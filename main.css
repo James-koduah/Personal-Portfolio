@@ -1,0 +1,235 @@
+body{
+    width: 100vw;
+}
+/*Navbar*/
+nav{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    min-height: 4vh;
+    background-color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1vw 2vw 1vw 0vw;
+    z-index: 4;
+}
+    /*Nav anchor element*/
+    nav a{
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2vw;
+        text-decoration: none;
+        margin-right:4vw;
+        padding: 0.1vh;
+    }
+        nav a:hover{
+        color: red;
+        }
+
+
+
+/*Welcome Section*/
+#Welcome{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    top: 4vh;
+    left: -1vw;
+    display: flex;
+    background:url(https://img.freepik.com/free-photo/couple-love-walks-stars-silhouette-lovers-couple-who-are-enjoying-their-time-together-night-starry-sky-starry-sky-night-walk-man-woman-traveling-wedding-travel_135372-4.jpg?w=740);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: 0.5vw 0.5vw 0.5vw black;
+    z-index: 1;
+}
+    /*The part that contains my name*/
+    #info{
+        height: 95%;
+        width: 40%;
+        background: transparent;
+        border-color:black;border-style: solid;border-width: 0.2vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        /*animation for the webdeveloper text*/
+        #webdev{
+            background-color: rgb(243, 6, 6);
+            font-size: 4vw;
+            box-shadow: 0.08em 0.1em 0.1em black;
+            animation-name: dev;
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+        }
+        @keyframes dev {
+            0% { 
+               transform: rotate(0); 
+               transform-origin: top left; 
+               animation-timing-function: ease-in-out; 
+            }
+            20%, 60% { 
+               transform: rotate(80deg); 
+               transform-origin: top left; 
+               animation-timing-function: ease-in-out; 
+            }
+            40% { 
+               transform: rotate(60deg); 
+               transform-origin: top left; 
+               animation-timing-function: ease-in-out; 
+            }
+            80% { 
+               transform: rotate(60deg) translateY(0); 
+               opacity: 1; 
+               transform-origin: top left; 
+               animation-timing-function: ease-in-out; 
+            }
+            100% { 
+               transform: translateY(700px); 
+               opacity: 0; 
+            } 
+         } 
+
+    /*The part that contains the projects*/     
+    #projects{
+        height: 98vh;
+        width:55%;
+        display: grid;
+        grid-template-rows: 10% 58% 32%;
+        grid-gap: 0.5vw;
+        border-color:black;border-style: solid;border-width: 0.2vw;
+        box-shadow: -0.5vw 0.5vw 0.5vw black;
+        margin-left: 4%;
+    }
+        #proheader{
+            text-align:center;
+            font-size: 1.5vw;
+            background-color: blue;
+            opacity: 0.7;
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+        }
+        /*Grid space for the projects*/
+        #tiles{
+            width: 75%;
+            padding-top: 5vh;
+            padding-bottom: -5vh;
+            margin-left:13vw;
+            margin-right:13vw;
+            overflow-y:scroll;
+            overflow-x: hidden;
+        }
+        /*The projects.*/
+        .protiles{
+            background: linear-gradient(35deg, rgb(7, 7, 250),rgb(7, 7, 20));
+            box-shadow: 0.2vw 0.2vw 0.2vw black;
+            border-width: 0.1vw;
+            width: 30vw;
+            height: 35vh;
+            margin-bottom: 2vw;
+            display: flex;
+            align-items:flex-end;
+            justify-content: center;
+            font-size: 1.5vw;
+            border-radius: 2vw;
+        }
+            #keyboard{
+                background: url(images/keyboard.JPG);
+                background-size: 100% 100%;
+            }
+            #quotes{
+                background: url(images/quotes.JPG);
+                background-size: 100% 100%;
+            }
+            #rockpaperscissors{
+                background: url(images/rockpapersicssors.JPG);
+                background-size: 100% 100%;
+            }
+
+
+/*Animation boxes section*/
+#design{
+    position: relative;
+    width: 99.5vw;
+    height: 20vh;
+    padding-left: 0.5vw;
+    display: flex;
+    align-items: flex-end;
+    left: -1vw;
+    background: linear-gradient(rgb(2, 2, 58),rgb(7, 7, 20));
+    z-index: -3;
+}
+.box {
+    position: relative;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background:linear-gradient(rgb(243, 6, 6),black) ;
+    height: 5vw;
+    transform-origin: bottom;
+    width: 4vw;
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0);}
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-7vh); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+
+/*Skills section*/
+#skills{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background:url(images/back2.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    left: -1vw;
+    padding-top: 4vw;
+}
+    #aboutme{
+        position: relative;
+        min-width: 60vw;
+        max-width: 90vw;
+        height: auto;
+        padding:1vw;
+        background: linear-gradient(rgb(5, 5, 216),rgb(3, 3, 126),rgb(2, 2, 58),rgb(7, 7, 20));
+        margin: auto;
+        text-align: center;
+        border-radius: 14vw;
+    }
+        #aboutme p{
+            font-family:'Times New Roman', Times, serif;
+            font-weight: 5s00;
+            font-size: 1em;
+            color:white;
+        }
+
+
+    #resume{
+       position: absolute;
+       width: 30vw;
+       height: 60vh;
+       background: url(images/resume.JPG);
+       background-size: 100% 100%;
+       border-radius: 4vw;
+       margin-top: 2vw;
+       margin-left: 4vw;
+       display: flex;
+       align-items: flex-end;
+       text-align: center;
+       justify-content: center;
+       color:white;
+       font-weight: 700;
+       font-size: 2vw;
+    }
