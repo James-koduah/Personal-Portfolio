@@ -1,5 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     width: 100vw;
+    background-color: rgb(69, 67, 67);
 }
 /*Navbar*/
 nav{
@@ -40,7 +46,7 @@ nav{
     top: 4vh;
     left: -1vw;
     display: flex;
-    background:url(https://img.freepik.com/free-photo/couple-love-walks-stars-silhouette-lovers-couple-who-are-enjoying-their-time-together-night-starry-sky-starry-sky-night-walk-man-woman-traveling-wedding-travel_135372-4.jpg?w=740);
+    background:url(images/welcome.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
     box-shadow: 0.5vw 0.5vw 0.5vw black;
@@ -48,7 +54,7 @@ nav{
 }
     /*The part that contains my name*/
     #info{
-        height: 95%;
+        height: 98%;
         width: 40%;
         background: transparent;
         border-color:black;border-style: solid;border-width: 0.2vw;
@@ -126,6 +132,27 @@ nav{
             overflow-y:scroll;
             overflow-x: hidden;
         }
+        ::-webkit-scrollbar {
+            width: 1vw;
+          }
+          
+          /* Track */
+           ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+            background: black;
+          }
+           
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: linear-gradient(rgb(8, 8, 217),rgb(7, 7, 20)); 
+            border-radius: 10px;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+          }
         /*The projects.*/
         .protiles{
             background: linear-gradient(35deg, rgb(7, 7, 250),rgb(7, 7, 20));
@@ -157,7 +184,7 @@ nav{
 /*Animation boxes section*/
 #design{
     position: relative;
-    width: 99.5vw;
+    width: 100vw;
     height: 20vh;
     padding-left: 0.5vw;
     display: flex;
@@ -189,42 +216,47 @@ nav{
 /*Skills section*/
 #skills{
     position: relative;
-    width: 100vw;
+    width: 101vw;
     min-height: 100vh;
-    background:url(images/back2.jpg);
+    background:url(images/skills.jfif);
     background-size: 100% 100%;
     background-attachment: fixed;
     left: -1vw;
     padding-top: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
     #aboutme{
         position: relative;
-        min-width: 60vw;
-        max-width: 90vw;
-        height: auto;
-        padding:1vw;
+        min-width: 55vw;
+        max-width: 58vw;
+        height: 60vh;
         background: linear-gradient(rgb(5, 5, 216),rgb(3, 3, 126),rgb(2, 2, 58),rgb(7, 7, 20));
-        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        border-radius: 14vw;
+        border-radius: 5vw;
+        margin-right: 3vw;
+        opacity: 0.9;
     }
         #aboutme p{
-            font-family:'Times New Roman', Times, serif;
-            font-weight: 5s00;
-            font-size: 1em;
+            font-family:calibri;
+            font-weight: 500;
+            font-size: 1.5vw;
             color:white;
         }
 
 
     #resume{
-       position: absolute;
+       position: relative;
        width: 30vw;
        height: 60vh;
        background: url(images/resume.JPG);
        background-size: 100% 100%;
        border-radius: 4vw;
-       margin-top: 2vw;
-       margin-left: 4vw;
        display: flex;
        align-items: flex-end;
        text-align: center;
@@ -232,4 +264,5 @@ nav{
        color:white;
        font-weight: 700;
        font-size: 2vw;
+       opacity: 0.7;
     }
