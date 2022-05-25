@@ -13,7 +13,7 @@ nav{
     top:0px;
     left: 0px;
     width: 100%;
-    min-height: 4vh;
+    height: 3vh;
     background-color: black;
     display:flex;
     flex-direction: row;
@@ -46,7 +46,7 @@ nav{
     top: 4vh;
     left: -1vw;
     display: flex;
-    background:url(images/welcome.jpg);
+    background:url(https://img.freepik.com/free-photo/couple-love-walks-stars-silhouette-lovers-couple-who-are-enjoying-their-time-together-night-starry-sky-starry-sky-night-walk-man-woman-traveling-wedding-travel_135372-4.jpg?w=740);
     background-size: 100% 100%;
     background-attachment: fixed;
     box-shadow: 0.5vw 0.5vw 0.5vw black;
@@ -113,24 +113,16 @@ nav{
         box-shadow: -0.5vw 0.5vw 0.5vw black;
         margin-left: 4%;
     }
-        #proheader{
-            text-align:center;
-            font-size: 1.5vw;
-            background-color: blue;
-            opacity: 0.7;
-            display: flex;
-            align-items:flex-start;
-            justify-content: center;
-        }
         /*Grid space for the projects*/
         #tiles{
-            width: 75%;
+            width: 56%;
             padding-top: 5vh;
             padding-bottom: -5vh;
             margin-left:13vw;
             margin-right:13vw;
             overflow-y:scroll;
             overflow-x: hidden;
+            box-shadow: -.3vw -0.3vw 0.3vw black,-0.3vw 0.3vw 0.3vw black;
         }
         ::-webkit-scrollbar {
             width: 1vw;
@@ -140,12 +132,13 @@ nav{
            ::-webkit-scrollbar-track {
             box-shadow: inset 0 0 5px grey; 
             border-radius: 10px;
-            background: black;
+            
+            background: linear-gradient(90deg,rgb(0, 0, 255),rgb(1, 1, 21),rgb(1, 1, 21))
           }
            
           /* Handle */
           ::-webkit-scrollbar-thumb {
-            background: linear-gradient(rgb(8, 8, 217),rgb(7, 7, 20)); 
+            background: linear-gradient(90deg,rgb(255, 0, 0),rgb(195, 1, 1),rgb(21, 1, 1),rgb(21, 1, 1)) ;
             border-radius: 10px;
           }
           
@@ -165,7 +158,6 @@ nav{
             align-items:flex-end;
             justify-content: center;
             font-size: 1.5vw;
-            border-radius: 2vw;
         }
             #keyboard{
                 background: url(images/keyboard.JPG);
@@ -185,7 +177,7 @@ nav{
 #design{
     position: relative;
     width: 100vw;
-    height: 20vh;
+    height: 28vh;
     padding-left: 0.5vw;
     display: flex;
     align-items: flex-end;
@@ -195,7 +187,7 @@ nav{
 }
 .box {
     position: relative;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     background:linear-gradient(rgb(243, 6, 6),black) ;
     height: 5vw;
@@ -206,8 +198,8 @@ nav{
 }
 @keyframes bounce-4 {
     0%   { transform: scale(1,1)    translateY(0);}
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1) translateY(-7vh); }
+    10%  { transform: scale(1.2,.8) translateY(0); }
+    30%  { transform: scale(.8,1.2) translateY(-9vh); }
     50%  { transform: scale(1,1)    translateY(0); }
     100% { transform: scale(1,1)    translateY(0); }
 }
@@ -217,46 +209,46 @@ nav{
 #skills{
     position: relative;
     width: 101vw;
-    min-height: 100vh;
-    background:url(images/skills.jfif);
+    min-height: 65vh;
+    background-color: rgb(103, 102, 102);
     background-size: 100% 100%;
-    background-attachment: fixed;
+    background-attachment:fixed;
     left: -1vw;
     padding-top: 4vw;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
 }
     #aboutme{
-        position: relative;
-        min-width: 55vw;
-        max-width: 58vw;
-        height: 60vh;
+        position: fixed;
+        top: 30vh;
+        left: 10vw;
+        width: 55vw;
+        height: 40vh;
         background: linear-gradient(rgb(5, 5, 216),rgb(3, 3, 126),rgb(2, 2, 58),rgb(7, 7, 20));
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-align: center;
-        border-radius: 5vw;
         margin-right: 3vw;
         opacity: 0.9;
+        overflow-y: scroll;
+        padding: 1vw;
+        border-radius: 00.5vw;
     }
         #aboutme p{
             font-family:calibri;
             font-weight: 500;
-            font-size: 1.5vw;
+            font-size: 16px;
             color:white;
         }
 
 
     #resume{
-       position: relative;
-       width: 30vw;
-       height: 60vh;
+       position: fixed;
+       top: 30vh;
+       right : 10vw;
+       width: 20vw;
+       height: 44vh;
        background: url(images/resume.JPG);
        background-size: 100% 100%;
-       border-radius: 4vw;
        display: flex;
        align-items: flex-end;
        text-align: center;
@@ -266,3 +258,15 @@ nav{
        font-size: 2vw;
        opacity: 0.7;
     }
+
+#contact{
+    position: relative;
+    width: 100%;
+    left:0;
+    height: 100vh;
+    background: url(images/space\ lab.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: -0.5vw -0.7vw 1vw black;
+    z-index: 6;
+}
