@@ -4,19 +4,22 @@
         <title>Personal website</title>
         <link rel="stylesheet" href="main.css">
         <script src="app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     </head>
     <body>
+        <div id="nav">
         <nav>
             <a href="#">Home</a>
-            <a href="#">Home</a>
+            <a href="#aaa">About</a>
             <a href="#">Home</a>
         </nav>
+        </div>
         
         <!--The Welcome Section-->
         <div id="Welcome">
             <div id="info">
                 <h1 style="background-color: rgb(247, 10, 81);margin-bottom: -3.3vh;font-size: 3vw;
-                transform: skewX(14deg);"><strong>James Koduah</strong></h1><br>
+                transform: skewX(14deg);box-shadow: -0.08em -0.1em 0.1em black;"><strong>James Koduah</strong></h1><br>
                 <h1 id="webdev" ><i>Web Developer</i></h1>
             </div>
             <div id="projects">
@@ -35,7 +38,7 @@
                     <div class="protiles"></div>
                     <div class="protiles"></div>
                 </div>
-                <div style="width:100%;text-align: center;color:white"><p style="background-color: rgb(4, 4, 56);width: 20%;margin: auto;font-size: 1vw;">Scroll</p></div>
+                <div style="width:100%;text-align: center;color:white"><p style="background-color: rgb(6, 119, 217);width: 20%;margin: auto;font-size: 1vw;font-weight: 600;">Scroll</p></div>
             </div>
         </div>
 
@@ -76,7 +79,7 @@
                 <p>I am from the West African country of Ghana where the food is good and the people are nice.
                     I have been looking at the tech space for a while and decided to get my feet wet. I am mostly self-taught and have utilized
                     learning materials from various sources and a very notable one (which is also my favorite ) is FreeCodeCamp online front
-                    and backend training in web development.Currently I am well versed in the use of HTML, CSS and JavaScript. I have work
+                    and backend training in web development.Currently I am comfortable in the use of HTML, CSS and JavaScript. I have work
                     experience in the retail business from my family owned business. I have worked in our gaming center which is where people
                     pay to play games on console and also our grocery store.
                     Inherently I have more than enough experience in communicating and dealing with people with most of them being pleasant
@@ -84,9 +87,20 @@
                     society :) 
                 </p>
             </div>
+            <div id="aaa" style="top:30%"></div>
             <a href="images/resume.pdf" target="_blank"><div id="resume"><h3 style="background-color:rgb(10, 10, 129)">My Resume</h3></div></a>
         </div>
-        <div id="contact"></div>
+        <div id="contact">
+            <div id="items">
+                <h4 id="h4" >LET <span style="background-color: black;color:white">US</span> TALK</h4>
+                <div id="so">
+                    <a href="https://www.linkedin.com/in/james-koduah/" target="_blank"><div id="linkedin" class="socials"></div></a>
+                    <a href=""><div id="twitter" class="socials"></div></a>
+                    <a href=""><div id="gmail" onclick="copy()" class="socials"></div></a>
+                    <a href="https://www.freecodecamp.org/fccc30fee4f-8bee-4a5a-9250-4ce43db12c5c" target="_blank"><div id="freecode" class="socials"></div></a>
+                </div>
+            </div>    
+        </div>
 
     </body>
 </html>

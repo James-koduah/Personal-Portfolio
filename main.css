@@ -8,12 +8,12 @@ body{
     background-color: rgb(69, 67, 67);
 }
 /*Navbar*/
-nav{
+#nav{
     position: fixed;
     top:0px;
     left: 0px;
     width: 100%;
-    height: 3vh;
+    height: 4vh;
     background-color: black;
     display:flex;
     flex-direction: row;
@@ -26,13 +26,14 @@ nav{
     nav a{
         color:white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 2vw;
+        font-size: 1.6vw;
         text-decoration: none;
         margin-right:4vw;
         padding: 0.1vh;
     }
         nav a:hover{
-        color: red;
+        color: salmon;
+        text-decoration: none;
         }
 
 
@@ -57,8 +58,6 @@ nav{
         height: 98%;
         width: 40%;
         background: transparent;
-        border-color:black;border-style: solid;border-width: 0.2vw;
-        box-shadow: 0.5vw 0.5vw 0.5vw black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -69,7 +68,7 @@ nav{
         #webdev{
             background-color: rgb(243, 6, 6);
             font-size: 4vw;
-            box-shadow: 0.08em 0.1em 0.1em black;
+            box-shadow: -0.08em -0.1em 0.1em black;
             animation-name: dev;
             animation-duration: 6s;
             animation-iteration-count: 1;
@@ -98,7 +97,7 @@ nav{
             }
             100% { 
                transform: translateY(700px); 
-               opacity: 0; 
+               opacity: 0.1; 
             } 
          } 
 
@@ -117,6 +116,7 @@ nav{
         #tiles{
             width: 56%;
             padding-top: 5vh;
+            background-color: rgba(250, 128, 114,0.2);
             padding-bottom: -5vh;
             margin-left:13vw;
             margin-right:13vw;
@@ -209,7 +209,7 @@ nav{
 #skills{
     position: relative;
     width: 101vw;
-    min-height: 65vh;
+    min-height: 55vh;
     background-color: rgb(103, 102, 102);
     background-size: 100% 100%;
     background-attachment:fixed;
@@ -225,6 +225,9 @@ nav{
         left: 10vw;
         width: 55vw;
         height: 40vh;
+        border-width: 0.1vw;
+        border-style: solid;
+        border-color: black;
         background: linear-gradient(rgb(5, 5, 216),rgb(3, 3, 126),rgb(2, 2, 58),rgb(7, 7, 20));
         text-align: center;
         margin-right: 3vw;
@@ -232,10 +235,11 @@ nav{
         overflow-y: scroll;
         padding: 1vw;
         border-radius: 00.5vw;
+        box-shadow: -1vw 2.5vw 1.5vw black;
     }
         #aboutme p{
-            font-family:calibri;
-            font-weight: 500;
+            font-family:Candara Light;
+            font-weight: 700;
             font-size: 16px;
             color:white;
         }
@@ -246,7 +250,10 @@ nav{
        top: 30vh;
        right : 10vw;
        width: 20vw;
-       height: 44vh;
+       height: 40vh;
+       border-width: 0.1vw;
+       border-style: solid;
+       border-color: black;
        background: url(images/resume.JPG);
        background-size: 100% 100%;
        display: flex;
@@ -256,17 +263,97 @@ nav{
        color:white;
        font-weight: 700;
        font-size: 2vw;
+       box-shadow: -1.5vw 2.5vw 1.5vw black;
        opacity: 0.7;
     }
+
+
+/*THE CONTACT SECTION*/    
 
 #contact{
     position: relative;
     width: 100%;
     left:0;
     height: 100vh;
+    color : black;
     background: url(images/space\ lab.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
     box-shadow: -0.5vw -0.7vw 1vw black;
     z-index: 6;
+    padding-top: 4vh;
 }
+
+#items{
+    width: 70vw;
+    height: 80vh;
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(35deg, rgba(0, 0, 242,0.5),rgba(3, 3, 138,0.5),rgba(1, 1, 71,0.5));
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+    #h4{
+        font-size: 6vw;
+        font-family:Kristen ITC;
+        color : white;
+    }
+
+    .socials{
+        position: absolute;
+        width : 20vw;
+        height : 40vh;
+        border-radius: 2vw;
+        bottom: 15.5vh;
+        border-width: 0.3vw;
+        border-style: solid;
+    }
+    #so{
+        display: flex;
+        flex-direction: row;
+    }
+        #linkedin{
+            background:url(images/linkedin.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: 9;
+        }
+
+        #twitter{
+            background:url(images/twitter2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 30vw;
+            z-index: 10;
+        }
+        #gmail{
+            background:url(images/gmail.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 45vw;
+            z-index: 11;
+        }
+        #freecode{
+            background:url(images/fcc.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 59.5vw;
+            z-index: 12;
+        }
+        #freecode:hover{
+            z-index: 13;
+        }
+        #gmail:hover{
+            z-index: 13;
+        }
+        #twitter:hover{
+            z-index: 13;
+        }
+        #linkedin:hover{
+            z-index: 13;
+        }
+        
