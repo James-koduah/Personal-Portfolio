@@ -171,6 +171,10 @@ body{
                 background: url(images/rockpapersicssors.JPG);
                 background-size: 100% 100%;
             }
+            #ballandpaddle{
+                background: url(images/ballandpaddle.png);
+                background-size: 100% 100%;
+            }
 
 
 /*Animation boxes section*/
@@ -289,7 +293,7 @@ body{
     height: 80vh;
     text-align: center;
     margin: auto;
-    background: linear-gradient(35deg, rgba(0, 0, 242,0.5),rgba(3, 3, 138,0.5),rgba(1, 1, 71,0.5));
+    background: linear-gradient(35deg, rgba(0, 0, 242,0.7),rgba(3, 3, 138,0.7),rgba(1, 1, 71,0.7));
     border-radius: 2vw;
     display: flex;
     flex-direction: column;
@@ -311,6 +315,7 @@ body{
         bottom: 15.5vh;
         border-width: 0.3vw;
         border-style: solid;
+        filter: blur(0.05vw);
     }
     #so{
         display: flex;
