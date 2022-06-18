@@ -1,11 +1,17 @@
 let prokey=document.getElementById('keyboard')
 let proquo=document.getElementById('quotes')
+let webdev=document.getElementById('webdev')
 let jj=2;
 function copy (){
    navigator.clipboard.writeText('jameskoduah171@gmail.com');
   alert("Copied the text: jameskoduah171@gmail.com");
 }
-
+function dev(){
+  webdev.innerHTML='A JUNIOR THOUGH';
+}
+function dev2(){
+  webdev.innerHTML='WEB DEVELOPER'
+}
 setInterval(()=>{
   if(jj==1){
     prokey.style.background='url(images/keyboard.JPG)';
