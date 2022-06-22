@@ -448,10 +448,23 @@ body{
                 height: 15vh;
                 bottom: 15vh;
             }
+            
             #items{
                 height: 35vh;
             }
             #contact{
                 height:50vh
+            }
+            
+        }
+        
+        @media(max-height:600px){
+            #h4{
+                margin-bottom: -5vh;
+            }
+        }
+        @media(max-height:300px){
+            #h4{
+                margin-bottom: -13vh;
             }
         }
