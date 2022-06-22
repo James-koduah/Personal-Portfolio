@@ -95,6 +95,7 @@ body{
                 border: white solid 0.05vw;
                 border-bottom: none;
             }
+            
             @keyframes dev {
                 0% { 
                 transform: rotate(0); 
@@ -143,7 +144,7 @@ body{
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
             }
-    
+            
          
 
         
@@ -225,6 +226,37 @@ body{
                 background: url(images/memory.JPG);
                 background-size: 100% 100%;
             }
+            @media(max-width:550px){
+                .protiles{height: 15vh;}
+                #projects{height: 73vh}
+                /* #name{font-size: 2vw;}
+                #webdev{font-size: 2vw;} */
+                #myskills{
+                    height: 15%;
+                }
+                #Welcome{
+                    height: 75vh;
+                }
+            }
+            @media(max-width:300px){
+                .protiles{height: 8vh;}
+                #projects{height: 48vh}
+                /* #name{font-size: 2vw;}
+                #webdev{font-size: 2vw;} */
+                #myskills{
+                    height: 8%;
+                }
+                #Welcome{
+                    height: 50vh;
+                }
+                #resume{
+                    height: 20vh;
+                }
+                #resume h3{
+                    font-size: 4vw;
+                }
+            }
+           
 
 
 
@@ -359,33 +391,67 @@ body{
             background:url(images/twitter2.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            left: 30vw;
+            left: 28vw;
             z-index: 10;
         }
         #gmail{
             background:url(images/gmail.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            left: 45vw;
+            left: 40vw;
             z-index: 11;
         }
         #freecode{
             background:url(images/fcc.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            left: 59.5vw;
+            left: 53.5vw;
             z-index: 12;
         }
-        #freecode:hover{
+        #github{
+            background:url(images/GitHub.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 65.5vw;
             z-index: 13;
+        }
+        #freecode:hover{
+            z-index: 14;
         }
         #gmail:hover{
-            z-index: 13;
+            z-index: 14;
         }
         #twitter:hover{
-            z-index: 13;
+            z-index: 14;
         }
         #linkedin:hover{
-            z-index: 13;
+            z-index: 14;
+        }
+        #github:hover{
+            z-index: 14;
         }
         
+        @media(max-width:550px){
+            .socials{
+                height: 25vh;
+                bottom: 25vh;
+            }
+            #items{
+                height: 60vh;
+            }
+            #contact{
+                height:80vh
+            }
+        }
+        @media(max-width:300px){
+            .socials{
+                height: 15vh;
+                bottom: 15vh;
+            }
+            #items{
+                height: 35vh;
+            }
+            #contact{
+                height:50vh
+            }
+        }
