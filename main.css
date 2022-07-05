@@ -178,14 +178,13 @@ body{
           
           /* Track */
            ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey; 
-            border-radius: 10px;
+            box-shadow: inset 0 0 5px white; 
+            
             background: black ;
         }
-           
           /* Handle */
           ::-webkit-scrollbar-thumb {
-            background: linear-gradient(90deg,white,white,gray,black) ;
+            background: linear-gradient(90deg,rgb(0, 0, 255),rgb(4, 4, 130),rgb(4, 4, 130),rgb(4, 4, 130),black) ;
             border-radius: 10px;
           }
           
@@ -224,6 +223,10 @@ body{
             }
             #memoryGame{
                 background: url(images/memory.JPG);
+                background-size: 100% 100%;
+            }
+            #circle-repeller{
+                background: url(images/circle\ repeller.png);
                 background-size: 100% 100%;
             }
             @media(max-width:550px){
