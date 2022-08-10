@@ -6,6 +6,7 @@
 body{
     width: 100vw;
     background-color: rgb(69, 67, 67);
+    overflow-x: hidden;
 }
 /*Navbar*/
 #nav{
@@ -20,7 +21,7 @@ body{
     justify-content: flex-end;
     align-items: center;
     padding: 2vw 2vw 2vw 0vw;
-    z-index: 4;
+    z-index: 22;
 }
     /*Nav anchor element*/
     nav a{
@@ -47,7 +48,7 @@ body{
     top: 4vh;
     left: -1vw;
     display: flex;
-    background:url(https://img.freepik.com/free-photo/couple-love-walks-stars-silhouette-lovers-couple-who-are-enjoying-their-time-together-night-starry-sky-starry-sky-night-walk-man-woman-traveling-wedding-travel_135372-4.jpg?w=740);
+    background:url(images/welcome.jpg);
     background-size: 100% 100%;
     box-shadow: 0.5vw 0.5vw 0.5vw black;
     z-index: 1;
@@ -229,6 +230,15 @@ body{
                 background: url(images/circle\ repeller.png);
                 background-size: 100% 100%;
             }
+            #calculator{
+                background: url(images/calcualtor.PNG);
+                background-size: 100% 100%;
+            }
+            #drum_machine{
+                background: url(images/drum\ machine.PNG);
+                background-size: 100% 100%;
+            }
+            
             @media(max-width:550px){
                 .protiles{height: 15vh;}
                 #projects{height: 73vh}
@@ -291,6 +301,7 @@ body{
         margin-right: 3vw;
         opacity: 0.9;
         overflow-y: scroll;
+        overflow-x: hidden;
         padding: 1vw;
         border-radius: 00.5vw;
         box-shadow: -1vw 2.5vw 1.5vw black;
@@ -471,3 +482,39 @@ body{
                 margin-bottom: -13vh;
             }
         }
+        #allq{
+            position: fixed;
+            width: 70vw;
+            height: 100vh;
+            background-color: rgb(0, 2, 15);
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 5vh;
+            padding: 3vw;
+        }
+
+        .bartiles{
+            width: 100%;
+            height: 40vh;
+            border-radius: 2vw;
+        }
+
+
+            #keyboardbar{
+                
+                background: url(images/keyboard2.JPG) no-repeat;
+                background-size: 100% 100%;
+            }
+
+        .vvv{
+            animation-name: vv;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+        }
+        @keyframes vv {
+            0%{left:-30%}
+            100%{left: 0%;}
+        }
+        

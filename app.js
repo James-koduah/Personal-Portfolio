@@ -33,3 +33,17 @@ setInterval(()=>{
     jj=1;
   }
 },4000)
+let nn=document.getElementById('allq')
+var aaaaa=false
+function alll(){
+  if(aaaaa==true){
+    nn.style.opacity='0'
+    nn.style.zIndex='0'
+    nn.className=''
+    return aaaaa=false
+  }
+  nn.className='vvv'
+  nn.style.zIndex='100'
+  nn.style.opacity='1'
+  return aaaaa=true
+}
