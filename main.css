@@ -518,3 +518,11 @@ body{
             100%{left: 0%;}
         }
         
+
+        #alqbut{
+            position: absolute;
+            background-color: rgb(2, 2, 69);
+            color: white;
+            font-family: Bradley Hand ITC;
+            font-weight: 800;
+        }

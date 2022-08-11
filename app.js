@@ -35,15 +35,44 @@ setInterval(()=>{
 },4000)
 let nn=document.getElementById('allq')
 var aaaaa=false
+let bb;
+let oo=0
+let pp=1
 function alll(){
   if(aaaaa==true){
-    nn.style.opacity='0'
-    nn.style.zIndex='0'
+    bb=setInterval(()=>{
+      nn.style.opacity=pp
+      nn.style.left=oo+'%'
+      oo--
+      pp-=0.01
+    },10)
+    setTimeout(() => {
+      nn.style.opacity='0'
+      nn.style.zIndex='0'
+      clearInterval(bb)
+      nn.style.left='0%'
+      oo=0
+      pp=1
+    }, 600);
+    
     nn.className=''
     return aaaaa=false
   }
+  if(aaaaa===false){
   nn.className='vvv'
   nn.style.zIndex='100'
   nn.style.opacity='1'
   return aaaaa=true
+  }
+}
+
+
+let mm= document.getElementById('body')
+
+function remo(){
+  document.addEventListener('click', function fff(){
+    alll()
+    return document.removeEventListener('click', fff)
+  })
+ 
 }
