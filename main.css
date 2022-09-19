@@ -537,6 +537,15 @@ a{cursor: none;}
                 height: 20vh;
             }
         }
+
+        @media (max-width:280px) {
+            nav{
+                height: 6vh;
+            }
+            nav a{
+                font-size: 4vw;
+            }
+        }
         
         @media(max-height:600px){
             #h4{
