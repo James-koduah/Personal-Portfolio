@@ -1,6 +1,7 @@
 let prokey=document.getElementById('keyboard')
 let proquo=document.getElementById('quotes')
 let webdev=document.getElementById('webdev')
+let ball=document.getElementById('ball')
 let jj=2;
 function copy (){
    navigator.clipboard.writeText('jameskoduah171@gmail.com');
@@ -76,3 +77,13 @@ function remo(){
   })
  
 }
+
+
+function ballCursor(e){
+  x=e.clientX
+     y=e.clientY
+    ball.style.left=x+'px'
+    ball.style.top=y+'px'
+    console.log(x)
+}
+document.addEventListener('mousemove', ballCursor)
