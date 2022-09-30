@@ -79,7 +79,7 @@ a{cursor: none;}
                 font-size: 3vw;
                 box-shadow: -1vw -1vw 1.1vw black;
                 border: black solid 0.1vw;
-                font-family: Bradley Hand ITC;
+                font-family: "Bradley Hand ITC";
             }    
 
             /*animation for the webdeveloper text*/
@@ -370,13 +370,13 @@ a{cursor: none;}
 
     #h4{
         font-size: 6vw;
-        font-family:Kristen ITC;
+        font-family:"Kristen ITC";
         color : white;
     }
 
     #aboutsocials{
         color:white;
-        font-family: Bradley Hand ITC;
+        font-family: "Bradley Hand ITC";
         font-size: 3vw;
         font-weight: 550;
     }
@@ -499,9 +499,8 @@ a{cursor: none;}
 
         #alqbut{
             position: absolute;
-            background-color: rgb(2, 2, 69);
-            color: white;
-            font-family: Bradley Hand ITC;
+            background-color: white;
+            color: black;
             font-weight: 800;
         }
 
@@ -535,6 +534,9 @@ a{cursor: none;}
         @media (max-width:450px) {
             .bartiles{
                 height: 20vh;
+            }
+            #allq{
+                width: 100vw;
             }
         }
 
