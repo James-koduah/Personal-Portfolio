@@ -28,8 +28,8 @@ a{cursor: none;}
     /*Nav anchor element*/
     nav a{
         color:white;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 2vw;
+        font-family: Kristen ITC;
+        font-size: 2.5vw;
         text-decoration: none;
         margin-right:4vw;
         padding: 0.1vh;
@@ -241,36 +241,6 @@ a{cursor: none;}
                 background-size: 100% 100%;
             }
             
-            @media(max-width:550px){
-                .protiles{height: 15vh;}
-                #projects{height: 73vh}
-                /* #name{font-size: 2vw;}
-                #webdev{font-size: 2vw;} */
-                #myskills{
-                    height: 15%;
-                }
-                #Welcome{
-                    height: 75vh;
-                }
-            }
-            @media(max-width:300px){
-                .protiles{height: 8vh;}
-                #projects{height: 48vh}
-                /* #name{font-size: 2vw;}
-                #webdev{font-size: 2vw;} */
-                #myskills{
-                    height: 8%;
-                }
-                #Welcome{
-                    height: 50vh;
-                }
-                #resume{
-                    height: 20vh;
-                }
-                #resume h3{
-                    font-size: 4vw;
-                }
-            }
            
 
 
@@ -447,18 +417,7 @@ a{cursor: none;}
             z-index: 14;
         }
         
-        @media(max-width:550px){
-            .socials{
-                height: 25vh;
-                bottom: 25vh;
-            }
-            #items{
-                height: 60vh;
-            }
-            #contact{
-                height:80vh
-            }
-        }
+        
         
         #allq{
             position: fixed;
@@ -517,7 +476,9 @@ a{cursor: none;}
 
         
 
+
         @media(max-width:300px){
+            .protiles{height: 8vh;}
             .socials{
                 height: 15vh;
                 bottom: 15vh;
@@ -530,13 +491,37 @@ a{cursor: none;}
                 height:50vh
             }
             
+            #projects{height: 48vh}
+            /* #name{font-size: 2vw;}
+            #webdev{font-size: 2vw;} */
+            #myskills{
+                height: 8%;
+            }
+            #Welcome{
+                height: 50vh;
+            }
+            #resume{
+                height: 20vh;
+            }
+            #resume h3{
+                font-size: 4vw;
+            }
         }
+
+
         @media (max-width:450px) {
             .bartiles{
                 height: 20vh;
             }
             #allq{
                 width: 100vw;
+            }
+            nav{
+                height: 5vh;
+                align-items: flex-start;
+            }
+            nav a{
+                font-size: 4vw;
             }
         }
 
@@ -557,5 +542,28 @@ a{cursor: none;}
         @media(max-height:300px){
             #h4{
                 margin-bottom: -13vh;
+            }
+        }
+
+        @media(max-width:550px){
+            .socials{
+                height: 25vh;
+                bottom: 25vh;
+            }
+            #items{
+                height: 60vh;
+            }
+            #contact{
+                height:80vh
+            }
+            .protiles{height: 15vh;}
+            #projects{height: 73vh}
+            /* #name{font-size: 2vw;}
+            #webdev{font-size: 2vw;} */
+            #myskills{
+                height: 15%;
+            }
+            #Welcome{
+                height: 75vh;
             }
         }
