@@ -7,16 +7,14 @@ body{
     width: 100vw;
     background-color: rgb(69, 67, 67);
     overflow-x: hidden;
-    cursor: none;
 }
-a{cursor: none;}
 /*Navbar*/
 #nav{
     position: fixed;
     top:0px;
     left: 0px;
     width: 100%;
-    height: 4vh;
+    height: 5vh;
     background-color: black;
     display:flex;
     flex-direction: row;
@@ -51,7 +49,7 @@ a{cursor: none;}
     left: -1vw;
     display: flex;
     background:url(images/welcome.jpg);
-    background-size: 100% 100%;
+    background-size: 50vw 100%;
     box-shadow: 0.5vw 0.5vw 0.5vw black;
     z-index: 1;
 }
@@ -521,18 +519,11 @@ a{cursor: none;}
                 align-items: flex-start;
             }
             nav a{
-                font-size: 4vw;
+                font-size: 2vh;
             }
         }
 
-        @media (max-width:280px) {
-            nav{
-                height: 6vh;
-            }
-            nav a{
-                font-size: 4vw;
-            }
-        }
+        
         
         @media(max-height:600px){
             #h4{

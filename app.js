@@ -7,12 +7,7 @@ function copy (){
    navigator.clipboard.writeText('jameskoduah171@gmail.com');
   alert("Copied the text: jameskoduah171@gmail.com");
 }
-function dev(){
-  webdev.innerHTML='A JUNIOR THOUGH';
-}
-function dev2(){
-  webdev.innerHTML='WEB DEVELOPER'
-}
+
 setInterval(()=>{
   if(jj==1){
     prokey.style.background='url(images/keyboard.JPG)';
@@ -35,6 +30,7 @@ setInterval(()=>{
   }
 },4000)
 let nn=document.getElementById('allq')
+let pbtn = document.getElementById("my_projects")
 var aaaaa=false
 let bb;
 let oo=0
@@ -55,7 +51,9 @@ function alll(){
       oo=0
       pp=1
     }, 600);
+    pbtn.innerHTML = "My Projects"
     
+  pbtn.style.borderStyle = "none"
     nn.className=''
     return aaaaa=false
   }
@@ -63,6 +61,9 @@ function alll(){
   nn.className='vvv'
   nn.style.zIndex='100'
   nn.style.opacity='1'
+  pbtn.innerHTML = "Close Projects"
+  pbtn.style.borderStyle = "solid"
+  pbtn.style.borderColor = "red"
   return aaaaa=true
   }
 }
@@ -78,12 +79,3 @@ function remo(){
  
 }
 
-
-function ballCursor(e){
-  x=e.clientX
-     y=e.clientY
-    ball.style.left=x+'px'
-    ball.style.top=y+'px'
-    console.log(x)
-}
-document.addEventListener('mousemove', ballCursor)
