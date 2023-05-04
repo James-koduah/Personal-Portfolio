@@ -1,0 +1,132 @@
+/*Welcome Section*/
+#Welcome{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    top: 4vh;
+    left: -1vw;
+    display: flex;
+    background:url(images/welcome.jpg);
+    background-size: 100vw 100%;
+    box-shadow: 0.5vw 0.5vw 0.5vw black;
+    z-index: 1;
+}
+    /*The part that contains my name*/
+    #info{
+        height: 98%;
+        width: 40%;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+        #con{
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+        }   
+
+            #name{
+                background-color: black;
+                padding:1vw;
+                font-size: 3vw;
+                box-shadow: -1vw -1vw 1.1vw black;
+                border: black solid 0.1vw;
+                font-family: "Bradley Hand ITC";
+            }    
+
+            /*animation for the webdeveloper text*/
+            #webdev{
+                background-color: black;
+                color: salmon;
+                font-size: 3vw;
+                font-weight: 800;
+                font-family: Kristen ITC;
+                box-shadow: -0.08em -0.1em 0.1em black;
+                animation-name: dev;
+                animation-duration: 6s;
+                animation-iteration-count: 1;
+                padding:1vw;
+                box-shadow: -1vw -1vw 1.1vw black;
+                border: white solid 0.05vw;
+                border-bottom: none;
+            }
+            
+            @keyframes dev {
+                0% { 
+                transform: rotate(0); 
+                transform-origin: top left; 
+                animation-timing-function: ease-in-out; 
+                }
+                20%, 60% { 
+                transform: rotate(80deg); 
+                transform-origin: top left; 
+                animation-timing-function: ease-in-out; 
+                }
+                40% { 
+                transform: rotate(60deg); 
+                transform-origin: top left; 
+                animation-timing-function: ease-in-out; 
+                }
+                80% { 
+                transform: rotate(60deg) translateY(0); 
+                opacity: 1; 
+                transform-origin: top left; 
+                animation-timing-function: ease-in-out; 
+                }
+                100% { 
+                transform: translateY(700px); 
+                opacity: 0.1; 
+                } 
+            } 
+
+        #myskills{
+            position: relative;
+            height: 20%;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: -1vw -1vw 1.1vw black;
+            border: white solid 0.1vw;
+            border-top: none;
+        }
+            #jslogo{
+                background: url(images/jsimage.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            #relogo{
+                background: url(images/react.jpg);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+
+    /*The part that contains the projects*/     
+    #projects{
+        height: 98vh;
+        width:55%;
+        display: grid;
+        grid-template-rows: 10% 58% 32%;
+        grid-gap: 0.5vw;
+        border-color:black;border-style: solid;border-width: 0.2vw;
+        box-shadow: -0.5vw 0.5vw 0.5vw black;
+        margin-left: 4%;
+    }
+
+    /*Grid space for the projects*/
+    #tiles{
+        width: 56%;
+        padding-top: 5vh;
+        background-color: rgba(250, 255, 255,0.2);
+        padding-bottom: -5vh;
+        margin-left:13vw;
+        margin-right:13vw;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-shadow: -.3vw -0.3vw 0.3vw black,-0.3vw 0.3vw 0.3vw black;
+    }

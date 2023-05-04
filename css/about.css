@@ -1,0 +1,62 @@
+/*Skills section*/
+#skills{
+    position: relative;
+    width: 101vw;
+    min-height: 65vh;
+    background-color: rgb(103, 102, 102);
+    background-size: 100% 100%;
+    background-attachment:fixed;
+    left: -1vw;
+    padding-top: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    #aboutme{
+        position: fixed;
+        top: 30vh;
+        left: 10vw;
+        width: 55vw;
+        height: 40vh;
+        border-width: 0.1vw;
+        border-style: solid;
+        border-color: black;
+        background: linear-gradient(rgb(5, 5, 16),rgb(3, 3, 126),rgb(2, 2, 58),rgb(7, 7, 20));
+        text-align: center;
+        margin-right: 3vw;
+        opacity: 0.9;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 1vw;
+        border-radius: 00.5vw;
+        box-shadow: -1vw 2.5vw 1.5vw black;
+    }
+        #aboutme p{
+            font-family:Candara Light;
+            font-weight: 700;
+            font-size: 16px;
+            color:white;
+        }
+
+
+    #resume{
+       position: fixed;
+       top: 30vh;
+       right : 10vw;
+       width: 20vw;
+       height: 40vh;
+       border-width: 0.1vw;
+       border-style: solid;
+       border-color: black;
+       background: url(images/resume.JPG);
+       background-size: 100% 100%;
+       display: flex;
+       align-items: flex-end;
+       text-align: center;
+       justify-content: center;
+       color:white;
+       font-weight: 700;
+       font-size: 2vw;
+       box-shadow: -1.5vw 2.5vw 1.5vw black;
+       opacity: 0.7;
+    }

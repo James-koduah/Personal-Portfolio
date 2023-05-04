@@ -1,0 +1,110 @@
+/*THE CONTACT SECTION*/    
+
+#contact{
+    position: relative;
+    width: 100%;
+    left:0;
+    height: 100vh;
+    color : black;
+    background: url(images/space\ lab.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: -0.5vw -0.7vw 1vw black;
+    z-index: 6;
+    padding-top: 4vh;
+}
+
+#items{
+    width: 70vw;
+    height: 75vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    background: linear-gradient(35deg, rgba(0, 0, 242,0.7),rgba(3, 3, 138,0.7),rgba(1, 1, 71,0.7));
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+    #h4{
+        font-size: 4vw;
+        font-family:"Kristen ITC";
+        color : white;
+    }
+
+    #aboutsocials{
+        color:white;
+        font-family: "Bradley Hand ITC";
+        font-size: 2vw;
+        font-weight: 550;
+    }
+
+    .socials{
+        position: absolute;
+        width : 15vw;
+        height : 30vh;
+        border-radius: 2vw;
+        bottom: 15.5vh;
+        border-width: 0.3vw;
+        border-style: solid;
+        filter: blur(0.05vw);
+        font-size: 0px;
+    }
+    #so{
+        display: flex;
+        flex-direction: row;
+        margin-left: 5vw;
+    }
+        #linkedin{
+            background:url(images/linkedin.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: 9;
+        }
+
+        #twitter{
+            background:url(images/twitter2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 28vw;
+            z-index: 10;
+        }
+        #gmail{
+            background:url(images/gmail.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 40vw;
+            z-index: 11;
+        }
+        #freecode{
+            background:url(images/fcc.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 53.5vw;
+            z-index: 12;
+        }
+        #github{
+            background:url(images/GitHub.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            left: 65.5vw;
+            z-index: 13;
+        }
+        #freecode:hover{
+            z-index: 14;
+        }
+        #gmail:hover{
+            z-index: 14;
+        }
+        #twitter:hover{
+            z-index: 14;
+        }
+        #linkedin:hover{
+            z-index: 14;
+        }
+        #github:hover{
+            z-index: 14;
+        }

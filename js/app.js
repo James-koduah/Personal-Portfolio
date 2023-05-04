@@ -28,21 +28,21 @@ function copy (){
 
 setInterval(()=>{
   if(jj==1){
-    prokey.style.background='url(images/keyboard.JPG)';
+    prokey.style.background='url(../css/images/keyboard.JPG)';
     prokey.style.backgroundSize='100% 100%'
-    proquo.style.background='url(images/quotes.JPG)';
+    proquo.style.background='url(../css/images/quotes.JPG)';
     proquo.style.backgroundSize='100% 100%';
     jj=2;
   }else if(jj===2){
-    prokey.style.background='url(images/keyboard2.JPG)';
-    proquo.style.background='url(images/quotes2.JPG)';
+    prokey.style.background='url(../css/images/keyboard2.JPG)';
+    proquo.style.background='url(../css/images/quotes2.JPG)';
     proquo.style.backgroundSize='100% 100%';
     prokey.style.backgroundSize='100% 100%';
     jj=3;
   }else if(jj==3){
-    prokey.style.background='url(images/keyboard3.JPG)';
+    prokey.style.background='url(../css/images/keyboard3.JPG)';
     prokey.style.backgroundSize='100% 100%'
-    proquo.style.background='url(images/quotes3.JPG)';
+    proquo.style.background='url(../css/images/quotes3.JPG)';
     proquo.style.backgroundSize='100% 100%';
     jj=1;
   }
