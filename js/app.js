@@ -1,10 +1,43 @@
-let prokey=document.getElementById('keyboard')
-let proquo=document.getElementById('quotes')
 let webdev=document.getElementById('webdev')
 let ball=document.getElementById('ball')
+let nn=document.getElementById('allq')
+let pbtn = document.getElementById("my_projects")
+let mm= document.getElementById('body')
+let display_text = document.getElementById('display_text')
+
+text_display = "Welcome[The name is James[A Software Engineer \
+based in Ghana[Here to help you build agile and scalable software \
+solutions[As a Full Stack Developer I give quality service in \
+both the Front and Backend[\
+C____ Python_____ Javascript____ React____ SQL____ Bash____ Puppet____\
+C++____ Java[Whatever you need just contact me"
+display_text.innerHTML = ''
+text_length = text_display.length
+text_num = 0
+console.log(text_display[text_num])
+text = setInterval(()=>{
+  if (text_display[text_num] == '['){
+    // Enter a newline character
+    display_text.innerHTML += '<br>'
+  }
+  else if(text_display[text_num] == ' '){
+    // Enter a space character (Its impossible to enter normally)
+    display_text.innerHTML += ` ${text_display[text_num + 1]}`
+    text_num++
+  }
+  else{
+    display_text.innerText += text_display[text_num]
+  }
+  if (text_num == text_length - 1){
+    clearInterval(text)
+    display_text.style.borderWidth = '0.1vw'
+  }
+  text_num += 1
+  
+}, 50)
 
 
-if (navigator.userAgent.match(/Android/i) ||
+if(navigator.userAgent.match(/Android/i) ||
     navigator.userAgent.match(/webOS/i) ||
     navigator.userAgent.match(/iPhone/i) ||
     navigator.userAgent.match(/iPad/i) || 
@@ -26,29 +59,8 @@ function copy (){
   alert("Copied the text: jameskoduah171@gmail.com");
 }
 
-setInterval(()=>{
-  if(jj==1){
-    prokey.style.background='url(../css/images/keyboard.JPG)';
-    prokey.style.backgroundSize='100% 100%'
-    proquo.style.background='url(../css/images/quotes.JPG)';
-    proquo.style.backgroundSize='100% 100%';
-    jj=2;
-  }else if(jj===2){
-    prokey.style.background='url(../css/images/keyboard2.JPG)';
-    proquo.style.background='url(../css/images/quotes2.JPG)';
-    proquo.style.backgroundSize='100% 100%';
-    prokey.style.backgroundSize='100% 100%';
-    jj=3;
-  }else if(jj==3){
-    prokey.style.background='url(../css/images/keyboard3.JPG)';
-    prokey.style.backgroundSize='100% 100%'
-    proquo.style.background='url(../css/images/quotes3.JPG)';
-    proquo.style.backgroundSize='100% 100%';
-    jj=1;
-  }
-},4000)
-let nn=document.getElementById('allq')
-let pbtn = document.getElementById("my_projects")
+
+
 var aaaaa=false
 let bb;
 let oo=0
@@ -87,7 +99,7 @@ function alll(){
 }
 
 
-let mm= document.getElementById('body')
+
 
 function remo(){
   document.addEventListener('click', function fff(){
