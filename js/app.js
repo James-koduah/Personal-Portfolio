@@ -30,7 +30,6 @@ text = setInterval(()=>{
   }
   if (text_num == text_length - 1){
     clearInterval(text)
-    display_text.style.borderWidth = '0.1vw'
   }
   text_num += 1
   
