@@ -109,8 +109,8 @@
     #tiles{
         display: flex;
         flex-direction: column;
-        max-width: 600px;
-        width: 40%;
+        max-width: 700px;
+        width: 50%;
         height: 40vh;
         border-radius: 1vw;
         overflow-y:hidden;
@@ -121,4 +121,23 @@
         width: 100%;
         height: 50vh;
         margin-bottom: 1vh;
+    }
+
+
+    #tile_position{
+        margin-top: 1vh;
+        width: 20%;
+        height: 2vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .position{
+        border: 1px black solid;
+        border-radius: 50%; 
+        width: 2rem;
+    }
+
+    #tile_position :nth-child(1){
+        background-color: black;
     }
