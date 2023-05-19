@@ -108,3 +108,6 @@ function remo(){
  
 }
 
+let james = setInterval(()=>{
+  jj = document.getElementById('tile_position')
+}, 2)

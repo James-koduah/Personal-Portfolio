@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html {
+    font-size: 5px;
+}
+
 body{
     width: 100vw;
     background-color: rgb(69, 67, 67);
