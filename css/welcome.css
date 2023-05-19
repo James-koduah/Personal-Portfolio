@@ -11,9 +11,28 @@
     box-shadow: 0.5vw 0.5vw 0.5vw black;
     z-index: 1;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-end;
 }
+
+   /*The part that contains the running text display*/     
+   #welcome_display{
+        height: 30vh;
+        width:100%;
+        background-color: #282828;
+        box-shadow: -0.5vw 0.5vw 0.5vw rgb(40, 30, 30);
+        display: flex;
+    }
+    #display_text{
+        color: #33FF33;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: fit-content;
+        font-size: 1.6rem;
+        word-wrap:break-word;
+        padding: 2vw;
+        margin-top: 8vh;
+        border-radius: 2vw;
+    }
     /*The part that contains my name*/
     #info{
         height: 70%;
@@ -28,9 +47,12 @@
     }
 
         #con{
+            left: 0;
+            margin-left: 5vw;
             width: fit-content;
             height: fit-content;
             display: flex;
+            align-self: flex-start;
         }   
 
             #name{
@@ -38,8 +60,9 @@
                 padding:1vw;
                 color: black;
                 font-size: 2.3rem;
-                font-family: "Bradley Hand ITC";
                 font-weight: 700;
+                border-bottom: 1px black solid;
+                border-right: 1px black solid;
             }    
 
             /*animation for the webdeveloper text*/
@@ -47,14 +70,13 @@
                 height: 50%;
                 color: black;
                 font-size: 2rem;
-                font-family: Kristen ITC;
-                box-shadow: -0.08rem -0.1rem 0.1rem black;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: 400;
                 animation-name: dev;
                 animation-duration: 6s;
                 animation-iteration-count: 1;
                 padding:1vw;
-                border: white solid 0.05vw;
-                border-bottom: none;
+                border-top: black solid 0.05vw;
             }
             
             @keyframes dev {
@@ -85,59 +107,23 @@
                 } 
             } 
 
-    /*The part that contains the projects*/     
-    #welcome_display{
-        height: 30vh;
-        width:100%;
-        background-color: black;
-        box-shadow: -0.5vw 0.5vw 0.5vw rgb(40, 30, 30);
-        display: flex;
-    }
-    #display_text{
-        color: rgb(26, 119, 2);
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        height: fit-content;
-        font-size: 1.6rem;
-        word-wrap:break-word;
-        padding: 2vw;
-        margin-top: 5vh;
-        border-radius: 2vw;
+ #bio_display{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ }
 
-    }
-
-    /* Grid space for the projects*/
-    #tiles{
-        display: flex;
-        flex-direction: column;
-        max-width: 700px;
-        width: 50%;
-        height: 40vh;
-        border-radius: 1vw;
-        overflow-y:hidden;
-        overflow-x: hidden;
-    }
-
-    #tiles .protiles {
-        width: 100%;
-        height: 50vh;
-        margin-bottom: 1vh;
-    }
-
-
-    #tile_position{
-        margin-top: 1vh;
-        width: 20%;
-        height: 2vh;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .position{
-        border: 1px black solid;
-        border-radius: 50%; 
-        width: 2rem;
-    }
-
-    #tile_position :nth-child(1){
-        background-color: black;
-    }
+.display{
+    max-width: 45vw;
+    min-width: 500px;
+    height: 40vh;
+    background: linear-gradient(90deg, #FFFFFF, #DDDDFF, #EEEEFF, #FFFFFF);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.display .display_text{
+}
+.display .display_pic{
+    background-color: #282828;
+}
