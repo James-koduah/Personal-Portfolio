@@ -3,9 +3,7 @@
     padding: 0px;
 }
 
-html {
-    font-size: 5px;
-}
+
 
 body{
     width: 100vw;
@@ -15,19 +13,18 @@ body{
 }
 
 ::-webkit-scrollbar {
-    width: 1vw;
+    width: 0.5vw;
     }
     
     /* Track */
     ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px white; 
-    
     background: black ;
 }
     /* Handle */
     ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,rgb(0, 0, 255),rgb(4, 4, 130),rgb(4, 4, 130),rgb(4, 4, 130),black) ;
-    border-radius: 10px;
+        background-color: rgb(28, 28, 28);
+        border-radius: 10px;
     }
     
     /* Handle on hover */
