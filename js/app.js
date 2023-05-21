@@ -36,19 +36,19 @@ text = setInterval(()=>{
 }, 50)
 
 
-if(navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) || 
-    navigator.userAgent.match(/iPod/i) || 
-    navigator.userAgent.match(/BlackBerry/i) || 
-    navigator.userAgent.match(/Windows Phone/i)) {
-  // the user is using a mobile device, so redirect to the mobile version of the website
-  if (screen.width < 400)
-  {
-  window.location = "https://james-koduah.github.io/mobile-portfolio/";
-  }
-}
+// if(navigator.userAgent.match(/Android/i) ||
+//     navigator.userAgent.match(/webOS/i) ||
+//     navigator.userAgent.match(/iPhone/i) ||
+//     navigator.userAgent.match(/iPad/i) || 
+//     navigator.userAgent.match(/iPod/i) || 
+//     navigator.userAgent.match(/BlackBerry/i) || 
+//     navigator.userAgent.match(/Windows Phone/i)) {
+//   // the user is using a mobile device, so redirect to the mobile version of the website
+//   if (screen.width < 400)
+//   {
+//   window.location = "https://james-koduah.github.io/mobile-portfolio/";
+//   }
+// }
 
 
 
