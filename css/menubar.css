@@ -1,0 +1,32 @@
+#nav_menu_button{
+    width: 10vw;
+    height: 10vw;
+    background:url('images/menulight.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: 5vw;
+    z-index: 38;
+}
+#menu_bar{
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    width: 100vw;
+    height: 92vh;
+    display: grid;
+    grid-template-rows: 30vh 70vh;
+    z-index: 1;
+}
+#main_menu {
+    background-color: rgb(223, 219, 219);
+}
+#close_menu {
+    background-color: transparent;
+}
+
+
+@media (max-width: 450px) {
+    #nav_menu_button {
+        width: 5vw;
+        height: 5vw;
+    }
+}
