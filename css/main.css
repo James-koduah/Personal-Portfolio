@@ -12,6 +12,10 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
+main{
+    background-color: black;
+    z-index: 5;
+}
 ::-webkit-scrollbar {
     width: 0.5vw;
     }
