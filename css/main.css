@@ -1,160 +1,55 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
 }
 
+:root{
+    --soft-bg: #dfdbdb;
+    --body-bg: #141214; 
+    --text-color: #ffce55;
+    --body-bg-faded: #14121416;
+}
 
 
 body{
     width: 100vw;
-    background-color: rgb(69, 67, 67);
-    overflow-x: hidden;
+    height: fit-content;
+    background-color: var(--body-bg);
+    font-size: 5px;
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
 }
 
-main{
-    background-color: black;
-    z-index: 5;
-}
-::-webkit-scrollbar {
-    width: 0.5vw;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white; 
-    background: black ;
-}
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background-color: rgb(28, 28, 28);
-        border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-    }
-        /*The projects.*/
-        .protiles{
-            background: linear-gradient(35deg, rgb(7, 7, 250),rgb(7, 7, 20));
-            box-shadow: 0.2vw 0.2vw 0.2vw black;
-            border-width: 0.1vw;
-            width: 30vw;
-            height: 35vh;
-            margin-bottom: 2vw;
-            display: flex;
-            align-items:flex-end;
-            justify-content: center;
-            font-size: 1.5vw;
-        }
-            #keyboard{
-                background: url(images/keyboard.JPG);
-                background-size: 100% 100%;
-            }
-            #quotes{
-                background: url(images/quotes.JPG);
-                background-size: 100% 100%;
-            }
-            #rockpaperscissors{
-                background: url(images/rockpapersicssors.JPG);
-                background-size: 100% 100%;
-            }
-            #ballandpaddle{
-                background: url(images/ballandpaddle.png);
-                background-size: 100% 100%;
-            }
-            #memoryGame{
-                background: url(images/memory.JPG);
-                background-size: 100% 100%;
-            }
-            #circle-repeller{
-                background: url(images/circle\ repeller.png);
-                background-size: 100% 100%;
-            }
-            #calculator{
-                background: url(images/calcualtor.PNG);
-                background-size: 100% 100%;
-            }
-            #drum_machine{
-                background: url(images/drum\ machine.PNG);
-                background-size: 100% 100%;
-            }      
-        
-        
-        #side_bar{
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 70vw 30vw;
-        }
-        #side_projects{
-            width: 70vw;
-            height: 100vh;
-            background-color: rgb(48, 10, 36);
-            padding-top: 4vh;
-            padding-left: 4vw;
-            overflow-y: scroll;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        #side_close{
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-        }
-
-        .bartiles{
-            width: 30vw;
-            height: 20vh;
-            border-radius: 1vw;
-        }
-
-
-            #keyboardbar{
-                
-                background: url(images/keyboard2.JPG) no-repeat;
-                background-size: 100% 100%;
-            }
-
-        .vvv{
-            animation-name: vv;
-            animation-duration: 1s;
-            animation-iteration-count: 1;
-        }
-        @keyframes vv {
-            0%{left:-90%}
-            100%{left: 0%;}
-        }
-        
-
-        #alqbut{
-            position: absolute;
-            background-color: white;
-            color: black;
-            font-weight: 800;
-        }
-
-
-        #ball{
-            position: fixed;
-            width: 20px;
-            height: 20px; 
-            border-radius: 50%;
-            background-color: white;
-            z-index: 144;
-        }
-
-
-@media (max-width: 450px) {
-    #side_projects{
-        width: 100vw;
-    }    
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
+nav{
+    position: sticky;
+    top: 0vh;
+    width: 97vw;
+    height: 7vh;
+    padding: 3vh 1vw 0 2vw;
+    background-color: var(--soft-bg);
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+nav h1{
+    font-weight: 400;
+    font-size: 5em;
+}
+nav div{
+    width: 25vw;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav div a{
+    font-size: 2.5em;
+}
 
-        
-
-
-       
