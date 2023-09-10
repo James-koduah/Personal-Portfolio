@@ -1,7 +1,6 @@
 #welcome{
     width: 100vw;
     height: 90vh;
-    background-color: var(--body-bg);
 }
 
 
@@ -107,7 +106,7 @@
 #welcome_mission {
     width: 100%;
     height: fit-content;
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 #m1 {
