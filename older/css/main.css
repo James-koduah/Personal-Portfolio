@@ -31,8 +31,8 @@ nav{
     position: sticky;
     top: 0vh;
     width: 97vw;
-    height: 7vh;
-    padding: 3vh 1vw 0 2vw;
+    height: 5vh;
+    padding: 1vh 1vw 0 2vw;
     background-color: var(--soft-bg);
     color: #222;
     display: flex;

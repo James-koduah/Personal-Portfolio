@@ -1,0 +1,343 @@
+*{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    background-color: #111;
+    width: 100vw;
+    font-size: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #000;
+    border-left: 1px #2c2c2c solid;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #222;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background: #000;
+}
+
+#welcome{
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: url(images/business_empire.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+#dialouge{
+    width: 57%;
+    padding-left: 3%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    background-color: #000000bb;
+    flex-direction: column;
+}
+.dialouge_text{
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+    font-weight: 900;
+    /* -webkit-text-stroke: 1px #ece0ed; */
+}
+.dialouge_text i{
+    font-size: 150%;
+}
+#dialouge1{
+    font-size: 6em;
+    margin-top: 60px;
+}
+#dialouge2{
+    font-size: 3em;
+    font-size: 600;
+}
+.important{
+    display: flex;
+    align-items: center;
+    padding: 5px 1px 0 1px;
+    border-bottom: 1px #fff solid;
+    border-top: 1px #fff solid;
+    cursor: pointer
+}
+.important:hover{
+    background-color: #fcfcfc33;
+}
+#chat{
+    width: 38%;
+    padding-right: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    background-color: #00000088;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#chatapp{
+    width: 90%;
+    max-width: 350px;
+    height: 90%;
+    background-color: #000;
+    color: #eee;
+    border-radius: 10px;
+    border: 2px #1b1a1a solid;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+}
+#chatapp .header{
+    width: 100%;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(
+        45deg,
+        #0a0a0a 5%,
+        #1f1e1e 10%,
+        #272525 30%,
+        #1d1a1a 50%,
+        #232222 70%,
+        #000000 80%,
+        #1d1c1c 95%
+      ); */
+    /* background: #2a282855; */
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2em;
+    font-weight: 600;
+}
+#chatapp .header ion-icon{
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+#chatapp .header p{
+    font-weight: 400;
+    margin-right: 7px;
+}
+#chatappfla{
+    width: 4px;
+    height: 4px;
+    background: #bbb;
+    border: 5px #000 solid;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: auto;
+
+}
+#chatbox{
+    width: 96%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 5vh;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+#chatbox::-webkit-scrollbar{
+    width: 0px;
+}
+.chat{
+    min-width: 46%;
+    width: fit-content;
+    max-width: 80%;
+    background-color: #222;
+    height: fit-content;
+    margin-top: 5px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    padding: 10px 2% 10px 2%;
+    font-size: 2.4em;
+    border: 1px #333333 solid;
+}
+
+.chatright{
+    align-self: flex-end;
+    background-color: #2c2c2c;
+}
+
+#chat_action{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #171717;
+}
+.chat_action{
+    width: 44%;
+    height: 45%;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 0 1% 0 1%;
+    background-color: #1c1c1c;
+    border: 1px #333333 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    text-align: center;
+    cursor: pointer;
+}
+.chat_action:hover{
+    background-color: #222;
+}
+
+#phonebutton{
+    width: 100%;
+    height: 30px;
+    /* background: linear-gradient(
+        70deg,
+        #0a0a0a 5%,
+        #141313 10%,
+        #141313 30%,
+        #0e0d0d 50%,
+        #0e0d0d 70%,
+        #000000 80%,
+        #1d1c1c 95%
+      ); */
+    background: #00000055;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px #1b1a1a solid;
+}
+#phonebutton ion-icon{
+    font-size: 3em;
+    color: #fff;
+    cursor: pointer;
+}
+#phonebuttonhome{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border: 2px #eee solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+@keyframes glow {
+    0%{border-color: #28729b;}
+    10%{border-color: #2034ea;}
+    20%{border-color: #28729b;}
+    30%{border-color: #03a1a1;}
+    40%{border-color: #28729b;}
+    50%{border-color: #2034ea;}
+    60%{border-color: #28729b;}
+    70%{border-color: #03a1a1;}
+    80%{border-color: #28729b;}
+    90%{border-color: #2034ea;}
+    100%{border-color: #28729b;}
+    
+}
+
+
+
+#portfolio{
+    width: 94%;
+    height: fit-content;
+    padding: 5vh 3% 5vh 3%;
+    background: url(images/portfolio.webp) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.portfolio_display{
+    position: relative;
+    width: 30%;
+    min-width: 350px;
+    height: 220px;
+    background-color: #222;
+    border-radius: 1vw;
+    border: 1px #555 solid;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.portfolio_display .left{
+    position: absolute;
+    top: calc(50% - 10px); left: calc(0% - 10px);
+    width: 30px; height: 30px;
+    background-color: #00000099;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    cursor: pointer;
+}
+.portfolio_display .right{
+    position: absolute;
+    top: calc(50% - 10px); right: calc(0% - 10px);
+    width: 30px; height: 30px;
+    background-color: #00000099;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    #welcome{
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 3vh;
+    }
+    #dialouge{
+        width: 100%;
+        height: fit-content;
+        min-height: 50vh;
+    }
+    #dialouge1{
+        font-size: 3.8em;
+    }
+    #dialouge2{
+        font-size: 2.2em;
+    }
+    
+    #chat{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    #chatapp{
+        height: 80vh;
+    }
+    .mobile-hide{
+        display: none;
+    }
+}
+@media (max-height: 400px) {
+    
+    #dialouge1{
+        font-size: 3.8em;
+    }
+    #dialouge2{
+        font-size: 2.2em;
+    }
+    
+    .mobile-hide{
+        display: none;
+    }
+}

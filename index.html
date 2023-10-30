@@ -3,142 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/welcome.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/bubble.css">
-    <title>Jaskin Tech</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <nav>
-        <h1>Jaskin Tech.</h1>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>           
-        </div>
+
     </nav>
     <main>
         <section id="welcome">
-            <div id="welcome_display">
-                <p id="welcome_display_text"></p>
+            <div id="dialouge">
+                <div id="dialouge1" class="dialouge_text"></div>
+                
+                <div id="dialouge2" class="dialouge_text"></div>
             </div>
-            <div id="welcome_pitch">
-                <div id="welcome_pitch_animation">
-                    <div id="welcome_pitch_name">James Koduah</div>
-                    <div id="webdev">Software Engineer</div>
-                </div>
-                <div id="welcome_mission">
-                    <span id="m1">Technology Is The Future</span>
-                    <p id="m2">We'll Get There One Bug After The Other</p>
-                    <p id="m3">A Growing Industry Needs Willing And Able Professionals
-                        Who Are Ready To Partake and Contribute To Its Growth<br>
-                        <i>My Sleeves Are Rolled Up. I'M READY.<span>*DRAMATIC MUSIC*</span></i>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="projects1">
-            <header id="projects1_header">Portfolio</header>
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Python Command Line Hospital Interface</p>
-                    <iframe src="https://www.youtube.com/embed/PSoybo7TTrE" allowfullscreen></iframe>
-                </div>
-                <div class="project_item_info">
-                    <header>A System Python Application</header>
-                    <p>This is an interface for a hospital with no Grapical Interface.
-                       Doctors and nurses can both perform tasks like adding patients and curing them  
-                    </p>
-                </div>
-            </div>
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Parma HealtCare App</p>
-                    <iframe src="https://www.youtube.com/embed/2GX1I0IgjuM" allowfullscreen></iframe>
-                </div>
-                <div class="project_item_info">
-                    <header>A Web-Based Application</header>
-                    <p>Parma is here to help you manage daily activites and operations of your healtcare center. 
-                       Keep track of your patients, their medical history and their prescriptions. Help Staff to 
-                       manage their work-flow and stay up-to-date about situations in the healtCare center and manage 
-                       Payments all with one software 
-                    </p>
+            <div id="chat">
+                <div id="chatapp">
+                    <div class="header">
+                        <div id="chatappfla"></div>
+                        <ion-icon name="wifi"></ion-icon>
+                        <ion-icon name="cellular-outline"></ion-icon>
+                        <ion-icon name="battery-full"></ion-icon>
+                        <p>99%</p>
+                    </div>
+                    <div id="chatbox">
+                    </div>
+                    <div id="chat_action">
+                    </div>
+                    <div id="phonebutton">
+                        <ion-icon name="menu"></ion-icon>
+                        <ion-icon name="stop-outline" onclick="chatApp(1)"></ion-icon>
+                        <ion-icon name="caret-back" onclick="chatApp(-1)"></ion-icon>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="projects2">
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Virtual Keyboard</p>
-                    <img src="images/keyboard2.JPG" alt="">
-                </div>
-                <div class="project_item_info">
-                    <header>A Web-Based Application</header>
-                    <p>As one of my first Web Development projects, the Virtual-keyboard provides all
-                       features of a Keyboard in your web browser. Use your Mouse or touch to type out
-                       your messages. 
-                    </p>
-                </div>
+        <section id="portfolio">
+            <div class="portfolio_display">
+                <img src="images/site1.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
             </div>
-
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Drum Machine Beat Maker</p>
-                    <img src="images/drum machine.PNG" alt="">
-                </div>
-                <div class="project_item_info">
-                    <header>A Web-Based Application</header>
-                    <p>Do you feel the music in you. Use this Beat Machine to bring your music to life.
-                       Currently with over 12 different sounds and counting. You can enjoy yourself with some music 
-                    </p>
-
-                </div>
+            <div class="portfolio_display">
+                <img src="images/site3.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
             </div>
-
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Rock Paper Scissors Game</p>
-                    <img src="images/rockpapersicssors.JPG" alt="">
-                </div>
-                <div class="project_item_info">
-                    <header>A Web-Based Application</header>
-                    <p>The classic game of Rock Paper Scissors. Play aganist the computer in this game of Chance.</p>
-                </div>
+            <div class="portfolio_display">
+                <img src="images/site2.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
             </div>
-
-            <div class="project_item">
-                <div class="project_item_connect"></div>
-                <div class="project_item_visual">
-                    <p>Calculator</p>
-                    <img src="images/calcualtor.PNG" alt="">
-                </div>
-                <div class="project_item_info">
-                    <header>A Web-Based Application</header>
-                    <p>A useful Javascript Calculator....That's if you want to crunch numbers in your browser</p>
-                </div>
+            <div class="portfolio_display mobile-hide">
+                <img src="images/site1.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
             </div>
-            <div class="see_more">See More</div>
-        </section>
-    </main>
-    <div class="bubble x1"></div>
-    <div class="bubble x2"></div>
-    <div class="bubble x3"></div>
-    <div class="bubble x4"></div>
-    <div class="bubble x5"></div>
-    <div class="bubble x6"></div>
-    <div class="bubble x7"></div>
-    <div class="bubble x8"></div>
-    <div class="bubble x9"></div>
-    <div class="bubble x10"></div>
-    <!--TODO: Give credit for the Bubble animation to Mark Bowley on Codepen-->
-    
+            <div class="portfolio_display mobile-hide">
+                <img src="images/site2.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
+            </div>
+            <div class="portfolio_display mobile-hide">
+                <img src="images/site3.png" alt="">
+                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
+                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
+            </div>
+        </section>  
+    </main>  
 
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
