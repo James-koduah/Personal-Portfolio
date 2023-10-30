@@ -27,9 +27,34 @@ body::-webkit-scrollbar-thumb{
     background-color: #222;
 }
 nav{
-    width: 100%;
-    height: 50px;
+    width: 96%;
+    padding: 0 2% 0 2%;
+    height: 60px;
     background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav i{
+    font-size: 150%;
+}
+#logo{
+    width: fit-content;
+    font-size: 4em;
+}
+
+#links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60%;
+    margin-right: 3%;
+}
+#links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 3em;
 }
 
 #welcome{
@@ -85,7 +110,7 @@ nav{
     padding-right: 2%;
     height: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #000000bb;
 }
@@ -283,7 +308,6 @@ nav{
     #welcome{
         flex-direction: column;
         height: fit-content;
-        padding-bottom: 3vh;
     }
     #dialouge{
         width: 100%;
@@ -294,7 +318,8 @@ nav{
         width: 100%;
         padding: 0;
         justify-content: center;
-        margin-top: 4vh;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
     }
     #chatapp{
         height: 80vh;
@@ -302,21 +327,24 @@ nav{
 }
 
 @media (max-width: 550px) {
-    
+    #links{
+        display: none;
+    }
     #dialouge1{
         font-size: 3.8em;
     }
     #dialouge2{
         font-size: 2.2em;
     }
-    
-    
     .mobile-hide{
         display: none;
     }
 }
 @media (max-height: 400px) {
     
+    #chat{
+        min-height: 550px;
+    }
     #dialouge1{
         font-size: 3.8em;
     }
