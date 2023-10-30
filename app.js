@@ -90,6 +90,7 @@ function chatApp(func){
     }
     if (func == 0){
         chatBox.innerHTML = ''
+        chatAppStore = []
         func = 1
     }
     if (func == 1){
