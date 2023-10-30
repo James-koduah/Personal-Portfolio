@@ -215,15 +215,14 @@ nav{
         #000000 80%,
         #1d1c1c 95%
       ); */
-    background: #555;
+    background: #aaa;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px #1b1a1a solid;
 }
 #phonebutton ion-icon{
     font-size: 3em;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 #phonebuttonhome{
