@@ -40,6 +40,7 @@ nav{
     background-attachment: fixed;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 #dialouge{
     width: 57%;
@@ -91,6 +92,7 @@ nav{
 #chatapp{
     width: 90%;
     max-width: 350px;
+    min-width: 300px;
     height: 90%;
     background-color: #000;
     color: #eee;
@@ -100,6 +102,7 @@ nav{
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
+    flex-shrink: 0;
 }
 #chatapp .header{
     width: 100%;
@@ -298,8 +301,7 @@ nav{
     font-size: 4em;
     cursor: pointer;
 }
-
-@media (max-width: 550px) {
+@media (max-width: 750px) {
     #welcome{
         flex-direction: column;
         height: fit-content;
@@ -309,7 +311,20 @@ nav{
         width: 100%;
         height: fit-content;
         min-height: 50vh;
+    }  
+    #chat{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        margin-top: 4vh;
     }
+    #chatapp{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 550px) {
+    
     #dialouge1{
         font-size: 3.8em;
     }
@@ -317,14 +332,7 @@ nav{
         font-size: 2.2em;
     }
     
-    #chat{
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-    }
-    #chatapp{
-        height: 80vh;
-    }
+    
     .mobile-hide{
         display: none;
     }
