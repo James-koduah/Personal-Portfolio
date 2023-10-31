@@ -16,14 +16,21 @@ body{
     color: #fff;
     overflow-x: hidden;
 }
-body::-webkit-scrollbar{
+i{
+    font-size: 150%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+::-webkit-scrollbar{
     width: 10px;
 }
-body::-webkit-scrollbar-track{
+::-webkit-scrollbar-track{
     background-color: #000;
     border-left: 1px #2c2c2c solid;
 }
-body::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     background-color: #222;
 }
 nav{
@@ -36,9 +43,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-nav i{
-    font-size: 150%;
-}
+
 #logo{
     width: fit-content;
     font-size: 4em;
@@ -51,10 +56,9 @@ nav i{
     min-width: 60%;
     margin-right: 3%;
 }
-#links a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 3em;
+#links a{font-size: 3em;}
+#links a:hover{
+    color: #ccc;
 }
 
 #welcome{
@@ -83,9 +87,7 @@ nav i{
     font-weight: 900;
     /* -webkit-text-stroke: 1px #ece0ed; */
 }
-.dialouge_text i{
-    font-size: 150%;
-}
+
 #dialouge1{
     font-size: 6em;
     margin-top: 60px;
@@ -262,23 +264,40 @@ nav i{
 #portfolio{
     width: 94%;
     height: fit-content;
-    padding: 5vh 3% 5vh 3%;
+    padding: 15vh 3% 15vh 3%;
     background: url(images/portfolio.webp) no-repeat;
     background-size: 100% 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+#portfolio header{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    font-size: 2.9em;
+    margin-bottom: 4vh;
+}
 .portfolio_display{
     position: relative;
     width: 30%;
     min-width: 350px;
-    height: 220px;
-    background-color: #222;
-    border-radius: 1vw;
+    background-color: #111;
     border: 1px #555 solid;
+    border-radius: 5px;
     overflow: hidden;
     margin-bottom: 30px;
+}
+.portfolio_display p{
+    width: 96%;
+    height: 30px;
+    font-size: 2.1em;
+    padding: 3px 2% 3px 2%;
+    text-align: center;
+}
+.portfolio_display_img{
+    width: 100%;
+    height: 220px;
 }
 .portfolio_display .left{
     position: absolute;
@@ -303,6 +322,124 @@ nav i{
     align-items: center;
     font-size: 4em;
     cursor: pointer;
+}
+
+
+
+#contact{
+    width: 100%;
+    height: 130vh;
+    /* background: url(images/contact1.png) no-repeat;
+    background-size: 100% 100%; */
+    background-color: #fff;
+}
+#contact .box{
+    width: 100%;
+    height: 85%;
+    padding: 5% 0 10% 0;
+    background-color: #00000066;
+    display: flex;
+}
+
+#contact_form{
+    width: 44vw;
+    height: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_form_box{
+    width: 90%;
+    height: 90%;
+    background-color: #ddd;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+#contact_form_box header{
+    width: 100%;
+    padding: 4px 0 4px 0;
+    font-size: 2.2em;
+    text-align: center;
+}
+.contact_site{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 2.3em;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.contact_site ion-icon{
+    font-size: 180%;
+    margin-right: 25px;
+}
+#contact_email{
+    width: 90%;
+    height: calc(100% - 180px);
+}
+#contact_email div{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+#contact_email div p{
+    font-size: 2.4em;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+#contact_email div input{
+    width: calc(98% - 1px);
+    height: 10px;
+    background: #cccccc;
+    color: #000;
+    border: 1px #444 solid;
+    padding: 2%;
+}
+#contact_email div textarea{
+    width: calc(98% - 1px);
+    height: 20vh;
+    background: #cccccc;
+    color: #000;
+    border: 1px #444 solid;
+    padding: 2%;
+}
+#contact_email div textarea::-webkit-scrollbar{
+    width: 5px;
+}
+#contact_email button{
+    width: 100%;
+    height: 30px;
+    background-color: #111;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    margin-bottom: 3vh;
+}
+#contact_info{
+    width: 55vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#contact_info_box{
+    width: 90%;
+    height: 50%;
+    margin-top: 5vh;
+}
+
+
+#credits{
+    width: 100%;
+    height: 70vh;
+    background-color: #000;
 }
 @media (max-width: 750px) {
     #welcome{
@@ -344,6 +481,15 @@ nav i{
     }
     .mobile-hide{
         display: none;
+    }
+    #contact .box{
+        flex-direction: column;
+    }
+    #contact_form{
+        width: 100vw;
+    }
+    #contact_info{
+        width: 100vw;
     }
 }
 @media (max-height: 400px) {
