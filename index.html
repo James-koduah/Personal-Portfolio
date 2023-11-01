@@ -50,42 +50,28 @@
         </section>
         <section id="portfolio">
             <header><i>P</i>ORTFOLIO</header>
-            <div class="portfolio_display">
-                <p></p>
-                <div class="portfolio_display_img">
-                    <img src="images/site1.png" alt="">
+            <p class="startp">Take a look at works we have completed ranging from One Page Sites to Enterprise Applications</p>
+            <div id="portfolio_display">
+                <div id="cover"></div>
+                <div id="portfolio_scroll">
+                    <div id="portfolio_project_1" class="portfolio_project" onclick="portfolio(0)">
+                        <img src="images/site1.png" alt="">
+                    </div>
+                    <div id="portfolio_project_2" class="portfolio_project">
+                        <img src="images/site2.png" alt="">
+                    </div>
+                    <div id="portfolio_project_3" class="portfolio_project" onclick="portfolio(1)">
+                        <img src="images/site3.png" alt="">
+                    </div>
                 </div>
-                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
-                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
-            </div>
-            <div class="portfolio_display">
-                <p></p>
-                <div class="portfolio_display_img">
-                    <img src="images/site3.png" alt="">
-                </div>
-                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
-                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
-            </div>
-            <a href="https://prince.jaskin.tech" class="portfolio_display">
-                <p>Clean Hands Painting And ArtWork Company<br>
-                An Informational Business and Portfolio Site
-                </p>
-                <div class="portfolio_display_img">
-                    <img src="images/site2.png" alt="">
-                </div>
-                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
-                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
-            </a>
-            <div class="portfolio_display">
-                <p></p>
-                <div class="portfolio_display_img">
-                    <img src="images/site1.png" alt="">
-                </div>
-                <div class="left"><ion-icon name="caret-back"></ion-icon></div>
-                <div class="right"><ion-icon name="caret-forward"></ion-icon></div>
+                <div class="left" onclick="portfolio(0)"><ion-icon name="arrow-back-circle"></ion-icon></div>
+                <div class="right" onclick="portfolio(1)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
             </div>
             <header style="background-color: #00000033;cursor: pointer;margin-top: 10vh"><i>S</i>EE <i>M</i>ORE <i>P</i>ROJECTS ></header>
         </section>  
+        <!-- <section id="contactimg">
+            <div><p><i>C</i>ONTACT <i>U</i>S</p></div>
+        </section> -->
         <section id="contact">
             <div class="box">
                 <div id="contact_form">

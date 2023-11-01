@@ -131,3 +131,16 @@ window.onload = ()=>{
     running_text()
     chatApp(1)
 }
+
+
+
+
+
+let portfolio_images = [
+    ['images/site1.png', 'http://google.com'],
+    ['images/site2.png', 'http://google.com'],
+    ['images/site3.png', 'http://google.com']
+]
+let current_portfolio_set = 0
+function portfolio(action){
+}

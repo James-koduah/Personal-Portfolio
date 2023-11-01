@@ -264,70 +264,126 @@ nav{
 
 
 #portfolio{
-    width: 70%;
+    width: 100%;
     height: fit-content;
-    padding: 5vh 15% 5vh 15%;
+    padding: 5vh 0% 5vh 0%;
     /* background: url(images/portfolio.webp) no-repeat;
     background-size: 100% 100%; */
     background: #fcfcfc;
     color: #111;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 #portfolio header{
-    width: 100%;
+    width: 70%;
     padding: 10px 0 10px 0;
     text-align: center;
     font-size: 3.2em;
     margin-bottom: 4vh;
 }
-.portfolio_display{
-    position: relative;
-    width: 30%;
-    min-width: 350px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.portfolio_display p{
-    width: 96%;
-    height: 30px;
-    font-size: 2.1em;
-    padding: 3px 2% 3px 2%;
+#portfolio .startp{
+    width: 70%;
+    font-size: 3em;
     text-align: center;
+    margin-bottom: 4vh;
 }
-.portfolio_display_img{
+#portfolio_display{
+    position: relative;
     width: 100%;
-    height: 220px;
+    height: 80vh;
+    background: url(images/business_empire.jpg) no-repeat;
+    background-size: 100% 100%;
 }
-.portfolio_display .left{
+#portfolio_display #cover{
     position: absolute;
-    top: calc(50% - 10px); left: calc(0% - 10px);
-    width: 30px; height: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    filter: blur(50px)
+}
+#portfolio_scroll{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.portfolio_project{
+    cursor: pointer;
+    border: 2px #aaa solid;
+}
+#portfolio_project_1{
+    position: absolute;
+    top: 25%;
+    left: -15%;
+    width: 40vw;
+    height: 45%;
+    filter: blur(1px);
+}
+#portfolio_project_2{
+    width: 40vw;
+    height: 60%;
+    background-color: #000;
+    opacity: 1;
+}
+#portfolio_project_3{
+    position: absolute;
+    top: 25%;
+    right: -15%;
+    width: 40vw;
+    height: 45%;
+    filter: blur(1px);
+}
+
+#portfolio_display .left{
+    position: absolute;
+    top: 10%; left: calc(0% - 10px);
+    width: 50px; height: 50px;
     background-color: #ffffff99;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+    font-size: 5em;
     cursor: pointer;
 }
-.portfolio_display .right{
+#portfolio_display .right{
     position: absolute;
-    top: calc(50% - 10px); right: calc(0% - 10px);
-    width: 30px; height: 30px;
+    top: 10%; right: 0%;
+    width: 50px; height: 50px;
     background-color: #ffffff99;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+    font-size: 5em;
     cursor: pointer;
 }
 
 
-
+/* #contactimg{
+    width: 100%;
+    height: 80vh;
+    background: url(images/business_empire.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+#contactimg div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contactimg div p{
+    font-size: 10em;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;    
+} */
 #contact{
     width: 100%;
     height: 110vh;
@@ -471,7 +527,7 @@ nav{
         height: fit-content;
     }
     #dialouge{
-        width: 100%;
+        width: 97%;
         height: fit-content;
         min-height: 50vh;
     }  
@@ -520,6 +576,19 @@ nav{
         font-size: 2.2em;
     }
     .mobile-hide{
+        display: none;
+    }
+    #contact_info_box{
+        padding-right: 0%;
+        text-align: center;
+    }
+    #portfolio_project_2{
+        width: 95vw;
+    }
+    #portfolio_project_1{
+        display: none;
+    }
+    #portfolio_project_3{
         display: none;
     }
 }
