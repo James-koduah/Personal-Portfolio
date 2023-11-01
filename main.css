@@ -38,8 +38,8 @@ nav{
     width: 96%;
     padding: 0 2% 0 2%;
     height: 60px;
-    background: #000;
     color: #fff;
+    background: #00000066;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,21 +64,36 @@ nav{
 
 #welcome{
     width: 100%;
-    height: calc(100vh - 50px);
-    background: url(images/business_empire.jpg) no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    animation-name: background_change;
+    animation-duration:  50s;
+    animation-iteration-count:  infinite;
+    transition: 1s;
 }
+@keyframes background_change {
+    0%,49%{
+        background: url(images/home3.jpg) no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    50%,100%{
+        background: url(images/home2.jpg) no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+
+}
+
 #dialouge{
     width: 57%;
     padding-left: 3%;
-    height: 100%;
+    height: calc(100% - 50px);
     display: flex;
     justify-content: left;
-    background-color: #000000bb;
+    background-color: #00000066;
     flex-direction: column;
 }
 .dialouge_text{
@@ -111,11 +126,11 @@ nav{
 #chat{
     width: 38%;
     padding-right: 2%;
-    height: 100%;
+    height: calc(100% - 50px);
     display: flex;
     justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #000000bb;
+    background-color: #00000066;
 }
 #chatapp{
     position: relative;
@@ -249,9 +264,9 @@ nav{
 
 
 #portfolio{
-    width: 94%;
+    width: 70%;
     height: fit-content;
-    padding: 5vh 3% 5vh 3%;
+    padding: 5vh 15% 5vh 15%;
     /* background: url(images/portfolio.webp) no-repeat;
     background-size: 100% 100%; */
     background: #fcfcfc;
@@ -436,6 +451,9 @@ nav{
 .smaller{
     font-size: 2.5em !important;
     font-weight: 600 !important;
+}
+.smaller ion-icon{
+    font-size: 130%;
 }
 .margin_bottom{
     margin-bottom: 15px;

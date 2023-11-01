@@ -50,11 +50,6 @@ function running_text(){
     }
     dialouge(text, 'dialouge1', two)
 }
-running_text()
-
-
-
-
 
 let chatBox = document.getElementById('chatbox')
 let chatAction = document.getElementById('chat_action')
@@ -132,4 +127,7 @@ function chatApp(func){
     }
     chatAppStore.push(func)
 }
-chatApp(1)
+window.onload = ()=>{
+    running_text()
+    chatApp(1)
+}
