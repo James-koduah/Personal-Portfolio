@@ -136,6 +136,7 @@ nav{
     position: relative;
     width: 320px;
     height: 90%;
+    max-height: 900px;
     background: url(images/chatbackground.jpg) no-repeat;
     background-size: 100% 100%;
     color: #eee;
@@ -244,10 +245,17 @@ nav{
     align-items: center;
     background-color: #00000066;
 }
+#phonebutton div{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 #phonebutton ion-icon{
     font-size: 3em;
     color: #000;
-    cursor: pointer;
 }
 #phonebuttonhome{
     width: 30px;
@@ -319,10 +327,10 @@ nav{
 }
 #portfolio_project_1{
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: -15%;
     width: 40vw;
-    height: 45%;
+    height: 40%;
     filter: blur(1px);
 }
 #portfolio_project_2{
@@ -333,10 +341,10 @@ nav{
 }
 #portfolio_project_3{
     position: absolute;
-    top: 25%;
+    top: 30%;
     right: -15%;
     width: 40vw;
-    height: 45%;
+    height: 40%;
     filter: blur(1px);
 }
 
@@ -563,6 +571,15 @@ nav{
         width: 100vw;
         margin-bottom: 5vh;
     }
+    #portfolio_project_2{
+        width: 95vw;
+    }
+    #portfolio_project_1{
+        display: none;
+    }
+    #portfolio_project_3{
+        display: none;
+    }
 }
 
 @media (max-width: 550px) {
@@ -581,15 +598,6 @@ nav{
     #contact_info_box{
         padding-right: 0%;
         text-align: center;
-    }
-    #portfolio_project_2{
-        width: 95vw;
-    }
-    #portfolio_project_1{
-        display: none;
-    }
-    #portfolio_project_3{
-        display: none;
     }
 }
 @media (max-height: 400px) {

@@ -143,4 +143,31 @@ let portfolio_images = [
 ]
 let current_portfolio_set = 0
 function portfolio(action){
+    let start = current_portfolio_set
+    let add;
+    if (action == 0){
+        add=-1
+        current_portfolio_set--
+        if (current_portfolio_set < 0){
+            current_portfolio_set = portfolio_images.length-1
+        }
+    }
+    else{
+        add=1
+        current_portfolio_set++
+        if (current_portfolio_set > portfolio_images.length-1){
+            current_portfolio_set = 0
+        }
+    }
+    for (let i = 1; i < 4; i++){
+        if (start > portfolio_images.length-1){
+            start = 0
+        }
+        let div = document.getElementById(`portfolio_project_${i}`)
+        if (i == 2){
+            div.onclick = ()=>{window.location.href =  portfolio_images[start][1]}
+        }
+        div.getElementsByTagName('img')[0].src = portfolio_images[start][0]
+        start++
+    }
 }
