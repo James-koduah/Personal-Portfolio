@@ -182,7 +182,7 @@ nav{
 }
 #chatbox{
     width: 96%;
-    padding: 15px 2% 5vh 2%;
+    padding: 35px 2% 5vh 2%;
     height: calc(100% - 3% - 15% - 30px);
     display: flex;
     flex-direction: column;
@@ -274,7 +274,7 @@ nav{
 #portfolio{
     width: 100%;
     height: fit-content;
-    padding: 5vh 0% 5vh 0%;
+    padding: 10vh 0% 15vh 0%;
     /* background: url(images/portfolio.webp) no-repeat;
     background-size: 100% 100%; */
     background: #fcfcfc;
@@ -294,13 +294,13 @@ nav{
     width: 70%;
     font-size: 3em;
     text-align: center;
-    margin-bottom: 4vh;
+    margin-bottom: 10vh;
 }
 #portfolio_display{
     position: relative;
     width: 100%;
     height: 80vh;
-    background: url(images/business_empire.jpg) no-repeat;
+    background: url(images/white_sea.webp) no-repeat;
     background-size: 100% 100%;
 }
 #portfolio_display #cover{
@@ -324,6 +324,8 @@ nav{
 .portfolio_project{
     cursor: pointer;
     border: 2px #aaa solid;
+    border-radius: 5px;
+    overflow: hidden;
 }
 #portfolio_project_1{
     position: absolute;
@@ -571,14 +573,36 @@ nav{
         width: 100vw;
         margin-bottom: 5vh;
     }
+    #portfolio_display{
+        height: 60vh;
+    }
     #portfolio_project_2{
         width: 95vw;
+        height: 30vh;
+        z-index: 100;
     }
     #portfolio_project_1{
-        display: none;
+        width: 80vw;
+        top: -20%;
+        left: 10vw;
     }
     #portfolio_project_3{
-        display: none;
+        top: calc(100% - 20%);
+        right: 10vw;
+        width: 80vw;
+    }
+    #portfolio_display .right{
+        top: 0%;
+        left: calc(50% - 25px);
+        transform: rotate(-90deg);
+    }
+    #portfolio_display .left{
+        top: calc(100% - 50px);
+        left: calc(50% - 25px);
+        transform: rotate(-90deg);
+    }
+    .portfolio_project{
+        border: none;
     }
 }
 
@@ -600,8 +624,10 @@ nav{
         text-align: center;
     }
 }
-@media (max-height: 400px) {
-    
+@media (max-height: 450px) {
+    #welcome{
+        height: 150vh;
+    }
     #chat{
         min-height: 550px;
     }

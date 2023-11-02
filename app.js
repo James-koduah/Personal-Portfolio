@@ -141,7 +141,7 @@ let portfolio_images = [
     ['images/site2.png', 'http://google.com'],
     ['images/site3.png', 'http://google.com']
 ]
-let current_portfolio_set = 0
+let current_portfolio_set = 1
 function portfolio(action){
     let start = current_portfolio_set
     let add;
@@ -165,7 +165,8 @@ function portfolio(action){
         }
         let div = document.getElementById(`portfolio_project_${i}`)
         if (i == 2){
-            div.onclick = ()=>{window.location.href =  portfolio_images[start][1]}
+            div.onclick = ()=>{window.location.href =  portfolio_images[start][1
+            ]}
         }
         div.getElementsByTagName('img')[0].src = portfolio_images[start][0]
         start++
