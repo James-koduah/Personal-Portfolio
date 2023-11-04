@@ -640,9 +640,6 @@ nav{
     .portfolio_project{
         border: none;
     }
-    #services{
-        height: 75vh;
-    }
 }
 
 @media (max-width: 550px) {
