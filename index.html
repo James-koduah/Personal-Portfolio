@@ -37,13 +37,25 @@
         }
         #precover h1{
             animation-name: bobs;
-            animation-duration: 2s;
+            animation-duration: 3s;
             animation-iteration-count: infinite;
+            --bg-size: 400%;
+            --color-one: #8d31ef;
+            --color-two: pink;
+            background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
         }
         @keyframes bobs {
-            0%{transform: scale(1.0);}
-            50%{transform: scale(1.2);}
-            100%{transform: 1.0;}
+            to {
+                background-position: var(--bg-size) 0;
+            }
         }
 
     </style>

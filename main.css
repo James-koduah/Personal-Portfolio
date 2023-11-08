@@ -701,7 +701,7 @@ nav{
 }
 @media (max-height: 450px) {
     #welcome{
-        height: 120vh;
+        height: fit-content;
     }
     #dialouge1{
         font-size: 3.8em;
