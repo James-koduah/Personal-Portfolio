@@ -8,8 +8,50 @@
     <title>Jaskin Tech</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        i{
+            font-size: 150%;
+        }
+        body{
+            background-color: #111;
+            width: 100vw;
+            height: 100vh;
+            font-size: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+        #precover{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 300;
+            background: #000;
+            color: #7a0af3;
+            font-size: 2.4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #precover h1{
+            animation-name: bobs;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes bobs {
+            0%{transform: scale(1.0);}
+            50%{transform: scale(1.2);}
+            100%{transform: 1.0;}
+        }
+
+    </style>
 </head>
 <body>
+    <div id="precover">
+        <h1><i>J</i>ASKIN <i>T</i>ECH.</h1>
+    </div>
     <img src="images/home2.jpg" style="display: none;">
     <img src="images/home3.jpg" style="display: none;">
     <main>

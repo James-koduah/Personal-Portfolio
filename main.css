@@ -21,18 +21,7 @@ img{
     object-fit: cover;
 }
 
-body{
-    background-color: #111;
-    width: 100vw;
-    height: 100vh;
-    font-size: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    color: var(--text-color);
-    overflow-x: hidden;
-}
-i{
-    font-size: 150%;
-}
+
 a{
     text-decoration: none;
     color: inherit;

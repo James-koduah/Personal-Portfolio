@@ -130,6 +130,7 @@ function chatApp(func){
 window.onload = ()=>{
     running_text()
     chatApp(1)
+    document.getElementById('precover').style.display = 'none'
 }
 
 
