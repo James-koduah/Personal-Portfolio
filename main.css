@@ -7,6 +7,13 @@
     /* --main-bg: #0b011a;
     --main-bg: #111; */
     --text-color: #000;
+    --home-bg-size: 100% 100%;
+    --violet: #e8d9f8;
+    --light-violet: #e8d9f8;
+}
+main{
+    width: 100vw;
+    height: 100vh;
 }
 img{
     width: 100%;
@@ -44,7 +51,7 @@ nav{
     width: 96%;
     padding: 0 2% 0 2%;
     height: 60px;
-    color: #fff;
+    color: var(--violet);
     background: #00000066;
     display: flex;
     align-items: center;
@@ -54,6 +61,7 @@ nav{
 #logo{
     width: fit-content;
     font-size: 4em;
+    font-weight: 700;
 }
 
 #links{
@@ -63,7 +71,10 @@ nav{
     min-width: 60%;
     margin-right: 3%;
 }
-#links a{font-size: 3em;}
+#links a{
+    font-size: 3.2em;
+    font-weight: 600;
+}
 #links a:hover{
     color: #ccc;
 }
@@ -78,16 +89,22 @@ nav{
     animation-duration:  50s;
     animation-iteration-count:  infinite;
     transition: 1s;
+    animation-timing-function: ease-in-out;
 }
 @keyframes background_change {
-    0%,49%{
-        background: url(images/home3.jpg) no-repeat;
-        background-size: 100% 100%;
+    0%,35%{
+        background: url(images/laptop2.jpeg) no-repeat;
+        background-size: var(--home-bg-size);
         background-attachment: fixed;
     }
-    50%,100%{
-        background: url(images/home2.jpg) no-repeat;
-        background-size: 100% 100%;
+    36%,69%{
+        background: url(images/violet6.jpeg) no-repeat;
+        background-size: var(--home-bg-size);
+        background-attachment: fixed;
+    }
+    70%,100%{
+        background: url(images/keyboard2.jpeg) no-repeat;
+        background-size: var(--home-bg-size);
         background-attachment: fixed;
     }
 
@@ -105,18 +122,18 @@ nav{
 .dialouge_text{
     width: fit-content;
     height: fit-content;
-    color: #fff;
+    color: var(--light-violet);
     font-weight: 900;
     /* -webkit-text-stroke: 1px #ece0ed; */
 }
 
 #dialouge1{
     font-size: 6em;
-    margin-top: 60px;
+    margin-top: 120px;
 }
 #dialouge2{
     font-size: 3.2em;
-    font-size: 600;
+    font-weight: 600;
 }
 .important{
     display: flex;
@@ -134,7 +151,7 @@ nav{
     padding-right: 2%;
     height: calc(100% - 50px);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #00000066;
 }
@@ -658,6 +675,9 @@ nav{
     #contact_info_box{
         padding-right: 0%;
         text-align: center;
+    }
+    .service{
+        width: 47%;
     }
 }
 @media (max-height: 450px) {

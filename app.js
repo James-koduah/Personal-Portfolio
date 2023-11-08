@@ -46,7 +46,7 @@ function running_text(){
             <i>F</i>IND&nbsp;<i>S</i>OME&nbsp;<i>I</i>NSPIRATION&nbsp;<i>F</i>OR&nbsp;<i>Y</i>OUR&nbsp;<i>I</i>DEA&nbsp\
             <i><ion-icon name="play-circle"></ion-icon><i></p>'
         }
-        dialouge(text, 'dialouge2', last)
+        dialouge(text, 'dialouge2')
     }
     dialouge(text, 'dialouge1', two)
 }
