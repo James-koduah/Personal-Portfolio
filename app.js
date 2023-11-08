@@ -34,7 +34,7 @@ function dialouge(text, box, callback=false){
 }
 function running_text(){
     let text = '-JASKIN -THEC.^^^^ECH.]-ADD -TECHNOLOGY -TO -YOUR -ASSETS\
-    ]-IT -IS -WORTH -THE -INVESTMENT|**^*****|**^*****|**^*****|**^*****'
+    ]-IT -IS -WORTH -THE -INVESTMENT.|**^*****|**^*****|**^*****|**^*****'
     function two(){
         let text = '-A -BUSINESS -LANDING -PAGE.*.*.*]\
         -AN -ECOMMERECE -SITE.*.*.*]\
@@ -139,7 +139,8 @@ window.onload = ()=>{
 let portfolio_images = [
     ['images/site1.png', 'http://google.com'],
     ['images/site2.png', 'http://google.com'],
-    ['images/site3.png', 'http://google.com']
+    ['images/site3.png', 'http://google.com'],
+    ['images/violet6.jpeg', 'http://google.com']
 ]
 let current_portfolio_set = 1
 function portfolio(action){
@@ -159,7 +160,7 @@ function portfolio(action){
             current_portfolio_set = 0
         }
     }
-    for (let i = 1; i < 4; i++){
+    for (let i = 1; i <= 4; i++){
         if (start > portfolio_images.length-1){
             start = 0
         }
