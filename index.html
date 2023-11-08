@@ -34,6 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         #precover h1{
             animation-name: bobs;
@@ -57,12 +58,28 @@
                 background-position: var(--bg-size) 0;
             }
         }
+        #precover div{
+            width: 20px;
+            height: 3px;
+            background-color: #8d31ef;
+            margin-top: 10px;
+            margin-left: -20em;
+            animation: slide 4s infinite ease-in-out;
+        }
+        @keyframes slide {
+            0%{margin-left: -20em; width: 20px;}
+            25%{width: 50px;}
+            50%{margin-left: 20em; width: 20px;}
+            75%{width: 50px;}
+            100%{margin-left: -20em; width: 20px;}            
+        }
 
     </style>
 </head>
 <body>
     <div id="precover">
         <h1><i>J</i>ASKIN <i>T</i>ECH.</h1>
+        <div></div>
     </div>
     <img src="images/home2.jpg" style="display: none;">
     <img src="images/home3.jpg" style="display: none;">
