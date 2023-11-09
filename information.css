@@ -70,6 +70,17 @@
 
 
 @media (max-width: 800px) {
+    #information_header{
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    #information_header h2{
+        font-size: 3.4em;
+    }
+    #information_header h3{
+        font-size: 2.9em;
+    }
     #service_information .item{
         width: 95%;
         margin-bottom: 20px;
