@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="information.css">
     <title>Jaskin Tech</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -148,21 +147,6 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="image_frame"><img src="images/laptop3.jpeg" alt=""></div>
-                    <div class="info">
-                        <header><i>P</i>URPOSE <i>D</i>RIVEN <i>S</i>ITES</header>
-                        <p>Your Website isn't supposed to be just pretty, but it should be
-                            a means to an end.
-                        </p>
-                        <p>A Business Website aims to convert customers. A 
-                            Portfolio Website's purpose is to make people 
-                            intrested in your work, etc
-                        </p>
-                        <p>See how we help you achieve this...</p>
-                        <div class="learn_more">READ MORE</div>
-                    </div>
-                </div>
-                <div class="item">
                     <div class="image_frame"><img src="images/datacenter4.jpeg" alt=""></div>
                     <div class="info">
                         <header><i>P</i>URPOSE <i>D</i>RIVEN <i>S</i>ITES</header>
@@ -177,6 +161,34 @@
                         <div class="learn_more">READ MORE</div>
                     </div>
                 </div>
+                <div class="item mobile-hide" >
+                    <div class="image_frame"><img src="images/laptop3.jpeg" alt=""></div>
+                    <div class="info">
+                        <header><i>P</i>URPOSE <i>D</i>RIVEN <i>S</i>ITES</header>
+                        <p>Your Website isn't supposed to be just pretty, but it should be
+                            a means to an end.
+                        </p>
+                        <p>A Business Website aims to convert customers. A 
+                            Portfolio Website's purpose is to make people 
+                            intrested in your work, etc
+                        </p>
+                        <p>See how we help you achieve this...</p>
+                        <div class="learn_more">READ MORE</div>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio_display">
+                <div id="portfolio_scroll_right">
+                    <div id="portfolio_scroll">
+                        <div class="portfolio_project" style="background: blue;" class="portfolio_project"></div>
+                        <div class="portfolio_project" style="background: rgb(0, 255, 145);" class="portfolio_project"></div>
+                        <div class="portfolio_project current" style="background: rgb(127, 127, 174);" class="portfolio_project"></div>
+                        <div class="portfolio_project" style="background: blue;" class="portfolio_project"></div>
+                        <div class="portfolio_project" style="background: rgb(127, 127, 174);" class="portfolio_project"></div>
+                    </div>
+                </div>
+                <div class="left" onclick="portfolio_scroll(0)"><ion-icon name="arrow-back-circle"></ion-icon></div>
+                <div class="right" onclick="portfolio_scroll(1)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
             </div>
         </section>
         <section id="services">
@@ -189,22 +201,22 @@
                 <div class="service"></div>
             </div>
         </section>
-        <section id="portfolio">
+        <!-- <section id="portfolio">
             <header><i>P</i>ORTFOLIO</header>
             <p class="startp">Take a look at works we have completed ranging from One Page Sites to Enterprise Applications</p>
             <div id="portfolio_display">
                 <div id="cover"></div>
                 <div id="portfolio_scroll">
-                    <div id="portfolio_project_1" class="portfolio_project" onclick="portfolio(0)">
+                    <div class="portfolio_project" onclick="portfolio(0)">
                         <img src="images/site1.png" alt="">
                     </div>
-                    <div id="portfolio_project_2" class="portfolio_project">
+                    <div class="portfolio_project">
                         <img src="images/site2.png" alt="">
                     </div>
-                    <div id="portfolio_project_3" class="portfolio_project" onclick="portfolio(1)">
+                    <div class="portfolio_project" onclick="portfolio(1)">
                         <img src="images/site3.png" alt="">
                     </div>
-                    <div id="portfolio_project_4" class="portfolio_project" onclick="portfolio(1)">
+                    <div class="portfolio_project" onclick="portfolio(1)">
                         <img src="images/site3.png" alt="">
                     </div>
                 </div>
@@ -212,7 +224,7 @@
                 <div class="right" onclick="portfolio(1)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
             </div>
             <header style="background-color: #00000033;cursor: pointer;margin-top: 5vh"><i>S</i>EE <i>M</i>ORE <i>P</i>ROJECTS ></header>
-        </section>
+        </section> -->
         <section id="contact">
             <div class="box">
                 <div id="contact_form">
@@ -291,5 +303,6 @@
     </main>  
 
     <script src="app.js"></script>
+    <link rel="stylesheet" href="information.css">
 </body>
 </html>

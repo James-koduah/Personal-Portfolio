@@ -174,3 +174,39 @@ function portfolio(action){
         start++
     }
 }
+
+let p_scroll = document.getElementById('portfolio_scroll')
+let p_scroll_right = document.getElementById('portfolio_scroll_right')
+let p_pos = -72.5
+let p_r_pos = 0
+let p_r_pos_w = 100;
+function portfolio_scroll(arg){
+    let current = p_scroll.querySelector('.current')
+    console.log(current)
+    if (arg === 0){
+        p_pos += -50 
+        p_scroll.style.left = `${p_pos}vw`
+        let new_p = document.createElement('div')
+        new_p.className = 'portfolio_project'
+        new_p.style.background = 'brown'
+        p_scroll.appendChild(new_p)
+        let new_c = current.nextElementSibling
+        current.className = 'portfolio_project'
+        new_c.className += ' current'
+    }
+    if (arg === 1){
+        p_pos += 50 
+        p_scroll.style.left = `${p_pos}vw`
+        p_r_pos += -50
+        p_r_pos_w += 50
+        p_scroll_right.style.width = `${p_r_pos_w}vw`
+        p_scroll_right.style.left = `${p_r_pos}vw`
+        let new_p = document.createElement('div')
+        new_p.className = 'portfolio_project'
+        new_p.style.background = 'brown'
+        p_scroll.insertBefore(new_p, p_scroll.children[0])
+        let new_c = current.previousElementSibling
+        current.className = 'portfolio_project'
+        new_c.className += ' current'
+    }
+}

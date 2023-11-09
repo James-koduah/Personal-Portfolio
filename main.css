@@ -160,9 +160,9 @@ nav{
     width: 300px;
     height: 90%;
     max-height: 900px;
-    background: url(images/chatbackground.jpg) no-repeat;
+    background: url(images/chatbackgrounddark.jpg) no-repeat;
     background-size: 100% 100%;
-    color: #eee;
+    color: #c2c2c2;
     border-radius: 10px;
     border: 4px #6c6a6a solid;
     display: flex;
@@ -218,7 +218,7 @@ nav{
     min-width: 46%;
     width: fit-content;
     max-width: 80%;
-    background-color: #222;
+    background-color: #333;
     height: fit-content;
     margin-top: 5px;
     border-radius: 5px;
@@ -230,7 +230,7 @@ nav{
 
 .chatright{
     align-self: flex-end;
-    background-color: #180e21;
+    background-color: #222;
 }
 
 #chat_action{
@@ -280,7 +280,7 @@ nav{
 }
 #phonebutton ion-icon{
     font-size: 3em;
-    color: #000;
+    color: #fff;
 }
 #phonebuttonhome{
     width: 30px;
@@ -296,12 +296,10 @@ nav{
 
 
 
-#portfolio{
+/* #portfolio{
     width: 100%;
     height: fit-content;
     padding: 10vh 0% 15vh 0%;
-    /* background: url(images/portfolio.webp) no-repeat;
-    background-size: 100% 100%; */
     background: var(--main-bg);
     color: var(--text-color);
     display: flex;
@@ -412,7 +410,7 @@ nav{
     align-items: center;
     font-size: 5em;
     cursor: pointer;
-}
+} */
 
 
 
@@ -625,7 +623,7 @@ nav{
         padding: 0;
         justify-content: center;
         padding-top: 4vh;
-        padding-bottom: 4vh;
+        padding-bottom: 10vh;
     }
     #chatapp{
         height: 80vh;
@@ -652,7 +650,7 @@ nav{
         width: 100vw;
         margin-bottom: 5vh;
     }
-    #portfolio_display{
+    /* #portfolio_display{
         height: 90vh;
     }
     #portfolio_project_2{
@@ -682,7 +680,7 @@ nav{
     }
     .portfolio_project{
         border: none;
-    }
+    } */
 }
 
 @media (max-width: 550px) {
@@ -690,11 +688,15 @@ nav{
     #links{
         display: none;
     }
+    #dialouge{
+        width: 87%;
+        min-height: 50vh;
+    }
     #dialouge1{
-        font-size: 3.8em;
+        font-size: 3.6em;
     }
     #dialouge2{
-        font-size: 2.2em;
+        font-size: 2.4em;
     }
     .mobile-hide{
         display: none;
@@ -705,6 +707,9 @@ nav{
     }
     .service{
         width: 47%;
+    }
+    .mobile-hide{
+        display: none !important;
     }
 }
 @media (max-height: 450px) {
@@ -719,6 +724,6 @@ nav{
     }
     
     .mobile-hide{
-        display: none;
+        display: none !important;
     }
 }
