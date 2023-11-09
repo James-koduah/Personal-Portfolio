@@ -10,6 +10,10 @@
     --home-bg-size: 100% 100%;
     --violet: #e8d9f8;
     --light-violet: #e8d9f8;
+    --purple: #8d31ef;
+    --purple-soft: #4e207f;
+    --purple-faded: #8d31ef12; 
+    --sans: Oscine, sans-serif;
 }
 main{
     width: 100vw;
@@ -61,18 +65,18 @@ nav{
     margin-right: 3%;
 }
 #links a{
-    font-size: 3.2em;
+    font-size: 2.9em;
     font-weight: 600;
 }
 #links a:hover{
-    color: #ccc;
+    color: #8d31ef;
 }
 
 #welcome{
     width: 100%;
     height: 100vh;
     animation-name: background_change;
-    animation-duration:  70s;
+    animation-duration:  100s;
     animation-iteration-count:  infinite;
     transition: 1s;
     animation-timing-function: ease-in-out;
@@ -106,6 +110,7 @@ nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    background: #00000066;
 }
 #dialouge{
     width: 57%;
@@ -113,7 +118,6 @@ nav{
     height: 100%;
     display: flex;
     justify-content: left;
-    background-color: #00000066;
     flex-direction: column;
 }
 .dialouge_text{
@@ -150,7 +154,6 @@ nav{
     display: flex;
     justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #00000066;
 }
 #chatapp{
     position: relative;
@@ -161,7 +164,7 @@ nav{
     background-size: 100% 100%;
     color: #eee;
     border-radius: 10px;
-    border: 5px #6c6a6a solid;
+    border: 4px #6c6a6a solid;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -253,7 +256,7 @@ nav{
     font-size: 2.1em;
     text-align: center;
     cursor: pointer;
-    font-family: Oscine, sans-serif;
+    font-family: var(--sans);
 }
 .chat_action:hover{
     background-color: rgb(2, 31, 59);
@@ -602,17 +605,21 @@ nav{
         flex-direction: column-reverse;
         height: fit-content;
     }
-    #dialouge1{
-        margin-top: 40px;
-    }
     #welcome nav{
         align-self: start;
     }
     #dialouge{
-        width: 97%;
+        width: 77%;
         height: fit-content;
         min-height: 40vh;
     }  
+    #dialouge1{
+        margin-top: 60px;
+        font-size: 5.5em;
+    }
+    #dialouge2{
+        font-size: 2.9em;
+    }
     #chat{
         width: 100%;
         padding: 0;
@@ -679,6 +686,7 @@ nav{
 }
 
 @media (max-width: 550px) {
+    #logo{font-size: 3em;color: #8d31ef;}
     #links{
         display: none;
     }

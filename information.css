@@ -1,0 +1,127 @@
+#information{
+    width: 100%;
+    height: 200vh;
+    background: url(images/background2.jpeg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 80px 0 10vh 0;
+    color: var(--light-violet);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#information_header{
+    width: 94%;
+    padding: 0 3% 40px 3%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--purple);
+}
+#information_header h2{
+    font-size: 4em;
+}
+#information_header h3{
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+#service_information{
+    width: 94%;
+    padding: 0 3% 0 3%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#service_information .item{
+    width: 32%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+#service_information .item .image_frame{
+    width: 100%;
+    height: 230px;
+}
+#service_information .item .info{
+    width: 94%;
+    padding: 15px 3% 15px 3%;
+    height: 240px;
+}
+#service_information .item .info header{
+    font-size: 2.6em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+#service_information .item .info p{
+    font-size: 3em;
+    color: #aaa;
+}
+.learn_more{
+    width: fit-content;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--purple);
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 800px) {
+    #service_information .item{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #services_info .item{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    border: 2px var(--purple-faded) dashed;
+}
+#services_info .item .img_frame{
+    width: 40%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#services_info .item .img_frame img{
+    width: 60%;
+    height: auto;
+}
+#services_info .item .info{
+    width: 40%;
+    padding: 3vh 1% 3vh 1%;
+}
+#services_info .item .info p{
+    font-size: 3.4em;
+} */
