@@ -259,7 +259,7 @@ nav{
     font-family: var(--sans);
 }
 .chat_action:hover{
-    background-color: rgb(2, 31, 59);
+    background-color: #111;
 }
 
 #phonebutton{

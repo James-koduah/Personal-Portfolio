@@ -165,7 +165,7 @@ function portfolio(action){
         if (start > portfolio_images.length-1){
             start = 0
         }
-        let div = document.getElementById(`portfolio_project_${i}`)
+        let div = document.getElementById(`scroll_display_item_${i}`)
         if (i == 2){
             div.onclick = ()=>{window.location.href =  portfolio_images[start][1
             ]}
@@ -175,38 +175,84 @@ function portfolio(action){
     }
 }
 
+let p_projects = [
+    ['images/laptop.jpeg', '#'],
+    ['images/happy1.png', '#'],
+    ['images/keyboard4.jpeg', '#'],
+    ['images/laptop2.jpeg', '#'],
+    ['images/laptop3.jpeg', '#'],
+    ['images/laptop4.jpeg', '#'],
+    ['images/laptop5.jpeg', '#'],
+    ['images/laptop6.jpeg', '#'],
+    ['images/datacenter1.jpg', '#'],
+    ['images/datacenter2.jpeg', '#'],
+    ['images/datacenter3.jpg', '#'],
+    ['images/datacenter4.jpeg', '#'],
+    ['images/datacenter5.jpeg', '#'],
+    ['images/flower.jpg', '#'],
+    ['images/office1.jpeg', '#']
+]
+let p_projects_index_r = 4
+let p_projects_index_l = 0
 let p_scroll = document.getElementById('portfolio_scroll')
 let p_scroll_right = document.getElementById('portfolio_scroll_right')
-let p_pos = -72.5
+let p_scroll_position = -72.5
 let p_r_pos = 0
 let p_r_pos_w = 100;
-function portfolio_scroll(arg){
-    let current = p_scroll.querySelector('.current')
-    console.log(current)
-    if (arg === 0){
-        p_pos += -50 
-        p_scroll.style.left = `${p_pos}vw`
-        let new_p = document.createElement('div')
-        new_p.className = 'portfolio_project'
-        new_p.style.background = 'brown'
-        p_scroll.appendChild(new_p)
-        let new_c = current.nextElementSibling
-        current.className = 'portfolio_project'
-        new_c.className += ' current'
+function portfolio_scroll(movement){
+    let current = p_scroll.querySelector('.scroll_current')
+    let img = document.createElement('img')
+    if (movement == 0){
+        p_projects_index_l--
+        if (p_projects_index_l < 0){
+            p_projects_index_l = p_projects.length - 1;
+        }
+        img.src = p_projects[p_projects_index_l][0]
     }
-    if (arg === 1){
-        p_pos += 50 
-        p_scroll.style.left = `${p_pos}vw`
+    if (movement == 1){
+        p_projects_index_r++
+        if (p_projects_index_r > p_projects.length -1){
+            p_projects_index_r = 0
+        }
+        img.src = p_projects[p_projects_index_r][0]
+    }
+    if (movement === 0){ //Moving right
+        /* Move the portfolio div to the left */
+        p_scroll_position += -50 
+        p_scroll.style.left = `${p_scroll_position}vw`
+        /* Add a new elemeent to the right */
+        let new_p = document.createElement('div')
+        new_p.className = 'scroll_display_item'
+        new_p.appendChild(img)
+        p_scroll.appendChild(new_p)
+        /* Make the element on the right of the previous centered element the new center */
+        let new_current = current.nextElementSibling
+        current.className = 'scroll_display_item'
+        new_current.className += ' scroll_current'
+    }
+    if (movement === 1){
+        /* Move the portfolio div to the right */
+        p_scroll_position += 50 
+        p_scroll.style.left = `${p_scroll_position}vw`
+        /* Move the cover div to the left 
+           This is because when we move the main div to the right, we're going to get an empty
+           space and so we need the cover div to move to the right to make up for the empty space
+        */
         p_r_pos += -50
         p_r_pos_w += 50
         p_scroll_right.style.width = `${p_r_pos_w}vw`
         p_scroll_right.style.left = `${p_r_pos}vw`
+        /* Add a new elemeent to the left */
         let new_p = document.createElement('div')
-        new_p.className = 'portfolio_project'
-        new_p.style.background = 'brown'
+        new_p.className = 'scroll_display_item'
+        new_p.appendChild(img)
         p_scroll.insertBefore(new_p, p_scroll.children[0])
-        let new_c = current.previousElementSibling
-        current.className = 'portfolio_project'
-        new_c.className += ' current'
+        /* Make the element on the left of the previous centered element the new center */
+        let new_current = current.previousElementSibling
+        current.className = 'scroll_display_item'
+        new_current.className += ' scroll_current'
     }
 }
+
+
+
