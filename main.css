@@ -689,6 +689,7 @@ nav{
         display: none;
     }
     #dialouge{
+        display: none;
         width: 87%;
         min-height: 50vh;
     }
