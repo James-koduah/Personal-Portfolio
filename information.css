@@ -98,9 +98,15 @@
     }
     #service_information .item{
         width: 95%;
+        height: fit-content;
         margin-bottom: 20px;
     }
     #service_information .item .image_frame{
         height: 210px;   
+    }
+    
+    #service_information .item .info{
+        height: fit-content;
+        margin-bottom: 50px;
     }
 }
