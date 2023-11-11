@@ -60,9 +60,8 @@
     #product1_img_frame{
         width: 100vw;
         height: 60vh;
-        background: url(images/man3.jpeg) no-repeat;
+        background: url(images/computer7.jpeg) no-repeat;
         background-size: 100% 100%;
-        filter: blur(1px);
     }
     #product1_img_frame img{
         display: none;
