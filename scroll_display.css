@@ -177,7 +177,7 @@ function portfolio_scroll(movement){
     position: relative;
     display: none;
     width: 100%;
-    height: 350px;
+    height: 300px;
     color: #111;
     justify-content: space-around;
     align-items: center;
