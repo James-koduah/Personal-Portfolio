@@ -50,9 +50,7 @@
     color: #aaa;
     margin-bottom: 5px;
 }
-#product1_info_content .item span{
-    font-size: 50%;
-}
+
 
 @media (max-width: 800px) {
     #product1{
@@ -62,8 +60,9 @@
     #product1_img_frame{
         width: 100vw;
         height: 60vh;
-        background: url(images/computer2.jpeg) no-repeat;
+        background: url(images/man3.jpeg) no-repeat;
         background-size: 100% 100%;
+        filter: blur(1px);
     }
     #product1_img_frame img{
         display: none;
@@ -76,7 +75,7 @@
 
 @media (max-width: 550px) {
     #product1{
-        margin-top: 100px;
+        margin-top: 10px;
     }
     #product1_img_frame{
         height: 230px;

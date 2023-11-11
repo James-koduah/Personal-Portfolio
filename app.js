@@ -256,3 +256,54 @@ function portfolio_scroll(movement){
 
 
 
+let portfolio_mobile_left = document.getElementById('portfolio_display_MOBILE_left')
+let p_mobile_left_position = 0
+let p_moveby = 0
+let portfolio_mobile_right = document.getElementById('portfolio_display_MOBILE_right')
+let p_mobile_right_width = 0
+let p_mobile_right_position = 0
+function scroll_display_mobile(direction){
+    if ((window.innerWidth - 80) !== p_moveby){
+        p_moveby = window.innerWidth - 80;
+        p_mobile_right_width = p_moveby
+        p_mobile_left_position -= p_mobile_left_position % p_moveby
+        console.log('ran')
+    }
+    let img = document.createElement('img')
+    let header = document.createElement('header')
+    header.innerText = 'CLEAN HANDS PAINTING AND ARTWORK COMPANY'
+    let p = document.createElement('p')
+    p.innerText = 'A compact business and portfolio site completed in a month'
+    let new_p = document.createElement('div')
+    new_p.className = 'scroll_MOBILE_item'
+    new_p.appendChild(img)
+    new_p.appendChild(header)
+    new_p.appendChild(p)
+    if (direction == 0){
+        p_projects_index_l--
+        if (p_projects_index_l < 0){
+            p_projects_index_l = p_projects.length - 1;
+        }
+        img.src = p_projects[p_projects_index_l][0]
+        
+        p_mobile_left_position -= p_moveby
+        portfolio_mobile_left.style.left = `${p_mobile_left_position}px`
+        portfolio_mobile_left.appendChild(new_p)
+    }
+    if (direction == 1){
+        p_projects_index_r++
+        if (p_projects_index_r > p_projects.length -1){
+            p_projects_index_r = 0
+        }
+        img.src = p_projects[p_projects_index_r][0]
+    }
+    if (direction === 1){
+        p_mobile_left_position += p_moveby
+        portfolio_mobile_left.style.left = `${p_mobile_left_position}px`
+        p_mobile_right_width += p_moveby
+        p_mobile_right_position += p_moveby
+        portfolio_mobile_right.style.width = `${p_mobile_right_width}px`
+        portfolio_mobile_right.style.left = `-${p_mobile_right_position}px`
+        portfolio_mobile_left.insertBefore(new_p, portfolio_mobile_left.children[0])
+    }
+}

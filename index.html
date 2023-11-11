@@ -175,39 +175,60 @@
                     </div>
                 </div>
             </div>
-            <div class="information_header" style="margin-top: 120px;">
+            <div id="portfolio_display_header" class="information_header">
                 <h2><i>P</i>ORTFOLIO.</h2>
                 <h3><i>S</i>EE <i>H</i>OW <i>W</i>E <i>M</i>ADE <i>O</i>UR <i>C</i>USTOMERS <i>S</i>MILE</h3>
             </div>
-            <div id="portfolio_display" class="scroll_display_PC">
-                <div id="portfolio_scroll_right" class="scroll_display_move_right">
-                    <div id="portfolio_scroll" class="scroll_display_move_left">
-                        <div class="scroll_display_item">
-                            <img src="images/laptop.jpeg" alt="">
-                            <div></div>
-                        </div>
-                        <div class="scroll_display_item">
-                            <img src="images/happy1.png" alt="">
-                            <div></div>
-                        </div>
-                        <div class="scroll_display_item scroll_current">
-                            <img src="images/keyboard4.jpeg" alt="">
-                            <div></div>
-                        </div>
-                        <div class="scroll_display_item">
-                            <img src="images/laptop5.jpeg" alt="">
-                            <div></div>
-                        </div>
-                        <div class="scroll_display_item">
-                            <img src="images/flower.jpg" alt="">
-                            <div></div>
+            <div id="portfolio">
+                <div id="portfolio_display" class="scroll_display_PC">
+                    <div id="portfolio_scroll_right" class="scroll_display_move_right">
+                        <div id="portfolio_scroll" class="scroll_display_move_left">
+                            <div class="scroll_display_item">
+                                <img src="images/laptop.jpeg" alt="">
+                                <div></div>
+                            </div>
+                            <div class="scroll_display_item">
+                                <img src="images/happy1.png" alt="">
+                                <div></div>
+                            </div>
+                            <div class="scroll_display_item scroll_current">
+                                <img src="images/keyboard4.jpeg" alt="">
+                                <div></div>
+                            </div>
+                            <div class="scroll_display_item">
+                                <img src="images/laptop5.jpeg" alt="">
+                                <div></div>
+                            </div>
+                            <div class="scroll_display_item">
+                                <img src="images/flower.jpg" alt="">
+                                <div></div>
+                            </div>
                         </div>
                     </div>
+                    <div class="scroll_display_move_left_button" onclick="portfolio_scroll(1)"><ion-icon name="arrow-back-circle"></ion-icon></div>
+                    <div class="scroll_display_move_right_button" onclick="portfolio_scroll(0)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
                 </div>
-                <div class="scroll_display_move_left_button" onclick="portfolio_scroll(1)"><ion-icon name="arrow-back-circle"></ion-icon></div>
-                <div class="scroll_display_move_right_button" onclick="portfolio_scroll(0)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
+                <div id="portfolio_display_MOBILE" class="scroll_display_MOBILE">
+                    <div class="scroll_MOBILE_move" onclick="scroll_display_mobile(1)"><ion-icon name="arrow-back-circle"></ion-icon></div>
+                    <div class="scroll_MOBILE">
+                        <div id="portfolio_display_MOBILE_right" class="scroll_MOBILE_track_right">
+                            <div id="portfolio_display_MOBILE_left" class="scroll_MOBILE_track_left">
+                                <div class="scroll_MOBILE_item">
+                                    <img src="images/laptop.jpeg" alt="">
+                                    <header>TEEMBOOM SAAS</header>
+                                    <p>An Enterprise Scale Web Application.</p>
+                                </div>
+                                <div class="scroll_MOBILE_item"><img src="images/happy1.png" alt=""></div>
+                                <div class="scroll_MOBILE_item"><img src="images/keyboard4.jpeg" alt=""></div>
+                                <div class="scroll_MOBILE_item"><img src="images/laptop2.jpeg" alt=""></div>
+                                <div class="scroll_MOBILE_item"><img src="images/laptop3.jpeg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll_MOBILE_move" onclick="scroll_display_mobile(0)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
+                </div>
+                <div id="portfolio_see_more"><div class="learn_more">SEE MORE PROJECTS</div></div>
             </div>
-            <div id="portfolio_see_more"><div class="learn_more">SEE MORE PROJECTS</div></div>
             <div id="product1">
                 <div id="product1_img_frame"><img src="images/computer4.jpeg" alt=""></div>
                 <div id="product1_info">
