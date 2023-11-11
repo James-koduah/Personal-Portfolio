@@ -226,7 +226,7 @@ function portfolio_scroll(movement){
 .scroll_MOBILE_item p{
     width: 100%;
     margin-top: 5px;
-    font-size: 2.2em;
+    font-size: 2.5em;
     color: #bbb;
 }
 .scroll_MOBILE_move{
