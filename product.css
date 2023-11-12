@@ -59,7 +59,7 @@
     }
     #product1_img_frame{
         width: 100vw;
-        height: 60vh;
+        height: 250px;
         background: url(images/computer7.jpeg) no-repeat;
         background-size: 100% 100%;
     }
