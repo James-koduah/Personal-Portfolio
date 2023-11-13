@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="information.css">
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="scroll_display.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Jaskin Tech</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -175,6 +176,10 @@
                     </div>
                 </div>
             </div>
+            <div class="flow_image">
+                <img class="flow_image1" src="images/jas_display96.jpeg" alt="">
+                <img class="flow_image2" src="images/jas_display5.jpg" alt="">
+            </div>
             <div id="portfolio_display_header" class="information_header">
                 <h2><i>P</i>ORTFOLIO.</h2>
                 <h3><i>S</i>EE <i>H</i>OW <i>W</i>E <i>M</i>ADE <i>O</i>UR <i>C</i>USTOMERS <i>S</i>MILE</h3>
@@ -198,7 +203,7 @@
                                 </div>
                             </div>
                             <div class="scroll_display_item scroll_current">
-                                <img src="images/keyboard4.jpeg" alt="">
+                                <img src="images/site2.png" alt="">
                                 <div>
                                     <header>CLEAN HANDS PAINTING AND ARTWORK</header>
                                     <p>A compact business and portfolio site completed within a month</p>
@@ -276,107 +281,53 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <section id="services">
-            <div class="cover"></div>
-            <div id="services_pitch">
-                <div class="service"></div>
-                <div class="service"></div>
-                <div class="service"></div>
-                <div class="service"></div>
-                <div class="service"></div>
-            </div>
-        </section> -->
-        <!-- <section id="portfolio">
-            <header><i>P</i>ORTFOLIO</header>
-            <p class="startp">Take a look at works we have completed ranging from One Page Sites to Enterprise Applications</p>
-            <div id="portfolio_display">
-                <div id="cover"></div>
-                <div id="portfolio_scroll">
-                    <div class="scroll_display_item" onclick="portfolio(0)">
-                        <img src="images/site1.png" alt="">
-                    </div>
-                    <div class="scroll_display_item">
-                        <img src="images/site2.png" alt="">
-                    </div>
-                    <div class="scroll_display_item" onclick="portfolio(1)">
-                        <img src="images/site3.png" alt="">
-                    </div>
-                    <div class="scroll_display_item" onclick="portfolio(1)">
-                        <img src="images/site3.png" alt="">
-                    </div>
+            <div id="contact">
+                <div class="information_header">
+                    <h2><i>C</i>ONTACT</h2>
+                    <h3><i>L</i>ET'S <i>S</i>TART <i>W</i>ORK</h3>
                 </div>
-                <div class="left" onclick="portfolio(0)"><ion-icon name="arrow-back-circle"></ion-icon></div>
-                <div class="right" onclick="portfolio(1)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
-            </div>
-            <header style="background-color: #00000033;cursor: pointer;margin-top: 5vh"><i>S</i>EE <i>M</i>ORE <i>P</i>ROJECTS ></header>
-        </section> -->
-        <!-- <section id="contact">
-            <div class="box">
-                <div id="contact_form">
-                    <div id="contact_form_box">
-                        <header><i>T</i>ALK <i>T</i>0 <i>A</i> <i>H</i>UMAN</header>
-                        <div class="contact_site" style="background:#25D366;">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                            <i>W</i>HATSAPP
+                <div id="contact_content">
+                    <div id="contact_media">
+                        <div id="contact_media_text">
+                            <p>
+                                TALK TO US
+                            </p>
                         </div>
-                        <div class="contact_site" style="background:#1877F2;">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <i>F</i>ACEBOOK
+                        <div id="contact_media_links">
+                            <a class="item"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a class="item"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a class="item"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                            <a class="item"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a class="item"><ion-icon name="call-outline"></ion-icon></a>
+                            <a class="item"><ion-icon name="mail-outline"></ion-icon></a>
                         </div>
-                        <div class="contact_site" style="background:#26a7de;">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                            <i>T</i>WITTER
-                        </div>
-                        <div class="contact_site" style="background:#722F37;">
-                            <ion-icon name="call"></ion-icon>
-                            <i>T</i>ELEPHONE
-                        </div>
-                        <div id="contact_email">
-                            <header><i>E</i>MAIL</header>
+                    </div>
+                    <div id="contact_email">
+                        <div class="box">
+                            <header>Contact Via Email</header>
                             <div>
-                                <p><i>Y</i>OUR <i>E</i>MAIL</p>
+                                <p>Your Name</p>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <p>Your Email</p>
                                 <input type="email">
                             </div>
                             <div>
-                                <p><i>Y</i>OUR <i>M</i>ESSAGE</p>
+                                <p>Your Message</p>
                                 <textarea></textarea>
                             </div>
-                            <button><i>S</i>UBMIT</button>
+                            <div>
+                                <button>Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="contact_info">
-                    <div id="contact_info_box">
-                        <header><i>J</i>ASKIN <i>T</i>ECH.</header>
-                        <p class="margin_bottom">
-                        <i>J</i>ASKIN <i>T</i>ECH is a Web Development Agency that
-                        aims to help everyone intrested in joining the internet have a stress free
-                        and convinent way to materialize their ideas. 
-                        </p>
-                        <p>We put a smile on your face and remove any stress by providing:</p>
-                        <p class="smaller margin_bottom">
-                           <i>C</i>ONSTANT <i>C</i>OMMUNICATION<br>
-                           <i>F</i>AST <i>P</i>ROJECT <i>C</i>OMPLETION<br>
-                           <i>C</i>LEAR <i>P</i>AYMENT(No Hidden Fees)<br>
-                        </p>
-                        <p>We make your site look great by applying:</p>
-                        <p class="smaller margin_bottom">
-                            <i>G</i>RAPHIC <i>D</i>ESIGN<br>
-                            <i>V</i>IDEO <i>E</i>DITTING<br>
-                            <i>A</i><i>I</i> <i>G</i>ENERATED <i>I</i>MAGES
-                        </p>
-                        <p><i>J</i>ASKIN <i>T</i>ECH understands the importance of transparency with you, our client,
-                            which is why we:        
-                        </p>
-                        <p class="smaller margin_bottom">
-                            <i>D</i>ISCUSS <i>T</i>HE <i>T</i>ECH <i>S</i>TACK <ion-icon title="If you want to hear us discuss Nodejs vs Python, No Problem 👍" name="help-circle-outline"></ion-icon><br>
-                            <i>D</i>ISCUSS <i>T</i>HIRD <i>P</i>ARTIES - <i>D</i>OMAIN <i>N</i>AME <i>P</i>ROVIDERS, <i>H</i>OSTING <i>P</i>LATFORMS, ETC
-                        </p>
-                    </div>
-                </div>
             </div>
-        </section> -->
+            <div class="jaskin_tech">
+                <i>J</i>ASKIN &nbsp;&nbsp; <i>T</i>ECH.
+            </div>
+        </section>
         <section id="credits">
             
             <section id="hidden" style="display: none;">

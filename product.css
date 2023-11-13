@@ -69,10 +69,6 @@
     #product1_info{
         width: 90vw;
     }
-    #product1_info_content .item{
-        height: fit-content;
-        margin-bottom: 10px;
-    }
 
 }
 

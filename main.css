@@ -24,6 +24,12 @@ img{
     height: 100%;
     object-fit: cover;
 }
+input:focus, textarea:focus{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
 
 
 a{
@@ -296,297 +302,33 @@ nav{
 
 
 
-/* #portfolio{
-    width: 100%;
-    height: fit-content;
-    padding: 10vh 0% 15vh 0%;
-    background: var(--main-bg);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#portfolio header{
-    width: 70%;
-    padding: 10px 0 10px 0;
-    text-align: center;
-    font-size: 3.2em;
-    margin-bottom: 4vh;
-}
-#portfolio .startp{
-    width: 70%;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 10vh;
-}
-#portfolio_display{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background: url(images/datacenter3.jpg) no-repeat;
-    background-size: 100% 100%;
-}
-#portfolio_display #cover{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #00000099;
-    filter: blur(1px)
-}
-#portfolio_scroll{
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    overflow: hidden;
-    justify-content: center;
-}
-.portfolio_project{
-    cursor: pointer;
-    border: 2px #aaa solid;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.portfolio_project img{
-    transition: 2s;
-}
-#portfolio_project_1{
-    position: absolute;
-    top: 22%;
-    left: -15%;
-    width: 40vw;
-    height: 30vh;
-    filter: blur(1px);
-}
-#portfolio_project_2{
-    width: 30vw;
-    height: 35vh;
-    background-color: #000;
-    opacity: 1;
-    margin-top: 25vh;
-    z-index: 15;
-}
-#portfolio_project_3{
-    position: absolute;
-    top: 22%;
-    right: -15%;
-    width: 40vw;
-    height: 30vh;
-    filter: blur(1px);
-}
-#portfolio_project_4{
-    position: absolute;
-    top: 3%;
-    right: calc(50% - 12.5vw);
-    width: 25vw;
-    height: 25vh;
-    filter: blur(1px);
-    z-index: 2;
-}
 
-#portfolio_display .left{
-    position: absolute;
-    top: 10%; left: calc(0% - 10px);
-    width: 50px; height: 50px;
-    background-color: #ffffff99;
-    border-radius: 50%;
+
+
+.jaskin_tech{
+    width: 100%;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5em;
-    cursor: pointer;
-}
-#portfolio_display .right{
-    position: absolute;
-    top: 10%; right: 0%;
-    width: 50px; height: 50px;
-    background-color: #ffffff99;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
-    cursor: pointer;
-} */
-
-
-
-#services{
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    background: var(--main-bg);
-    padding-bottom: 10vh;
-}
-#services .cover{
-    width: 100%;
-    height: 50vh;
-    background: url(images/grass2.jpg) no-repeat;
-    background-size: 100% 100%;
-    filter: blur(1px);
-    z-index: 0;
-}
-
-#services_pitch{
-    position: relative;
-    width: 90%;
-    height: fit-content;
-    background: linear-gradient(180deg, #fff, var(--main-bg));
-    margin: -25vh auto 0vh auto;
-    padding: 5vh 1% 5vh 1%;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.service{
-    width: 180px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px #eee solid;
-    flex-shrink: 0;
-    margin-bottom: 3vh;
-}
-
-
-
-
-
-
-
-#contact{
-    width: 100%;
-    height: 110vh;
-    /* background: url(images/contact1.png) no-repeat;
-    background-size: 100% 100%; */
-    background-color: var(--main-bg);
-    padding-top: 3vh;
-}
-#contact .box{
-    width: 100%;
-    height: 85%;
-    padding: 5% 0 10% 0;
-    display: flex;
-}
-
-#contact_form{
-    width: 44vw;
-    height: 100%;
-    max-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#contact_form_box{
-    width: 90%;
-    height: 90%;
-    background-color: #ddd;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-}
-#contact_form_box header{
-    width: 100%;
-    padding: 4px 0 4px 0;
-    font-size: 2.2em;
-    text-align: center;
-}
-.contact_site{
-    width: 90%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    font-size: 2.3em;
-    cursor: pointer;
-    color: #fff;
+    color: var(--purple);
+    font-size: 8em;
+    font-weight: 600;
     letter-spacing: 2px;
 }
-.contact_site ion-icon{
-    font-size: 180%;
-    margin-right: 25px;
-}
-#contact_email{
-    width: 90%;
-    height: calc(100% - 180px);
-}
-#contact_email div{
+
+
+.flow_image{
     width: 100%;
     height: fit-content;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
-#contact_email div p{
-    font-size: 2.4em;
-    margin-bottom: 3px;
-    font-weight: 600;
+.flow_image img{
+    height: auto;
 }
-#contact_email div input{
-    width: calc(98% - 1px);
-    height: 30px;
-    background: #cccccc;
-    color: #000;
-    border: 1px #444 solid;
-    padding-left: 2%;
-}
-#contact_email div textarea{
-    width: calc(98% - 1px);
-    height: 20vh;
-    background: #cccccc;
-    color: #000;
-    border: 1px #444 solid;
-    padding-left: 2%;
-}
-#contact_email div textarea::-webkit-scrollbar{
-    width: 5px;
-}
-#contact_email button{
-    width: 100%;
-    height: 30px;
-    background-color: #111;
-    color: #fff;
-    font-size: 2em;
-    cursor: pointer;
-    margin-bottom: 3vh;
-}
-#contact_info{
-    width: 55vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    color: var(--text-color);
-}
-#contact_info_box{
-    width: 80%;
-    padding-right: 10%;
-    min-height: 50%;
-    height: fit-content;
-    text-align: right;
-}
-#contact_info_box header{
-    font-size: 4em;
-    font-weight: 600;
-    color: #1245a8;
-}
-#contact_info_box p{
-    font-size: 3.3em;
-    font-family: Oscine, sans-serif;
-}
-.smaller{
-    font-size: 2.5em !important;
-    font-weight: 600 !important;
-}
-.smaller ion-icon{
-    font-size: 130%;
-}
-.margin_bottom{
-    margin-bottom: 15px;
+.flow_image2{
+    display: none;
 }
 
 
@@ -631,57 +373,16 @@ nav{
     t{
         display: none
     }
-    .portfolio_display{
-        min-width: 80vw;
-    }
+
     #links a{
         font-size: 2.4em;
     }
-    #contact{
-        height: fit-content;
-    }
-    #contact .box{
-        flex-direction: column-reverse;
-    }
-    #contact_form{
-        width: 100vw;
-    }
-    #contact_info{
-        width: 100vw;
-        margin-bottom: 5vh;
-    }
-    /* #portfolio_display{
-        height: 90vh;
-    }
-    #portfolio_project_2{
-        width: 95vw;
-        height: 40vh;
-        z-index: 100;
-    }
-    #portfolio_project_1{
-        width: 80vw;
-        top: -30vh;
-        left: 10vw;
-    }
-    #portfolio_project_3{
-        top: calc(100% - 20%);
-        right: 10vw;
-        width: 80vw;
-    }
-    #portfolio_display .right{
-        top: 0%;
-        left: calc(50% - 25px);
-        transform: rotate(-90deg);
-    }
-    #portfolio_display .left{
-        top: calc(100% - 50px);
-        left: calc(50% - 25px);
-        transform: rotate(-90deg);
-    }
-    .portfolio_project{
-        border: none;
-    } */
+    
+   .jaskin_tech{
+    font-size: 5em;
+   }
 }
+
 
 @media (max-width: 550px) {
     #logo{font-size: 3em;color: #8d31ef;}
@@ -702,15 +403,14 @@ nav{
     .mobile-hide{
         display: none;
     }
-    #contact_info_box{
-        padding-right: 0%;
-        text-align: center;
-    }
-    .service{
-        width: 47%;
-    }
     .mobile-hide{
         display: none !important;
+    }
+    .flow_image1{display: none;}
+    .flow_image2{display: block;}
+    .jaskin_tech{
+        font-size: 4.5em;
+        height: 45vh;
     }
 }
 @media (max-height: 450px) {
@@ -722,8 +422,7 @@ nav{
     }
     #dialouge2{
         font-size: 2.2em;
-    }
-    
+    } 
     .mobile-hide{
         display: none !important;
     }

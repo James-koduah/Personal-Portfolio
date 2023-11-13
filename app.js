@@ -265,7 +265,7 @@ let p_mobile_right_position = 0
 function scroll_display_mobile(direction){
     if ((window.innerWidth - 80) !== p_moveby){
         p_moveby = window.innerWidth - 80;
-        p_mobile_right_width = p_moveby
+        p_mobile_right_width += p_moveby
         p_mobile_left_position -= p_mobile_left_position % p_moveby
         console.log('ran')
     }
