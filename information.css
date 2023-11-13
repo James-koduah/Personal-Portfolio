@@ -56,6 +56,7 @@
 }
 #service_information .item .info p{
     font-size: 3em;
+    line-height: 160%;
     color: #aaa;
 }
 .learn_more{

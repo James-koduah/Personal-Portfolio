@@ -142,6 +142,7 @@
     #contact_email{
         width: 90vw;
         margin: 0 auto 0 auto;
+        height: fit-content;
     }
     #contact_email .box{
         width: 450px;
