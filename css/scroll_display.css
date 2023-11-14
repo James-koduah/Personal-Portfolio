@@ -29,7 +29,7 @@
     background-color: black;
     flex-shrink: 0;
     margin: 0 2vw 0 2vw;
-    filter: blur(2px);
+    filter: blur(1px);
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;

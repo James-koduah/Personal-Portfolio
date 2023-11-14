@@ -1,7 +1,7 @@
 #information{
     width: 100%;
     height: fit-content;
-    background: url(images/background2.jpeg) no-repeat;
+    background: url(../images/background2.jpeg) no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
     padding: 80px 0 10vh 0;
