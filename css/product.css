@@ -3,7 +3,9 @@
     height: 100vh;
     margin-top: 5vh;
     display: flex;
-    background-color: #e0e8e5;
+    background: linear-gradient(180deg, #ddd 98%, #666, #000);
+    opacity: 0;
+    transition: 2.5s;
 }
 #product1_img_frame{
     width: 45vw;

@@ -131,6 +131,16 @@
 }
 
 
+#copyright{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 2.4em;
+    color: #ccc;
+}
+
 @media (max-width: 1000px) {
     #footer_main{
         justify-content: center;

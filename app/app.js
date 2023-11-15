@@ -30,16 +30,16 @@ function dialouge(text, box, callback=false){
             dialouge_text.innerHTML += current
         }
         text_index++
-    }, 100)
+    }, 70)
 }
 function running_text(){
     let text = '-JASKIN -THEC.^^^^ECH.]-ADD -TECHNOLOGY -TO -YOUR -ASSETS\
-    ]-IT -IS -WORTH -THE -INVESTMENT.|**^*****|**^*****|**^*****|**^*****'
+    ]-IT -IS -WORTH -THE -INVESTMENT.**************'
     function two(){
         let text = '-A -BUSINESS -LANDING -PAGE.*.*.*]\
         -AN -ECOMMERECE -SITE.*.*.*]\
         -AN -ENTERPRISE -APPLICATION.*.*.*]\
-        -UTILIZE -OUR -EXPERTISE]]]*********'
+        -UTILIZE -OUR -EXPERTISE'
         
         function last(){
             document.getElementById('dialouge2').innerHTML += '<p class="important">\
@@ -131,6 +131,7 @@ window.onload = ()=>{
     running_text()
     chatApp(1)
     document.getElementById('precover').remove()
+    cool_scroll_translate('chatapp', 0, true)
 }
 
 
@@ -352,3 +353,23 @@ function footer_ai_images(){
     },5000)
 }
 footer_ai_images()
+
+function cool_scroll_translate(element_id, offset = 0, instant=false){
+    let element = document.getElementById(element_id)
+    window.addEventListener('scroll', ()=>{
+        if (window.scrollY > element.offsetTop - window.innerHeight + offset){
+            element.style.transform = 'translate(0px, 0px)'
+            element.style.opacity = 1
+        }
+    })
+    if (instant){
+        element.style.transform = 'translate(0px, 0px)'
+        element.style.opacity = 1
+    }
+}
+
+cool_scroll_translate('portfolio', 150)
+cool_scroll_translate('service_information', 150)
+cool_scroll_translate('product1', 250)
+
+

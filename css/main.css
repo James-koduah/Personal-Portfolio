@@ -83,66 +83,67 @@ nav{
 #welcome{
     width: 100%;
     height: 100vh;
-    animation-name: background_change;
-    animation-duration:  100s;
-    animation-iteration-count:  infinite;
-    transition: 1s;
-    animation-timing-function: ease-in-out;
-}
-@keyframes background_change {
-    0%,25%{
-        background: url(../images/keyboard5.jpeg) no-repeat;
-        background-size: var(--home-bg-size);
-        background-attachment: fixed;
-    }
-    26%,50%{
-        background: url(../images/datacenter7.jpeg) no-repeat;
-        background-size: var(--home-bg-size);
-        background-attachment: fixed;
-    }
-    51%,75%{
-        background: url(../images/card2.jpg) no-repeat;
-        background-size: var(--home-bg-size);
-        background-attachment: fixed;
-    }
-    76%, 100%{
-        background: url(../images/laptop2.jpeg) no-repeat;
-        background-size: var(--home-bg-size);
-        background-attachment: fixed;
-    }
-
+    background: linear-gradient(66deg, #000, #370c64, #000) no-repeat;
 }
 #welcome .main{
     width: 100vw;
     height: calc(100% - 60px);
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     background: #00000066;
 }
 #dialouge{
-    width: 57%;
+    width: 60%;
     padding-left: 3%;
-    height: 100%;
+    height: 80%;
     display: flex;
-    justify-content: left;
     flex-direction: column;
+    justify-content: space-between;
+}
+#dialouge .cover{
+    min-height: 400px;
 }
 .dialouge_text{
     width: fit-content;
     height: fit-content;
     color: var(--light-violet);
     font-weight: 900;
-    /* -webkit-text-stroke: 1px #ece0ed; */
 }
 
 #dialouge1{
-    font-size: 7em;
-    margin-top: 120px;
+    font-size: 6.3em;
+    margin-top: 60px;
+    font-family: var(--verdana);
 }
 #dialouge2{
-    font-size: 3.9em;
-    font-weight: 600;
+    font-size: 2.3em;
+    font-weight: 500;
+    font-family: "Montserrat", Sans-serif;
+    margin-top: 5px;
+}
+#dialouge3{
+    font-family: var(--verdana);
+    margin-top: 40px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+#dialouge3_ins{
+    font-size: 2.5em;
+}
+#dialouge3 ion-icon{
+    font-size: 6em;
+    color: #ff060e ;
+    margin-left: 30px;
+}
+#lets_connect{
+    width: fit-content;
+    padding: 20px 30px 20px 30px;
+    font-size: 2.6em;
+    font-weight: 700;
+    background-color: var(--purple);
+    margin-bottom: 15px;
 }
 .important{
     display: flex;
@@ -156,7 +157,7 @@ nav{
     background-color: var(--main-bg);
 }
 #chat{
-    width: 38%;
+    width: 33%;
     padding-right: 2%;
     height: 100%;
     display: flex;
@@ -167,7 +168,7 @@ nav{
     position: relative;
     width: 300px;
     height: 90%;
-    max-height: 900px;
+    max-height: 650px;
     background: url(../images/chatbackgrounddark.jpg) no-repeat;
     background-size: 100% 100%;
     color: #c2c2c2;
@@ -178,6 +179,8 @@ nav{
     overflow: hidden;
     justify-content: center;
     flex-shrink: 0;
+    transform: translate(-400px, -200px);
+    transition: 1.2s;
 }
 #chatapp .header{
     position: absolute;
@@ -346,7 +349,7 @@ nav{
         align-self: start;
     }
     #dialouge{
-        width: 77%;
+        width: 97%;
         height: fit-content;
         min-height: 40vh;
     }  
@@ -387,15 +390,29 @@ nav{
         display: none;
     }
     #dialouge{
-        display: none;
-        width: 87%;
-        min-height: 50vh;
+        /* display: none; */
+        width: 85%;
+        margin: 0 auto 50px auto;
+    }
+    #dialouge .cover{
+        min-height: 350px;
     }
     #dialouge1{
         font-size: 3.6em;
     }
     #dialouge2{
         font-size: 2.4em;
+    }
+    #dialouge3{
+        align-items: center;
+    }
+    #dialouge3 .cover{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #dialouge3 ion-icon{
+        margin-left: 0;
     }
     .mobile-hide{
         display: none;

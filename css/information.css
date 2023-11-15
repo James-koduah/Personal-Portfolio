@@ -26,6 +26,7 @@
     font-weight: 400;
 }
 
+
 #service_information{
     width: 94%;
     padding: 0 3% 0 3%;
@@ -33,6 +34,9 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    transform: translate(0px, 300px);
+    opacity: 0;
+    transition: 1.5s;
 }
 #service_information .item{
     width: 32%;
@@ -80,6 +84,11 @@
 }
 #portfolio_display_header{
     margin-top: 100px;
+}
+#portfolio{
+    opacity: 0;
+    transform: translate(0px, -300px);
+    transition: 1.2s;
 }
 
 
