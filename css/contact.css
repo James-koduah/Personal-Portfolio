@@ -70,7 +70,7 @@
 
 #contact_email{
     width: 35vw;
-    height: 90vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -168,7 +168,7 @@
     }
     #contact_media_links .item{
         height: 55px;
-        font-size: 2.5em;
+        font-size: 3em;
         border-radius: 3px;
     }
     #contact_email .box{

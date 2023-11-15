@@ -47,7 +47,7 @@
 }
 
 #footer_links{
-    width: calc(100% - 600px);
+    width: calc(100% - 650px);
     height: 100%;
     display: flex;
 }
