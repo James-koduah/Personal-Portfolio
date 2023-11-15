@@ -118,3 +118,21 @@
         font-size: 2.4em;
     }
 }
+@media (max-width: 550px) {
+    #service_information .item{
+        width: 100%;
+        align-items: center;
+    }
+    #service_information .item .image_frame{
+        width: 80%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    #service_information .item .info{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
