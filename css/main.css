@@ -126,7 +126,8 @@ nav{
     align-items: center;
     font-size: 3em;
     color: var(--purple);
-    box-shadow: 2px 2px 20px 20px var(--purple-soft)
+    /* box-shadow: 2px 2px 20px 20px var(--purple-soft); */
+    margin-top: 20px;
 }
 #dialouge2_text{
     max-width: 90%;
@@ -134,7 +135,7 @@ nav{
 }
 #stickman1{
     position: absolute;
-    width: 60px;
+    width: 100px;
     height: 100px;
     left: 0%;
     top: 0px;
@@ -162,6 +163,7 @@ nav{
     font-weight: 700;
     background-color: var(--purple);
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .important{
     display: flex;
@@ -376,7 +378,8 @@ nav{
         font-size: 5.5em;
     }
     #dialouge2{
-        width: 100%;
+        width: 90%;
+        margin-top: 50px;
     }
     #chat{
         width: 100%;
@@ -419,6 +422,7 @@ nav{
         font-size: 3.6em;
     }
     #dialouge2{
+        width: 100%;
     }
     #dialouge2_text{
         height: 70%;

@@ -35,11 +35,12 @@ var dialouge = function (text, box, callback=false){
 function dialouge1(){
     let text = '-JASKIN -THEC.^^^^ECH.]-ADD -TECHNOLOGY -TO -YOUR -ASSETS\
     ]-IT -IS -WORTH -THE -INVESTMENT.**************'
-    dialouge(text, 'dialouge1')
+    dialouge(text, 'dialouge1', dialouge2)
 }
 
 function dialouge2(){
     let dialouge_div = document.getElementById('dialouge2')
+    dialouge_div.style.boxShadow = '2px 2px 20px 20px var(--purple-soft)'
     let display = 'dialouge2_text'
     let stickman1 = document.getElementById('stickman1')
     let stickman1_img = document.getElementById('stickman1_img')
@@ -49,18 +50,18 @@ function dialouge2(){
     stickman1_img.style.display = 'block'
     stickman1_img_change('stickman1.png')
     let dialouge_bottom = dialouge_div.clientHeight - 100
-    let dialouge_right = dialouge_div.clientWidth - 60
+    let dialouge_right = dialouge_div.clientWidth - 100
     function animation1(){
         stickman1.style.top = `${dialouge_bottom}px`
         setTimeout(()=>{
             dialouge('-HELLO -THERE', display, animation2)
-            stickman1_img_change('stickman3.png')
+            stickman1_img_change('stickman2.png')
         }, 1500)
     }
     function animation2(){
         setTimeout(()=>{
             dialouge('!-LET -ME -SHOW -YOU -THE -DEVELOPMENT -PROCESS', display, animation3)
-            stickman1_img_change('stickman4.png')
+            stickman1_img_change('stickman3.png')
         }, 2000)
     }
     function animation3(){
@@ -68,6 +69,8 @@ function dialouge2(){
         stickman1.style.left = `${dialouge_right}px`
         stickman1.style.transform = 'scaleX(-1)'
         setTimeout(()=>{
+            stickman1.style.transform = 'scaleX(1)'
+            stickman1_img_change('stickman4.png')
             dialouge('!-FIRST: -YOU -GIVE -US -A -CALL', display)
         }, 2000)
     }

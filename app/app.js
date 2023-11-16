@@ -78,13 +78,26 @@ function chatApp(func){
     }
     chatAppStore.push(func)
 }
+
+
+let page_loaded = false
 window.onload = ()=>{
-    dialouge1()
-    chatApp(1)
-    document.getElementById('precover').remove()
-    cool_scroll_translate('chatapp', 0, true)
-    dialouge2()
+    page_loaded = true
 }
+setTimeout(()=>{
+    document.getElementById('precover').remove()
+    if (page_loaded){
+        dialouge1()
+        chatApp(1)
+        cool_scroll_translate('chatapp', 0, true)
+    }else{
+        setTimeout(()=>{
+            dialouge1()
+            chatApp(1)
+            cool_scroll_translate('chatapp', 0, true)
+        }, 3000)
+    }
+}, 4000)
 
 
 
