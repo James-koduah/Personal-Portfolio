@@ -337,7 +337,7 @@ nav{
 
 
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
     #welcome{
         height: fit-content;
     }
@@ -395,7 +395,7 @@ nav{
         margin: 0 auto 50px auto;
     }
     #dialouge .cover{
-        min-height: 350px;
+        min-height: 300px;
     }
     #dialouge1{
         font-size: 3.6em;
@@ -405,6 +405,9 @@ nav{
     }
     #dialouge3{
         align-items: center;
+    }
+    #lets_connect{
+        padding: 10px 20px 10px 20px;
     }
     #dialouge3 .cover{
         flex-direction: column;
