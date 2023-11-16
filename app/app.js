@@ -1,55 +1,6 @@
 
-function dialouge(text, box, callback=false){
-    
-    let dialouge_text = document.getElementById(box)
-    let text_index = 0
-    let running_text = setInterval(()=>{
-        let current = text[text_index]
-        if (text_index >= text.length ){
-            clearInterval(running_text)
-            if (callback){
-                callback()
-            }
-            return
-        }
-        if (current == '-'){//Make the next text Bigger than the rest
-            text_index++
-            dialouge_text.innerHTML += `<i>${text[text_index]}</i>`
-        }
-        else if(current == ']'){//Move to the next line
-            dialouge_text.innerHTML += '<br>'
-        }
-        else if(current == '^'){//Delete the previous letter
-            dialouge_text.innerHTML = dialouge_text.innerHTML.slice(0, -1)
-        }
-        else if(current == '*'){}//Do Nothing
-        else if(current == '!'){
-            dialouge_text.innerHTML = ''
-        }
-        else{
-            dialouge_text.innerHTML += current
-        }
-        text_index++
-    }, 70)
-}
-function running_text(){
-    let text = '-JASKIN -THEC.^^^^ECH.]-ADD -TECHNOLOGY -TO -YOUR -ASSETS\
-    ]-IT -IS -WORTH -THE -INVESTMENT.**************'
-    function two(){
-        let text = '-A -BUSINESS -LANDING -PAGE.*.*.*]\
-        -AN -ECOMMERECE -SITE.*.*.*]\
-        -AN -ENTERPRISE -APPLICATION.*.*.*]\
-        -UTILIZE -OUR -EXPERTISE'
-        
-        function last(){
-            document.getElementById('dialouge2').innerHTML += '<p class="important">\
-            <i>F</i>IND&nbsp;<i>S</i>OME&nbsp;<i>I</i>NSPIRATION&nbsp;<i>F</i>OR&nbsp;<i>Y</i>OUR&nbsp;<i>I</i>DEA&nbsp\
-            <i><ion-icon name="play-circle"></ion-icon><i></p>'
-        }
-        dialouge(text, 'dialouge2')
-    }
-    dialouge(text, 'dialouge1', two)
-}
+
+
 
 let chatBox = document.getElementById('chatbox')
 let chatAction = document.getElementById('chat_action')
@@ -128,10 +79,11 @@ function chatApp(func){
     chatAppStore.push(func)
 }
 window.onload = ()=>{
-    running_text()
+    dialouge1()
     chatApp(1)
     document.getElementById('precover').remove()
     cool_scroll_translate('chatapp', 0, true)
+    dialouge2()
 }
 
 
