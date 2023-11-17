@@ -40,40 +40,127 @@ function dialouge1(){
 
 function dialouge2(){
     let dialouge_div = document.getElementById('dialouge2')
-    dialouge_div.style.boxShadow = '2px 2px 20px 20px var(--purple-soft)'
+    dialouge_div.style.boxShadow = '2px 2px 13px 13px var(--purple-soft)'
     let display = 'dialouge2_text'
-    let stickman1 = document.getElementById('stickman1')
+    let bullets_display = 'dialouge2_text2'
+    let image_div = document.getElementById('stickman1')
     let stickman1_img = document.getElementById('stickman1_img')
     function stickman1_img_change(img){
         stickman1_img.src = 'images/png_icons/' + img
     }
     stickman1_img.style.display = 'block'
-    stickman1_img_change('stickman1.png')
     let dialouge_bottom = dialouge_div.clientHeight - 100
     let dialouge_right = dialouge_div.clientWidth - 100
-    function animation1(){
-        stickman1.style.top = `${dialouge_bottom}px`
+
+    let frame1_text = '-HELLO -THERE'
+    let frame2_text = '!-LET -ME -SHOW -YOU -THE -DEVELOPMENT -PROCESS'
+    let frame3_text = '!-FIRST: -YOU -GIVE -US -A -CALL'
+    let frame4_text = '!-THEN -WE -DISCUSS -THE -PURPOSE -OF -YOUR -WEBSITE******'
+    let frame4_bullets = '-WHAT -IS -THE -SITE -ABOUT...-?]\
+                         -WHO -ARE -YOUR -TAGERT -AUDIENCE...-?]\
+                         -WHAT -PRODUCT -OR -SERVICE -DO -YOU -OFFER...-?'
+    let frame5_text = '!-THIRD: -THE -SCOPE -OF -THE -PROJECT'
+    let frame6_text = '!-BASED -ON -YOUR -BUDJECT -AND -RESOURCES, -WE -ESTIMATE:********'
+    let frame6_bullets = "-THE -NUMBER -OF -WEBPAGES -TO -CREATE***]\
+                          -THE -SITE'S -FEATURES, -AND]\
+                          -OTHER -CRITICAL -REQUIREMENTS"
+    let frame7_text = '!-THEN -OUR -TEAM -GOES -TO -WORK'
+    let frame8_text = '!-WE -DESIGN -THE -SITE'
+    let frame9_text = '!-WE -ADD -CONTENT'
+    let frame10_text = '!-THEN]********-WE -GO -LIVE.'
+
+
+
+    function frame1(){
+        image_div.style.top = `${dialouge_bottom}px`
         setTimeout(()=>{
-            dialouge('-HELLO -THERE', display, animation2)
+            dialouge(frame1_text, display, frame2)
             stickman1_img_change('stickman2.png')
         }, 1500)
     }
-    function animation2(){
+    function frame2(){
         setTimeout(()=>{
-            dialouge('!-LET -ME -SHOW -YOU -THE -DEVELOPMENT -PROCESS', display, animation3)
+            dialouge(frame2_text, display, frame3)
             stickman1_img_change('stickman3.png')
         }, 2000)
     }
-    function animation3(){
-        stickman1.style.transition = '2s'
-        stickman1.style.left = `${dialouge_right}px`
-        stickman1.style.transform = 'scaleX(-1)'
+    function frame3(){
+        image_div.style.transition = '2s'
+        image_div.style.left = `${dialouge_right}px`
+        image_div.style.transform = 'scaleX(-1)'
         setTimeout(()=>{
-            stickman1.style.transform = 'scaleX(1)'
             stickman1_img_change('stickman4.png')
-            dialouge('!-FIRST: -YOU -GIVE -US -A -CALL', display)
+            image_div.style.transition = '0s'
+            image_div.style.transform = 'scaleX(1)'
+            dialouge(frame3_text, display, frame4)
         }, 2000)
     }
-    animation1()
+    function frame4(){
+        setTimeout(()=>{
+            stickman1_img_change('stickman5.png')
+            dialouge(frame4_text , display, ()=>{
+                dialouge(frame4_bullets, bullets_display, frame5)
+            })
+        }, 3000)
+    }
+    function frame5(){
+        setTimeout(()=>{
+            image_div.style.transition = '2s'
+            image_div.style.left = '0px'
+            stickman1_img_change('stickman6.png')
+            dialouge('!', bullets_display)
+            dialouge(frame5_text, display, frame6)
+        }, 2000)
+    }
+    function frame6(){
+        setTimeout(()=>{
+            image_div.style.transition = '0s'
+            stickman1_img_change('stickman7.png')
+            dialouge(frame6_text, display, ()=>{
+                dialouge(frame6_bullets, bullets_display, frame7)
+            })
+        }, 2500)
+    }
+    function frame7(){
+        setTimeout(()=>{
+            stickman1_img_change('stickman8.png')
+            dialouge('!', bullets_display)
+            dialouge(frame7_text, display, frame8)
+        }, 1500)
+    }
+    function frame8(){
+        setTimeout(()=>{
+            stickman1_img_change('sitemap1.png')
+            dialouge(frame8_text, display, frame9)
+        }, 2000)
+    }
+    function frame9(){
+        setTimeout(() => {
+            dialouge(frame9_text, display, ()=>{
+                stickman1_img_change('sitemap2.png')
+                dialouge(']-TEXT', display, ()=>{
+                    setTimeout(() => {
+                        stickman1_img_change('sitemap3.png')
+                        dialouge(']-IMAGES... ETC', display, frame10)                        
+                    }, 1000);
+                })
+            })
+        }, 2000);
+    }
+    function frame10(){
+        setTimeout(() => {
+            stickman1_img_change('global.png')
+            image_div.style.transition = '20s'
+            image_div.style.transform = ''
+            image_div.style.transform = 'rotate(18000deg)'   
+            dialouge('!', bullets_display)
+            dialouge(frame10_text, display, ()=>{
+                setTimeout(() => {
+                    dialouge('Hello World', bullets_display)                 
+                }, 2000);
+            })
+        }, 2000);
+    }
+    frame1()
 }
 

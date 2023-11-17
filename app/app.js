@@ -1,6 +1,7 @@
-
-
-
+function preload_image(im_url) {
+    let img = new Image();
+    img.src = im_url;
+  }
 
 let chatBox = document.getElementById('chatbox')
 let chatAction = document.getElementById('chat_action')
@@ -95,7 +96,7 @@ setTimeout(()=>{
             dialouge1()
             chatApp(1)
             cool_scroll_translate('chatapp', 0, true)
-        }, 3000)
+        }, 2000)
     }
 }, 4000)
 
@@ -338,3 +339,5 @@ cool_scroll_translate('service_information', 150)
 cool_scroll_translate('product1', 250)
 
 
+function preload_all_images(){
+}
