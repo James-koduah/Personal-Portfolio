@@ -40,7 +40,7 @@ function dialouge1(){
 
 function dialouge2(){
     let dialouge_div = document.getElementById('dialouge2')
-    dialouge_div.style.boxShadow = '2px 2px 13px 13px var(--purple-soft)'
+    dialouge_div.style.boxShadow = '1px 1px 3px 3px var(--purple-soft)'
     let display = 'dialouge2_text'
     let bullets_display = 'dialouge2_text2'
     let image_div = document.getElementById('stickman1')
@@ -62,8 +62,7 @@ function dialouge2(){
     let frame5_text = '!-THIRD: -THE -SCOPE -OF -THE -PROJECT'
     let frame6_text = '!-BASED -ON -YOUR -BUDJECT -AND -RESOURCES, -WE -ESTIMATE:********'
     let frame6_bullets = "-THE -NUMBER -OF -WEBPAGES -TO -CREATE***]\
-                          -THE -SITE'S -FEATURES, -AND]\
-                          -OTHER -CRITICAL -REQUIREMENTS"
+                          -THE -SITE'S -FEATURES, -AND -OTHER -CRITICAL -REQUIREMENTS"
     let frame7_text = '!-THEN -OUR -TEAM -GOES -TO -WORK'
     let frame8_text = '!-WE -DESIGN -THE -SITE'
     let frame9_text = '!-WE -ADD -CONTENT'
@@ -150,7 +149,7 @@ function dialouge2(){
     function frame10(){
         setTimeout(() => {
             stickman1_img_change('global.png')
-            image_div.style.transition = '20s'
+            image_div.style.transitionDuration = '20s'
             image_div.style.transform = ''
             image_div.style.transform = 'rotate(18000deg)'   
             dialouge('!', bullets_display)

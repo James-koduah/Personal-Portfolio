@@ -1,7 +1,4 @@
-function preload_image(im_url) {
-    let img = new Image();
-    img.src = im_url;
-  }
+
 
 let chatBox = document.getElementById('chatbox')
 let chatAction = document.getElementById('chat_action')
@@ -84,6 +81,7 @@ function chatApp(func){
 let page_loaded = false
 window.onload = ()=>{
     page_loaded = true
+    preload_all_images()
 }
 setTimeout(()=>{
     document.getElementById('precover').remove()
@@ -337,7 +335,35 @@ function cool_scroll_translate(element_id, offset = 0, instant=false){
 cool_scroll_translate('portfolio', 150)
 cool_scroll_translate('service_information', 150)
 cool_scroll_translate('product1', 250)
+cool_scroll_translate('mission', 200)
 
 
 function preload_all_images(){
+    let hidden = document.getElementById('hidden')
+    function preload_image(im_url) {
+        let img = new Image();
+        img.src = im_url;
+    }
+    let images = [
+        '../images/png_icons/stickman1.png',
+        '../images/png_icons/stickman2.png',
+        '../images/png_icons/stickman3.png',
+        '../images/png_icons/stickman4.png',
+        '../images/png_icons/stickman5.png',
+        '../images/png_icons/stickman6.png',
+        '../images/png_icons/stickman7.png',
+        '../images/png_icons/stickman8.png',
+        '../images/png_icons/sitemap1.png',
+        '../images/png_icons/sitemap2.png',
+        '../images/png_icons/sitemap3.png',
+        '../images/png_icons/global.png',
+        '../images/keyboard5.jpg',
+        '../images/datacenter7.jpeg',
+        '../images/card2.jpg',
+        '../images/laptop2.jpeg'
+    ]
+    for (let img of images){
+        preload_image(img)
+    }
+
 }

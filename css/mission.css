@@ -1,0 +1,14 @@
+#mission{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    transition: 2.5s;
+}
+#mission_info{
+    width: 45vw;
+}
+#mission_image_frame{
+    width: 55vw;
+    height: 100%;
+}
