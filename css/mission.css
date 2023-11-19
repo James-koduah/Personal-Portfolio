@@ -1,14 +1,59 @@
 #mission{
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     display: flex;
+    padding: 25vh 0 5vh 0;
     opacity: 0;
     transition: 2.5s;
 }
-#mission_info{
-    width: 45vw;
-}
 #mission_image_frame{
+    flex-shrink: 0;
+    min-width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+#mission_image_frame img{
+    width: 400px;
+    height: 400px;
+}
+
+
+#mission_info{
     width: 55vw;
-    height: 100%;
+    margin-top: -5vh;
+}
+#mission_info_text{
+    width: 85%;
+    margin: 0 auto;
+    font-family: var(--verdana);
+}
+#mission_info_text header{
+    font-size: 3.3em;
+    color: #eee;
+    margin-bottom: 20px;
+}
+#mission_info_text p{
+    font-size: 3.3em;
+    color: #bbb;
+    line-height: 160%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+    #mission{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 0;
+    }
+    #mission_image_frame{
+        width: 85vw;
+    }
+    #mission_image_frame img{
+        width: 100%;
+        height: auto;
+    }
+    #mission_info{
+        width: 100%;
+        margin-top: 5vh;
+    }
 }

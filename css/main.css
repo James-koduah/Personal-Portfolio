@@ -100,6 +100,7 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     font-family: var(--verdana);
+    color: #ccc;
 }
 #dialouge .cover{
     height: fit-content;
@@ -112,21 +113,25 @@ nav{
 }
 
 #dialouge1{
-    font-size: 4.9em;
+    font-size: 5.5em;
     margin-top: 40px;
     min-height: 150px;
+    font-family:Verdana, sans-serif;
+    line-height: 140%;
+    font-weight: 100;
 }
 #dialouge2{
     position: relative;
     width: 80%;
     height: 200px;
     margin-top: 15px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     align-items: center;
     color: var(--purple);
+    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
 }
 #dialouge2_text{
     max-width: 90%;
@@ -164,9 +169,12 @@ nav{
 #lets_connect{
     width: fit-content;
     padding: 15px 15px;
-    font-size: 2.3em;
+    font-size: 2em;
     font-weight: 700;
-    background-color: var(--purple);
+    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
+    color: #ccc;
+    box-shadow: 0px 0px 1px 1px var(--purple-soft);
+    /* border: 1px #bbb dashed; */
     font-family: var(--sans);
     margin-bottom: 15px;
     cursor: pointer;
@@ -380,12 +388,12 @@ nav{
         min-height: 40vh;
     }  
     #dialouge1{
-        margin-top: 60px;
+        margin-top: 30px;
         font-size: 5.5em;
     }
     #dialouge2{
         width: 90%;
-        margin-top: 50px;
+        margin-top: 20px;
     }
     #chat{
         width: 100%;
@@ -431,9 +439,13 @@ nav{
     }
     #dialouge2{
         width: 100%;
+        height: 160px;
+        padding: 20px 0 20px 0;
         justify-content: start;
     }
-    #dialouge2_text{
+    #dialouge .cover{
+        display: flex;
+        flex-direction: column-reverse;
     }
     #dialouge3{
         align-items: center;

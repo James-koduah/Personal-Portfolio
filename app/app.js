@@ -78,7 +78,7 @@ function chatApp(func){
 }
 
 
-let page_loaded = false
+var page_loaded = false
 window.onload = ()=>{
     page_loaded = true
     preload_all_images()
@@ -335,7 +335,7 @@ function cool_scroll_translate(element_id, offset = 0, instant=false){
 cool_scroll_translate('portfolio', 150)
 cool_scroll_translate('service_information', 150)
 cool_scroll_translate('product1', 250)
-cool_scroll_translate('mission', 200)
+cool_scroll_translate('mission', 300)
 
 
 function preload_all_images(){
