@@ -41,9 +41,9 @@ function dialouge1(){
 function dialouge2(){
     let dialouge_div = document.getElementById('dialouge2')
     dialouge_div.style.display = 'flex'
-    if (window.innerWidth < 550){
-        document.getElementById('dialouge1').style.display = 'none'
-    }
+    // if (window.innerWidth < 550){
+    //     document.getElementById('dialouge1').style.display = 'none'
+    // }
     dialouge_div.style.boxShadow = '1px 1px 3px 3px var(--purple-soft)'
     let display = 'dialouge2_text'
     let bullets_display = 'dialouge2_text2'
