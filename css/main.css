@@ -461,8 +461,10 @@ nav{
     }
     #dialouge1_header{
         width: 100%;
+        font-size: 3.5em;
     }
     #dialouge1_subheader{
+        font-size: 2.9em;
         width: 100%;
     }
     #dialouge2{
