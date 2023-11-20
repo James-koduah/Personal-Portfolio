@@ -20,6 +20,9 @@
 main{
     width: 100vw;
     height: fit-content;
+    background: url(../images/background2.jpeg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 img{
     width: 100%;
@@ -53,7 +56,6 @@ nav{
     padding: 0 2% 0 2%;
     height: 60px;
     color: var(--violet);
-    background: #00000066;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,17 +85,16 @@ nav{
 #welcome{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(66deg, #000, #370c64, #000) no-repeat;
+    /* background: linear-gradient(66deg, #000, #370c64, #000) no-repeat; */
 }
 #welcome .main{
     width: 100vw;
     height: calc(100% - 60px);
     display: flex;
     flex-wrap: wrap;
-    background: #00000066;
 }
 #dialouge{
-    width: 60%;
+    width: 55%;
     padding-left: 3%;
     height: 90%;
     display: flex;
@@ -113,24 +114,42 @@ nav{
 }
 
 #dialouge1{
-    font-size: 5.5em;
-    margin-top: 40px;
-    min-height: 150px;
-    font-family:Verdana, sans-serif;
-    line-height: 140%;
-    font-weight: 100;
+    width: 60%;
+    margin-top: 10px;
+    min-height: 100px;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#dialouge1_header{
+    width: 20em;
+    font-size: 4.5em;
+    font-weight: 500;
+    line-height: 110%;
+}
+#dialouge1_subheader{
+    width: 37em;
+    font-size: 2.5em;
+    font-weight: 400;
+    color: #d4d4d4;
+    line-height: 150%;
+    margin-top: 10px;
+    text-align: left;
+    transition: 1s;
 }
 #dialouge2{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 200px;
-    margin-top: 15px;
+    margin-top: 50px;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     align-items: center;
     color: var(--purple);
+    border-radius: 10px;
     background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
 }
 #dialouge2_text{
@@ -169,10 +188,11 @@ nav{
 #lets_connect{
     width: fit-content;
     padding: 15px 15px;
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: 700;
-    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
-    color: #ccc;
+    background-color: var(--purple);
+    /* background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat; */
+    color: #fff;
     box-shadow: 0px 0px 1px 1px var(--purple-soft);
     /* border: 1px #bbb dashed; */
     font-family: var(--sans);
@@ -203,8 +223,9 @@ nav{
     width: 300px;
     height: 90%;
     max-height: 650px;
-    background: url(../images/chatbackgrounddark.jpg) no-repeat;
-    background-size: 100% 100%;
+    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
+    /* background: url(../images/chatbackgrounddark.jpg) no-repeat;
+    background-size: 100% 100%; */
     color: #c2c2c2;
     border-radius: 10px;
     border: 4px #6c6a6a solid;
@@ -215,6 +236,7 @@ nav{
     flex-shrink: 0;
     transform: translate(-400px, -200px);
     transition: 1.2s;
+    font-family: var(--verdana);
 }
 #chatapp .header{
     position: absolute;
@@ -263,7 +285,8 @@ nav{
     min-width: 46%;
     width: fit-content;
     max-width: 80%;
-    background-color: #333;
+    background-color: #dedede;
+    color: #111;
     height: fit-content;
     margin-top: 5px;
     border-radius: 5px;
@@ -275,12 +298,13 @@ nav{
 
 .chatright{
     align-self: flex-end;
-    background-color: #222;
+    background: linear-gradient(45deg, #333, #444, #333);
+    color: #eee;
 }
 
 #chat_action{
     width: 100%;
-    height: 15%;
+    height: 75px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -288,20 +312,19 @@ nav{
 }
 .chat_action{
     width: 44%;
-    height: 45%;
+    height: 48%;
     margin-bottom: 2px;
     border-radius: 5px;
     padding: 0 1% 0 1%;
-    background-color: #2f2e31;
+    background: linear-gradient(45deg, #222, #333, #222);
     color: #ddd;
-    border: 1px #333333 solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.1em;
+    font-size: 1.8em;
+    font-weight: 500;
     text-align: center;
     cursor: pointer;
-    font-family: var(--sans);
 }
 .chat_action:hover{
     background-color: #111;
@@ -389,7 +412,6 @@ nav{
     }  
     #dialouge1{
         margin-top: 30px;
-        font-size: 5.5em;
     }
     #dialouge2{
         width: 90%;
@@ -434,18 +456,25 @@ nav{
         min-height: 300px;
     }
     #dialouge1{
-        font-size: 3.6em;
         text-align: center;
+        width: 100%;
+    }
+    #dialouge1_header{
+        width: 100%;
+    }
+    #dialouge1_subheader{
+        width: 100%;
     }
     #dialouge2{
         width: 100%;
         height: 160px;
         padding: 20px 0 20px 0;
         justify-content: start;
+        margin-top: 50px;
     }
     #dialouge .cover{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     #dialouge3{
         align-items: center;

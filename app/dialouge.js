@@ -33,9 +33,16 @@ var dialouge = function (text, box, callback=false){
     }, 70)
 }
 function dialouge1(){
-    let text = '-JASKIN -THEC.^^^^ECH.]-ADD -TECHNOLOGY -TO -YOUR -ASSETS\
-    ]-IT -IS -WORTH -THE -INVESTMENT.**************'
-    dialouge(text, 'dialouge1', dialouge2)
+    let header = '-ADD -TECHNOLOGY -TO -YOUR -ASSETS'
+    let subheader = 'We help people get the tech they need, making sure everyone has the tools they want.]\
+                      From Websites to Database Systems, we got you covered.'
+    // ]-IT -IS -WORTH -THE -INVESTMENT.**************'
+    dialouge(header, 'dialouge1_header', ()=>{
+        dialouge(subheader, 'dialouge1_subheader', ()=>{
+            dialouge2()
+        })
+    })
+
 }
 
 function dialouge2(){
