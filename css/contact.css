@@ -54,7 +54,8 @@
 #contact_media_links .item{
     width: 15%;
     height: 80px;
-    background: linear-gradient(45deg, #0f0f0f, #111, #141414, #111, #0f0f0f);
+    /* background: linear-gradient(45deg, #0f0f0f, #111, #141414, #111, #0f0f0f); */
+    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023);
     border-radius: 15px;
     margin-top: 20px;
     color: #fff;
@@ -90,7 +91,7 @@
     width: 100%;
     letter-spacing: 2px;
     font-size: 2.5em;
-    font-weight: 100;
+    font-weight: 500;
     text-align: center;
     margin-top: -15px;
     margin-bottom: 5px;
@@ -125,7 +126,7 @@
 #contact_email .box div button{
     width: 100%;
     height: 40px;
-    background: var(--purple-faded-light); 
+    background: var(--purple); 
     border: 1px #222 solid;
     color: #ddd;
     font-size: 2em;

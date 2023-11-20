@@ -38,9 +38,7 @@ function dialouge1(){
                       From Websites to Database Systems, we got you covered.'
     // ]-IT -IS -WORTH -THE -INVESTMENT.**************'
     dialouge(header, 'dialouge1_header', ()=>{
-        dialouge(subheader, 'dialouge1_subheader', ()=>{
-            dialouge2()
-        })
+        dialouge(subheader, 'dialouge1_subheader', dialouge2)
     })
 
 }
@@ -52,8 +50,9 @@ function dialouge2(){
     //     document.getElementById('dialouge1').style.display = 'none'
     // }
     if (window.innerWidth > 550){
-        dialouge_div.style.boxShadow = '1px 1px 3px 3px var(--purple-soft)'
+        dialouge_div.style.boxShadow = '0px 0px 3px 3px var(--purple-soft)'
     }
+    dialouge_div.style.background = 'linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023)'
     let display = 'dialouge2_text'
     let bullets_display = 'dialouge2_text2'
     let image_div = document.getElementById('stickman1')
@@ -66,7 +65,7 @@ function dialouge2(){
     let dialouge_right = dialouge_div.clientWidth - 100
 
     let frame1_text = '-HELLO -THERE'
-    let frame2_text = '!-LET -ME -SHOW -YOU -THE -DEVELOPMENT -PROCESS'
+    let frame2_text = '!-LET -ME -SHOW -YOU -THE -WEB -DEVELOPMENT -PROCESS'
     let frame3_text = '!-FIRST: -YOU -GIVE -US -A -CALL'
     let frame4_text = '!-THEN -WE -DISCUSS -THE -PURPOSE -OF -YOUR -WEBSITE******'
     let frame4_bullets = '-WHAT -IS -THE -SITE -ABOUT...-?]\

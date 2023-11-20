@@ -56,4 +56,7 @@
         width: 100%;
         margin-top: 5vh;
     }
+    #mission_info_text p{
+        font-size: 3em;
+    }
 }
