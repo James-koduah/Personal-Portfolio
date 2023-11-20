@@ -1,5 +1,5 @@
 
-var dialouge = function (text, box, callback=false){
+var dialouge = function (text, box, callback=false, speed=70){
     
     let dialouge_text = document.getElementById(box)
     let text_index = 0
@@ -30,7 +30,7 @@ var dialouge = function (text, box, callback=false){
             dialouge_text.innerHTML += current
         }
         text_index++
-    }, 70)
+    }, speed)
 }
 function dialouge1(){
     let header = '-ADD -TECHNOLOGY -TO -YOUR -ASSETS'

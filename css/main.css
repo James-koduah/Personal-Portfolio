@@ -464,8 +464,9 @@ nav{
         font-size: 3.5em;
     }
     #dialouge1_subheader{
-        font-size: 2.9em;
+        font-size: 3.2em;
         width: 100%;
+        text-align: center;
     }
     #dialouge2{
         width: 100%;
