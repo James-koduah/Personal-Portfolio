@@ -51,7 +51,9 @@ function dialouge2(){
     // if (window.innerWidth < 550){
     //     document.getElementById('dialouge1').style.display = 'none'
     // }
-    dialouge_div.style.boxShadow = '1px 1px 3px 3px var(--purple-soft)'
+    if (window.innerWidth > 550){
+        dialouge_div.style.boxShadow = '1px 1px 3px 3px var(--purple-soft)'
+    }
     let display = 'dialouge2_text'
     let bullets_display = 'dialouge2_text2'
     let image_div = document.getElementById('stickman1')

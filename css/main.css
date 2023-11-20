@@ -449,7 +449,7 @@ nav{
     #dialouge{
         /* display: none; */
         width: 85%;
-        margin: 0 auto 50px auto;
+        margin: 0 auto 30px auto;
         padding-left: 0%;
     }
     #dialouge .cover{
@@ -458,15 +458,18 @@ nav{
     #dialouge1{
         text-align: center;
         width: 100%;
+        min-height: 150px;
     }
     #dialouge1_header{
         width: 100%;
         font-size: 3.5em;
+        color: var(--light-violet);
     }
     #dialouge1_subheader{
         font-size: 3.2em;
         width: 100%;
         text-align: center;
+        color: #bbb;
     }
     #dialouge2{
         width: 100%;
