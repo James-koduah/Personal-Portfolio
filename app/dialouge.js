@@ -38,7 +38,11 @@ function dialouge1(){
                       From Websites to Database Systems, we got you covered.'
     // ]-IT -IS -WORTH -THE -INVESTMENT.**************'
     dialouge(header, 'dialouge1_header', ()=>{
-        dialouge(subheader, 'dialouge1_subheader', dialouge2)
+        dialouge(subheader, 'dialouge1_subheader', ()=>{
+            setTimeout(() => {
+                dialouge2()
+            }, 1000);
+        })
     })
 
 }

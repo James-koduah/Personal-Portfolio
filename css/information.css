@@ -71,6 +71,9 @@
     margin-top: 15px;
     cursor: pointer;
 }
+.learn_more:hover{
+    background: linear-gradient(45deg, #111111, #222, #333, #222, #111111);
+}
 
 #portfolio_see_more{
     width: 100vw;
