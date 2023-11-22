@@ -4,7 +4,7 @@
     min-height: 100vh;
     margin-top: 5vh;
     display: flex;
-    background: linear-gradient(180deg, #ddd 98%, #666, #000);
+    background: linear-gradient(180deg, #f1f1f1 98%, #666, #000);
     opacity: 0;
     transition: 2.5s;
 }

@@ -175,7 +175,8 @@ nav{
     width: 300px;
     height: 90%;
     max-height: 650px;
-    background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat;
+    background-color: #f1f1f1;
+    /* background: linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023) no-repeat; */
     /* background: url(../images/chatbackgrounddark.jpg) no-repeat;
     background-size: 100% 100%; */
     color: #c2c2c2;
@@ -268,7 +269,8 @@ nav{
     margin-bottom: 2px;
     border-radius: 5px;
     padding: 0 1% 0 1%;
-    background: linear-gradient(22deg, #2f025e , #45028d 43% 56%, #2f025e);
+    background: var(--purple-soft);
+    /* background: linear-gradient(22deg, #2f025e , #45028d 43% 56%, #2f025e); */
     color: #eee;
     display: flex;
     justify-content: center;
@@ -279,7 +281,7 @@ nav{
     cursor: pointer;
 }
 .chat_action:hover{
-    background-color: #aaa;
+    background: linear-gradient(22deg, #2f025e , #45028d 43% 56%, #2f025e);
 }
 
 #phonebutton{
@@ -420,7 +422,7 @@ nav{
         text-align: center;
     }
     #dialouge1_subheader{
-        font-size: 3em;
+        font-size: 3.3em;
         width: 100%;
         text-align: center;
         color: #bbb;

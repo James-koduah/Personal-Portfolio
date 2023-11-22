@@ -172,10 +172,17 @@ function dialouge2(){
             dialouge('!', bullets_display)
             dialouge(frame10_text, display, ()=>{
                 setTimeout(() => {
-                    dialouge('Hello World', bullets_display)                 
+                    dialouge('Hello World', bullets_display, repeat_again)                 
                 }, 2000);
             })
         }, 2000);
+    }
+    function repeat_again(){
+        setTimeout(() => {
+            dialouge('!', display)
+            dialouge('!', bullets_display)
+            dialouge2()
+        }, 20000);
     }
     frame1()
 }
