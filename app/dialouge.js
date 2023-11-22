@@ -42,7 +42,7 @@ function dialouge1(){
             setTimeout(() => {
                 dialouge2()
             }, 1000);
-        })
+        }, 50)
     })
 
 }
@@ -56,7 +56,8 @@ function dialouge2(){
     if (window.innerWidth > 550){
         dialouge_div.style.boxShadow = '0px 0px 3px 3px var(--purple-soft)'
     }
-    dialouge_div.style.background = 'linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023)'
+    // dialouge_div.style.background = 'linear-gradient(22deg, #0c001b , #1e0638 43% 56%, #110023)'
+    dialouge_div.style.background = '#fafafa'
     let display = 'dialouge2_text'
     let bullets_display = 'dialouge2_text2'
     let image_div = document.getElementById('stickman1')
@@ -90,13 +91,13 @@ function dialouge2(){
         image_div.style.top = `${dialouge_bottom}px`
         setTimeout(()=>{
             dialouge(frame1_text, display, frame2)
-            stickman1_img_change('stickman2.png')
+            stickman1_img_change('stickman_black2.png')
         }, 1500)
     }
     function frame2(){
         setTimeout(()=>{
             dialouge(frame2_text, display, frame3)
-            stickman1_img_change('stickman3.png')
+            stickman1_img_change('stickman_black3.png')
         }, 2000)
     }
     function frame3(){
@@ -104,7 +105,7 @@ function dialouge2(){
         image_div.style.left = `${dialouge_right}px`
         image_div.style.transform = 'scaleX(-1)'
         setTimeout(()=>{
-            stickman1_img_change('stickman4.png')
+            stickman1_img_change('stickman_black4.png')
             image_div.style.transition = '0s'
             image_div.style.transform = 'scaleX(1)'
             dialouge(frame3_text, display, frame4)
@@ -112,7 +113,7 @@ function dialouge2(){
     }
     function frame4(){
         setTimeout(()=>{
-            stickman1_img_change('stickman5.png')
+            stickman1_img_change('stickman_black5.png')
             dialouge(frame4_text , display, ()=>{
                 dialouge(frame4_bullets, bullets_display, frame5)
             })
@@ -122,7 +123,7 @@ function dialouge2(){
         setTimeout(()=>{
             image_div.style.transition = '2s'
             image_div.style.left = '0px'
-            stickman1_img_change('stickman6.png')
+            stickman1_img_change('stickman_black6.png')
             dialouge('!', bullets_display)
             dialouge(frame5_text, display, frame6)
         }, 2000)
@@ -130,7 +131,7 @@ function dialouge2(){
     function frame6(){
         setTimeout(()=>{
             image_div.style.transition = '0s'
-            stickman1_img_change('stickman7.png')
+            stickman1_img_change('stickman_black7.png')
             dialouge(frame6_text, display, ()=>{
                 dialouge(frame6_bullets, bullets_display, frame7)
             })
@@ -138,24 +139,24 @@ function dialouge2(){
     }
     function frame7(){
         setTimeout(()=>{
-            stickman1_img_change('stickman8.png')
+            stickman1_img_change('stickman_black8.png')
             dialouge('!', bullets_display)
             dialouge(frame7_text, display, frame8)
         }, 1500)
     }
     function frame8(){
         setTimeout(()=>{
-            stickman1_img_change('sitemap1.png')
+            stickman1_img_change('sitemap_black1.png')
             dialouge(frame8_text, display, frame9)
         }, 2000)
     }
     function frame9(){
         setTimeout(() => {
             dialouge(frame9_text, display, ()=>{
-                stickman1_img_change('sitemap2.png')
+                stickman1_img_change('sitemap_black2.png')
                 dialouge(']-TEXT', display, ()=>{
                     setTimeout(() => {
-                        stickman1_img_change('sitemap3.png')
+                        stickman1_img_change('sitemap_black3.png')
                         dialouge(']-IMAGES... ETC', display, frame10)                        
                     }, 1000);
                 })

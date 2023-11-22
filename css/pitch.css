@@ -1,0 +1,48 @@
+#pitch{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+}
+#pitch_header{
+    margin-top: 100px;
+}
+
+#pitch_images{
+    width: 55%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pitch_image_frame{
+    width: 80%;
+    height: 250px;
+}
+
+#pitch_text{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pitch_text li{
+    font-size: 3em;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+@media (max-width: 550px) {
+    #pitch{
+        flex-direction: column;
+    }
+    #pitch_images{
+        width: 100%;
+    }
+    #pitch_text{
+        width: 80%;
+        padding: 30px 10%;
+    }
+    #pitch_text li{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
