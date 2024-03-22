@@ -1,412 +1,76 @@
+---
+title: James Koduah
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/welcome.css">
-    <link rel="stylesheet" href="css/information.css">
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/mission.css">
-    <link rel="stylesheet" href="css/scroll_display.css">
-    <link rel="stylesheet" href="css/pitch.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/credits.css">
-    <title>Jaskin Tech</title>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <style>
-        i{
-            font-size: 150%;
-        }
-        span{
-            font-size: 50%;
-        }
-        body{
-            background-color: #111;
-            width: 100vw;
-            height: 100vh;
-            font-size: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-        #precover{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 300;
-            background: #000;
-            color: #7a0af3;
-            font-size: 2.4em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        #precover h1{
-            animation-name: bobs;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            --bg-size: 400%;
-            --color-one: #8d31ef;
-            --color-two: pink;
-            background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        @keyframes bobs {
-            to {
-                background-position: var(--bg-size) 0;
-            }
-        }
-        #precover div{
-            width: 20px;
-            height: 3px;
-            background-color: #8d31ef;
-            margin-top: 10px;
-            margin-left: -20em;
-            animation: slide 4s infinite ease-in-out;
-        }
-        @keyframes slide {
-            0%{margin-left: -20em; width: 20px;}
-            30%{width: 50px;}
-            50%{margin-left: 20em; width: 20px;}
-            80%{width: 50px;}
-            100%{margin-left: -20em; width: 20px;}            
-        }
-
-    </style>
+    {% include head %}
+    <link rel="stylesheet" href="/home/home.css">
+    <script src="/home/home.js"></script>
 </head>
 <body>
-    <div id="precover">
-        <h1><i>J</i>ASKIN <i>T</i>ECH.</h1>
-        <div></div>
-    </div>
+    <div id="screen"></div>
     <main>
-        <section id="welcome">
-            <nav>
-                <div id="logo"><i>J</i>ASKIN <i>T</i>ECH.</div>
-                <div id="links">
-                    <a href="#"><i>O</i>UR <i>P</i>RODUCTS <t>></t></a>
-                    <a href="#portfolio"><i>P</i>ORTFOLIO <t>></t></a>
-                    <a href="#"><i>A</i>BOUT <t>></t></a>
-                    <a href="#contact"><i>C</i>ONTACT <t>></t></a>
-                </div>
-            </nav>
-            <div class="main">
-                <div id="chat" class="mobile-hide">
-                    <div id="chatapp">
-                        <div class="header">
-                            <div id="chatappfla"></div>
-                            <ion-icon name="wifi"></ion-icon>
-                            <ion-icon name="cellular"></ion-icon>
-                            <ion-icon name="battery-full"></ion-icon>
-                            <p>99%</p>
-                        </div>
-                        <div id="chatbox">
-                        </div>
-                        <div id="chat_action">
-                        </div>
-                        <div id="phonebutton">
-                            <div onclick="chatApp(1)">
-                                <ion-icon name="stop-outline"></ion-icon>
-                            </div>
-                            <div onclick="chatApp(0)">
-                                <ion-icon name="ellipse-outline"></ion-icon>
-                            </div>
-                            <div onclick="chatApp(-1)">
-                                <ion-icon name="caret-back-outline"></ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="dialouge">
-                    <div id="dialouge1">
-                        <header id="dialouge1_header"></header>
-                        <p id="dialouge1_subheader"></p>
-                    </div>
-                    <div id="dialouge2">
-                        <p id="dialouge2_text"></p>
-                        <p id="dialouge2_text2"></p>
-                        <div id="stickman1"><img style="display: none;" id="stickman1_img" src="images/png_icons/stickman_black1.png" alt=""></div>
-                    </div>
-                
-                    <div id="dialouge3" class="dialouge_text">
-                        <a href="/appointment/" id="lets_connect">Book A Free Meeting</a>
-                    </div>
-                </div>
+        {% include nav.html %}
+        <section id="me">
+            <div class="me_item">
+                <span>Hello, my name is</span>
+                <p>James Osei Koduah</p>
             </div>
-        </section>  
-        <section id="information">
-            <div class="information_header">
-                <h2><i>J</i>ASKIN <i>T</i>ECH.</h2>
-                <h3><i>W</i>HY <i>C</i>HOOSE <i>U</i>S <i>?</i></h3>
+            <div id="me_job" class="me_item">
+                <span>I am a</span>
+                <p>Full Stack Web Developer</p>
             </div>
-            <div id="service_information">
-                <div class="item" >
-                    <div class="image_frame"><img src="images/man2.jpeg" alt=""></div>
-                    <div class="info">
-                        <header><i>S</i>IMPLE <i>P</i>ROCESS</header>
-                        <p>We make getting your own website so easy</p>
-                        <p>No Big Words/Jargons</p>
-                        <p>Secure and Documented Payments</p>
-                        <p>We give a Stress-free exprience</p>
-                        <div class="learn_more">READ MORE</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image_frame"><img src="images/datacenter4.jpeg" alt=""></div>
-                    <div class="info">
-                        <header><i>H</i>IGH <i>G</i>RADE <i>T</i>ECHNOLOGY</header>
-                        <p>We Choose the right tools for your project</p>
-                        <p>Your site grows and expands easily</p>
-                        <p>Responsive Design - Optimized for different screens...mobile, tablets, pc <span>ETC</span></p>
-                        <div class="learn_more">READ MORE</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image_frame"><img src="images/road1.jpeg" alt=""></div>
-                    <div class="info">
-                        <header><i>P</i>URPOSE <i>D</i>RIVEN <i>S</i>ITES</header>
-                        <p>Have your site built with advanced marketing strategies that appeal to
-                            your sites visitors and boost engagement.
-                        </p>
-                        <p>See how we help you achieve this...</p>
-                        <div class="learn_more">READ MORE</div>
-                    </div>
-                </div>
-            </div>
-            <div id="product1">
-                <div id="product1_img_frame"><img src="images/computer4.jpeg" alt=""></div>
-                <div id="product1_info">
-                    <header id="product1_info_header"><i>W</i>EB <i>D</i>EVELOPMENT <i>P</i>RODUCT OFFERINGS</header>
-                    <div id="product1_info_content">
-                        <div id="product1_disclaimer">Please Note that these products are generalizations. 
-                            Each project is different and to be discussed accordingly</div>
-                        <div class="item">
-                            <header><i>S</i>MALL <i>&</i> <i>C</i>OMPACT <i>S</i>ITE</header>
-                            <p>Great for Small Businesses, Individuals, Events</p>
-                            <p>1-2 Webpage(s)</p>
-                            <p>Limited Page Interactivity</p>
-                            <p><strong>Starts from:</strong></p>
-                            <p class="price"><strong><span>GHC</span> 2,300</strong></p>
-                            <a class="learn_more">CHECK PRODUCT</a>
-                        </div>
-                        <div class="item">
-                            <header><i>E</i>XPANSIVE <i>&</i> <i>R</i>OBUST <i>S</i>ITE</header>
-                            <p>Great for Firms and Corporations</p>
-                            <p>Multiple Webpages of Content</p>
-                            <p>Highly descriptive of your Concern</p>
-                            <p><strong>Starts from:</strong></p>
-                            <p class="price"><strong><span>GHC</span> 4,800</strong></p>
-                            <a class="learn_more">CHECK PRODUCT</a>
-                        </div>
-                        <div class="item">
-                            <header><i>W</i>EB <i>A</i>PPLICATION</header>
-                            <p>Backend And Database</p>
-                            <p>Ecommerce Apps, Hospital Portals, Company Processes ...</p>
-                            <p><strong>Starts from:</strong></p>
-                            <p class="price"><strong><span>GHC</span> 12,000</strong></p>
-                            <a class="learn_more">CHECK PRODUCT</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="mission">
-                <div id="mission_info">
-                    <div id="mission_info_text">
-                        <header>"We help people get the tech they need, making sure everyone has the tools they want."</header>
-                        <p>
-                            We are an agency that aims to help anyone from any industry with the need to 
-                            apply Technology, have an easy and convinent way of accessing this marvelous tool.
-                            Our vision is to expand to offer not just Web Development services, but other technological
-                            products.
-                        </p>
-                        <p>
-                            Technology has been responsible for the great advancement of the human race and everyone
-                            - especially businesses - would do well to adopt and utilize this tool. Technology is changing
-                            alot of industries, we aim to assist people ride the wave of change as smoothly as possible. 
-                        </p>
-                        <p>
-                            We aim to keep growing and expanding, both in our geographical locations and in our products and 
-                            services.
-                        </p>
-                    </div>
-                </div>
-                <div id="mission_image_frame"><img src="images/mission12.jpeg" alt=""></div>
-            </div>
-            <div id="portfolio_display_header" class="information_header">
-                <h2><i>P</i>ORTFOLIO.</h2>
-                <h3><i>S</i>EE <i>H</i>OW <i>W</i>E'VE <i>M</i>ADE <i>O</i>UR <i>C</i>USTOMERS <i>S</i>MILE</h3>
-            </div>
-            <div id="portfolio">
-                <div id="portfolio_display" class="scroll_display_PC">
-                    <div id="portfolio_scroll_right" class="scroll_display_move_right">
-                        <div id="portfolio_scroll" class="scroll_display_move_left">
-                            <div class="scroll_display_item">
-                                <img src="images/laptop.jpeg" alt="">
-                            </div>
-                            <div class="scroll_display_item">
-                                <img src="images/computer.jpeg" alt="">
-                            </div>
-                            <div class="scroll_display_item scroll_current">
-                                <img src="images/site4.png" alt="">
-                            </div>
-                            <div class="scroll_display_item">
-                                <img src="images/laptop5.jpeg" alt="">
-                            </div>
-                            <div class="scroll_display_item">
-                                <img src="images/flower.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll_display_move_left_button" onclick="portfolio_scroll(1)"><ion-icon name="arrow-back-circle"></ion-icon></div>
-                    <div class="scroll_display_move_right_button" onclick="portfolio_scroll(0)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
-                </div>
-                <div id="portfolio_display_MOBILE" class="scroll_display_MOBILE">
-                    <div class="scroll_MOBILE_move" onclick="scroll_display_mobile(1)"><ion-icon name="arrow-back-circle"></ion-icon></div>
-                    <div class="scroll_MOBILE">
-                        <div id="portfolio_display_MOBILE_right" class="scroll_MOBILE_track_right">
-                            <div id="portfolio_display_MOBILE_left" class="scroll_MOBILE_track_left">
-                                <div class="scroll_MOBILE_item">
-                                    <img src="images/laptop.jpeg" alt="">
-                                    <header>TEEMBOOM SAAS</header>
-                                    <p>An Enterprise Scale Web Application.</p>
-                                </div>
-                                <div class="scroll_MOBILE_item"><img src="images/happy1.png" alt=""></div>
-                                <div class="scroll_MOBILE_item"><img src="images/keyboard4.jpeg" alt=""></div>
-                                <div class="scroll_MOBILE_item"><img src="images/laptop2.jpeg" alt=""></div>
-                                <div class="scroll_MOBILE_item"><img src="images/laptop3.jpeg" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll_MOBILE_move" onclick="scroll_display_mobile(0)"><ion-icon name="arrow-forward-circle"></ion-icon></div>
-                </div>
-                <div id="portfolio_see_more"><div class="learn_more">SEE MORE PROJECTS</div></div>
-            </div>
-            <div id="pitch_header" class="information_header">
-                <h2><i>B</i>ENEFITS</h2>
-                <h3><i>W</i>HY <i>G</i>ET <i>A</i> <i>W</i>EBSITE</h3>
-            </div>
-            <div id="pitch">
-                <div id="pitch_images">
-                    <div class="pitch_image_frame"><img src="images/computer13.jpeg" alt=""></div>
-                    <div class="pitch_image_frame"><img src="images/drone.jpeg" alt=""></div>
-                </div>
-                <div id="pitch_text">
-                    <ul>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                        <li>Something to represent something that will become something</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="contact">
-                <div class="information_header">
-                    <h2><i>C</i>ONTACT</h2>
-                    <h3><i>L</i>ET'S <i>S</i>TART <i>W</i>ORK</h3>
-                </div>
-                <div id="contact_content">
-                    <div id="contact_media">
-                        <div id="contact_media_text">
-                            <p>
-                                TALK TO US
-                            </p>
-                        </div>
-                        <div id="contact_media_links">
-                            <a class="item"><ion-icon name="logo-linkedin"></ion-icon></a>
-                            <a class="item"><ion-icon name="logo-facebook"></ion-icon></a>
-                            <a class="item"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                            <a class="item"><ion-icon name="logo-twitter"></ion-icon></a>
-                            <a class="item"><ion-icon name="call-outline"></ion-icon></a>
-                            <a class="item"><ion-icon name="mail-outline"></ion-icon></a>
-                        </div>
-                    </div>
-                    <div id="contact_email">
-                        <div id="email_box" class="box">
-                            <header>Contact Via Email</header>
-                            <div>
-                                <p>Your Name</p>
-                                <input type="text">
-                            </div>
-                            <div>
-                                <p>Your Email</p>
-                                <input type="email">
-                            </div>
-                            <div>
-                                <p>Your Message</p>
-                                <textarea></textarea>
-                            </div>
-                            <div>
-                                <button>Send</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="jaskin_tech">
-                <i>J</i>ASKIN &nbsp;&nbsp; <i>T</i>ECH.
+            
+            <div class="me_item">
+                <span>I am from</span>
+                <p>Ghana</p>
             </div>
         </section>
-    </main>  
-    <footer id="credits">
-        <div id="footer_header">
-            <p><i>D</i>O <i>Y</i>OU <i>W</i>ANT <i>T</i>O <i>S</i>EE <i>S</i>OMETHING <i>I</i>NTRESTING...<i>?</i></p>
-            <a href="#" class="learn_more">EXPLORE</a>
-        </div>
-        <div id="footer_main">
-            <div id="footer_links">
-                <div id="footer_actions">
-                    <header><i>F</i>IND <i>O</i>PORTUNITIES <i>W</i>ITH <i>U</i>S</header>
-                    <a><i>B</i>ECOME <i>A</i> <i>P</i>ARTNER</a>
-                    <a><i>C</i>AREER <i>/</i> <i>O</i>PEN <i>P</i>OSITIONS</a>
+        <section id="projects">
+            <div id="projects_header">
+                <header>My Projects</header>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum consectetur velit placeat nulla alias quisquam. Modi nobis voluptatum enim nihil quasi</p>
+            </div>
+            <div class="p_item">
+                <div class="p_item_img">
+                    <img src="/images/teemboom.jpg" alt="">
                 </div>
-                <div id="footer_pages">
-                    <header><i>N</i>AVIGATE</header>
-                    <a href=""><i>P</i>RODUCTS</a>
-                    <a href=""><i>A</i>BOUT</a>
-                    <a href=""><i>P</i>ORTFOLIO</a>
-                    <a href=""><i>B</i>LOG</a>
-                    <a href=""><i>S</i>ERVICES</a>
+                <div class="p_item_text">
+                    <header>Teemboom Comments</header>
+                    <p>
+                        Teemboom is a third party comments plugin that generates a comments user engagement system for webpages.
+                        It is a Saas product I developed especially for static sites like Jekyll, Hugo etc, to enable these websites have
+                        a comments section. With just a <i><</i>script> tag you can have a personalized comment section for your webpage<br>                        
+                    </p>
                 </div>
             </div>
-            <div id="footer_improve">
-                <header><i>B</i>USINESS</header>
-                <div>
-                    <p><i>S</i>CHEDULE <i>A</i>N <i>A</i>PPOINTMENT</p>
-                    <a href="/appointment/" class="learn_more">SCHEDULE</a>
+            <div class="p_item">
+                <div class="p_item_img">
+                    <img src="/images/website_inspiration2.jpeg" alt="">
                 </div>
-                <div>
-                    <p><i>D</i>ROP <i>A</i> <i>H</i>INT, <i>T</i>IP OR <i>S</i>UGGESTION</p>
-                    <textarea></textarea>
-                    <button>DROP</button>
+                <div class="p_item_text"></div>
+            </div>
+            <div class="p_item">
+                <div class="p_item_img">
+                    <img src="/images/teemboom.jpg" alt="">
                 </div>
-
+                <div class="p_item_text"></div>
             </div>
-            <div id="footer_ai_images">
-                <img id="ai_images1" src="images/man7.jpeg" alt="">
-                <img id="ai_images2" src="images/man1.jpeg" alt="">
+            <div class="p_item">
+                <div class="p_item_img">
+                    <img src="/images/teemboom.jpg" alt="">
+                </div>
+                <div class="p_item_text"></div>
             </div>
-        </div>
-        <div id="copyright">Copyright © 2023 JASKIN TECH</div>
+            <div class="p_item">
+                <div class="p_item_img">
+                    <img src="/images/teemboom.jpg" alt="">
+                </div>
+                <div class="p_item_text"></div>
+            </div>
+        </section>
 
-    </footer>
-
-    <script src="app/app.js"></script>
-    <script src="app/dialouge.js"></script>
+    </main>
 </body>
 </html>
