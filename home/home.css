@@ -95,6 +95,8 @@
 .p_item_img{
     width: 55%;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .p_item_img img{
     object-fit: contain;
