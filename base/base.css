@@ -8,7 +8,8 @@
 }
 
 :root{
-    --ma-bg: #8402af44;
+    --ma-bg: #8402af55;
+    --at-bg: #ad03e5;
     --text-color: #eee;
     --sans: Oscine, sans-serif;
     --cam: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -47,13 +48,14 @@ body::-webkit-scrollbar-thumb{
 
 main{
     width: 80vw;
-    margin: 0 auto;
+    margin: 0 10vw;
     background-color: #00000066;
     padding: 10px 0;
 }
 @media (max-width: 600px) {
     main{
         width: 90vw;
+        margin: 0 5vw;
     }
 }
 
@@ -111,6 +113,37 @@ img{
     font-size: 3.3em;
     background-color: var(--ma-bg);
 }
+@media (max-width: 600px) {
+    #main_nav_links li{
+        font-size: 2.5em;
+    }
+}
+
+.action_button{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    font-size: 2.5em;
+    font-weight: 600;
+    background: var(--at-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 1px 1px #111; */
+    overflow: hidden;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+.action_button ion-icon{
+    font-size: 130%;
+    margin: 0 3px;
+}
+.action_button:hover{
+    background: #000;
+    font-size: 2.45em;
+}
 
 
 
@@ -120,5 +153,7 @@ img{
     height: 100vh;
     top: 0;
     left: 0;
+    background: transparent;
     z-index: -1;
+    transition: 1s;
 }

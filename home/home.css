@@ -30,6 +30,9 @@
         order: 3;
         width: 96%;
     }
+    .me_item p{
+        font-size: 3.8em;
+    }
 }
 @media (max-width: 600px) {
     #me_job{
@@ -66,17 +69,27 @@
 @media (max-width: 650px) {
     #projects_header{
         max-width: 100%;
-        width: calc(100% - 30px)
+        width: 96%;
+        padding: 15px 2%;
+    }
+    #projects_header header{
+        font-size: 3.8em;
     }
 }
 
 
 .p_item{
     width: 100%;
-    margin: 20px 0;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.p_item .action_button{
+    padding: 10px 15px;
+    font-weight: 400;
+    margin: 10px 0;
 }
 
 .p_item_img{
@@ -103,12 +116,29 @@
     font-size: 2.8em;
     line-height: 150%;
 }
-
+.p_item_ts{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ts_item{
+    padding: 5px 16px;
+    background-color: #00000099;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 2.4em !important;
+}
 @media (max-width: 1100px) {
     .p_item_img{
         width: 100%;
     }
     .p_item_text{
         width: 96%;
+        padding-top: 20px;
+    }
+    .p_item_text header{
+        font-size: 3.8em;
     }
 }
