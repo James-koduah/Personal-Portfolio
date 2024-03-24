@@ -40,7 +40,7 @@ body::-webkit-scrollbar{
     width: 5px;
 }
 body::-webkit-scrollbar-track{
-    background: purple;
+    background: #000;
 }
 body::-webkit-scrollbar-thumb{
     background: var(--ma-bg);

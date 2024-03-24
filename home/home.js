@@ -11,20 +11,21 @@ document.addEventListener('scroll', (e)=>{
         document.body.style.backgroundSize = 'cover'
         document.body.style.backgroundAttachment = 'fixed' 
     }
-    else if (window.scrollY > 1400 && window.scrollY < 2000){
+    else if (window.scrollY > 1400 && window.scrollY < 1700){
         screen_div.style.background = '#000'
     }
-    else if (window.scrollY > 2010 && window.scrollY < 2500){
+    else if (window.scrollY > 1710 && window.scrollY < 2100){
         document.body.style.background = 'url(/images/body.webp) no-repeat'
         document.body.style.backgroundSize = 'cover'
         document.body.style.backgroundAttachment = 'fixed' 
     }
-    if (window.scrollY > 2500){
+    if (window.scrollY > 2110){
         screen_div.style.background = 'transparent'
         document.documentElement.style.setProperty('--ma-bg', '#af750255')
         document.documentElement.style.setProperty('--su-bg', '#ffffff')
         
     }
+    console.log(window.scrollY)
         // if (screen_opacity >= 0 && screen_opacity <= 1){
         //     if (window.scrollY > winY){
         //         if (screen_opacity <= 0.98) screen_opacity += 0.02
