@@ -75,6 +75,10 @@
     #projects_header header{
         font-size: 3.8em;
     }
+    #projects_header p{
+        font-size: 3.1em;
+        line-height: 150%;
+    }
 }
 
 
@@ -142,5 +146,8 @@
     }
     .p_item_text header{
         font-size: 3.8em;
+    }
+    .p_item_text p{
+        font-size: 3.4em;
     }
 }
