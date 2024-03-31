@@ -25,7 +25,6 @@ document.addEventListener('scroll', (e)=>{
         document.documentElement.style.setProperty('--su-bg', '#ffffff')
         
     }
-    console.log(window.scrollY)
         // if (screen_opacity >= 0 && screen_opacity <= 1){
         //     if (window.scrollY > winY){
         //         if (screen_opacity <= 0.98) screen_opacity += 0.02
