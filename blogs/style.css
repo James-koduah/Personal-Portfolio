@@ -1,0 +1,33 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 3vw 100px;
+    margin: 0 7vw;
+}
+
+.blog{
+    width: 30%;
+    margin-top: 60px;
+}
+.blog_img{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.blog_img img{
+    border: 1px var(--at-bg) solid;
+}
+.blog_text{
+    width: 100%;
+    padding: 10px 0;
+}
+.blog_text header{
+    font-size: 3.4em;
+    margin-bottom: 15px;
+}
+
+.blog_text p{
+    font-size: 3em;
+    margin-bottom: 10px;
+}

@@ -1,10 +1,9 @@
 <nav id="main_nav">
-    <!-- <div id="main_nav_logo">
-        <p>James Koduah</p>
-    </div> -->
     <ul id="main_nav_links">
-        <li><a href="">My_Bio</a></li>
-        <li><a href="">My_Blog</a></li>
-        <li><a href="">My_Contact</a></li>
+        {% for item in site.data.nav %}
+        {% if page.url != item.link %}
+        <li><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endif %}
+        {% endfor %}
     </ul>
 </nav>

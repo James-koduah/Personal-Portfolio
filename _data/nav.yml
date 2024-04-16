@@ -1,0 +1,11 @@
+- name: My_Homepage
+  link: /
+
+- name: My_blog
+  link: /blogs/
+
+- name: My_Bio
+  link: /bio/
+
+- name: My_Contact 
+  link: /contact/
