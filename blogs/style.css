@@ -3,7 +3,13 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 3vw 100px;
-    margin: 0 7vw;
+    margin: 0 auto;
+}
+
+#main_nav{
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
 }
 
 .blog{
@@ -30,4 +36,21 @@ main{
 .blog_text p{
     font-size: 3em;
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 800px) {
+    main{
+        width: 85vw;
+        padding: 20px 3vw 100px;
+        margin: 0 auto;
+    }
+    .blog{
+        width: 48%;
+    }
+}
+@media (max-width: 600px) {
+    .blog{
+        width: 100%;
+    }
 }

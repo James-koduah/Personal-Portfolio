@@ -92,7 +92,6 @@ img{
     background-color: var(--ma-bg);
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -101,7 +100,7 @@ img{
 }
 
 #main_nav_links{
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }
