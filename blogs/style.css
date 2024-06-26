@@ -2,6 +2,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
     padding: 20px 3vw 100px;
     margin: 0 auto;
 }
@@ -14,6 +16,7 @@ main{
 
 .blog{
     width: 30%;
+    height: fit-content;
     margin-top: 60px;
 }
 .blog_img{

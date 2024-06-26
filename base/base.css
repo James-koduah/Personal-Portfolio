@@ -47,10 +47,11 @@ body::-webkit-scrollbar-thumb{
 }
 
 main{
-    width: 80vw;
-    margin: 0 10vw;
+    width: 90vw;
+    min-height: 100vh;
+    margin: 0 5vw;
     background-color: #00000066;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 @media (max-width: 600px) {
     main{
@@ -85,11 +86,10 @@ img{
 
 
 #main_nav{
-    width: 92%;
+    width: 96%;
     padding: 5px 2%;
-    margin: 0 2%;
-    height: 30px;
-    background-color: var(--ma-bg);
+    height: 50px;
+    background-color: #8402af22;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ img{
     padding: 0 15px;
     margin: 0 5px;
     font-size: 3.3em;
-    background-color: var(--ma-bg);
+    /* background-color: var(--ma-bg); */
 }
 @media (max-width: 600px) {
     #main_nav_links li{
