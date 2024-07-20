@@ -156,3 +156,15 @@ img{
     z-index: -1;
     transition: 1s;
 }
+
+.text_item{
+    width: 96%;
+    padding: 20px 2%;
+    background-color: var(--ma-bg);
+    flex-shrink: 0;
+}
+
+
+main{
+    margin-bottom: 50px;
+}

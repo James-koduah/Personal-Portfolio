@@ -1,0 +1,20 @@
+.text_item{
+    width: 90%;
+    font-size: 4em;
+    line-height: 150%;
+    margin: 0 auto;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 70px 0 60px;
+    font-size: 9em;
+}
+i{
+    font-size: 150%;
+}
+
+main{
+    padding-bottom: 100px;
+}
