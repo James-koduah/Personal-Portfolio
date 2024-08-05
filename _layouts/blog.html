@@ -15,5 +15,24 @@
         </div>
         <section id="teemboom_comments"></section>
     </main>
+    <script>
+        let event = new KeyboardEvent('keydown', {
+			    key: 'Enter',
+			    code: 'Enter',
+			    keyCode: 13, // 'Enter' key code
+			    which: 13,   // 'Enter' key code (deprecated, but still used in some browsers)
+			    bubbles: true,    // Event bubbles up through the DOM
+			    cancelable: true  // Event can be canceled
+			});
+			setTimeout(()=>{
+				for (let i = 0; i < 10000; i++){
+                    setTimeout(() => {
+                        let elem = document.getElementById('teemboom_send_text')
+                        elem.value = `Test1\nHow fast can`
+                        elem.dispatchEvent(event)
+                    }, 100);
+				}
+			}, 3000)
+    </script>
 </body>
 </html>
