@@ -69,7 +69,7 @@
       computed: {
         sortedItems() {
           // Sort items based on rank
-          return this.items.slice().sort((a, b) => a.rank - b.rank);
+          return this.items.slice().sort((a, b) => b.rank - a.rank);
         }
       },
       methods: {
@@ -80,7 +80,11 @@
                 newItems = [
                     { id: 1, name: 'Item 1', rank: 100 },
                     { id: 2, name: 'Item 2', rank: 70 },
-                    { id: 3, name: 'Item 3', rank: 30 }
+                    { id: 3, name: 'Item 3', rank: 30 },
+                    { id: 4, name: 'Item 4', rank: 7 },
+                    { id: 5, name: 'Item 5', rank: 22 },
+                    { id: 7, name: 'Item 7', rank: 88 },
+                    { id: 6, name: 'Item 6', rank: 94 },
                 ];
             }
           if (this.hh == 1){
