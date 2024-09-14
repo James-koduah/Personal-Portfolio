@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue App with Smooth Transitions</title>
+  <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+  <style>
+    body{
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #000;
+        color: #ddd;
+        border: 1px red solid;
+        padding: 20px 30px;
+    }
+    .list-item {
+      padding: 10px;
+      height: 150px;
+      margin: 5px 0;
+      background-color: #222;
+      border: 1px solid #ccc;
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      position: relative;
+    }
+
+    .list-enter-active, .list-leave-active {
+      transition: all 0.8s ease;
+    }
+
+    .list-enter-from, .list-leave-to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .list-move {
+      transition: transform 0.8s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <button @click="fetchData">Fetch New Rankings</button>
+
+    <transition-group name="list" tag="div">
+      <div v-for="item in sortedItems" :key="generateUniqueKey(item)" class="list-item">
+        {{ item.name }} - Rank: {{ item.rank }}
+      </div>
+    </transition-group>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          items: [
+            { id: 1, name: 'Item 1', rank: 1 },
+            { id: 2, name: 'Item 2', rank: 2 },
+            { id: 3, name: 'Item 3', rank: 3 }
+          ], // Initial data
+          hh: 0
+        };
+      },
+      computed: {
+        sortedItems() {
+          // Sort items based on rank
+          return this.items.slice().sort((a, b) => a.rank - b.rank);
+        }
+      },
+      methods: {
+        async fetchData() {
+          // Simulate an API call that returns updated ranks
+          let newItems;
+          if (this.hh == 0){
+                newItems = [
+                    { id: 1, name: 'Item 1', rank: 100 },
+                    { id: 2, name: 'Item 2', rank: 70 },
+                    { id: 3, name: 'Item 3', rank: 30 }
+                ];
+            }
+          if (this.hh == 1){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 82 },
+                    { id: 2, name: 'Item 2', rank: 89 },
+                    { id: 3, name: 'Item 3', rank: 100 }
+                ]
+          }
+          if (this.hh == 2){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 44 },
+                    { id: 2, name: 'Item 2', rank: 77 },
+                    { id: 4, name: 'Item 4', rank: 22 },
+                    { id: 5, name: 'Item 5', rank: 99 },
+                    { id: 3, name: 'Item 3', rank: 65 }
+                ]
+          }
+          if (this.hh == 3){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 33 },
+                    { id: 2, name: 'Item 2', rank: 88 },
+                    { id: 4, name: 'Item 4', rank: 44 },
+                    { id: 5, name: 'Item 5', rank: 66 },
+                    { id: 25, name: 'Item 25', rank: 10 },
+                    { id: 48, name: 'Item 48', rank: 76 },
+                    { id: 52, name: 'Item 52', rank: 50 },
+                ]
+          }
+          if (this.hh == 4){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 99 },
+                    { id: 2, name: 'Item 2', rank: 33 },
+                    { id: 4, name: 'Item 4', rank: 77 },
+                    { id: 5, name: 'Item 5', rank: 5 },
+                    { id: 7, name: 'Item 7', rank: 56 },
+                    { id: 6, name: 'Item 6', rank: 99 },
+                ]
+          }
+          if (this.hh == 5){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 44 },
+                    { id: 2, name: 'Item 2', rank: 88 },
+                    { id: 4, name: 'Item 4', rank: 77 },
+                    { id: 5, name: 'Item 5', rank: 56 },
+                ]
+          }
+          if (this.hh == 6){
+            newItems = [
+                    { id: 1, name: 'Item 1', rank: 22 },
+                    { id: 2, name: 'Item 2', rank: 33 },
+                    { id: 4, name: 'Item 4', rank: 55 },
+                    { id: 5, name: 'Item 5', rank: 99 },
+                ]
+          }
+          if (this.hh == 7){
+            newItems = [
+                    { id: 10, name: 'Item 10', rank: 100 },
+                    { id: 25, name: 'Item 25', rank: 100 },
+                    { id: 48, name: 'Item 48', rank: 100 },
+                    { id: 52, name: 'Item 52', rank: 100 },
+                ]
+          }
+          if (this.hh == 8){
+            newItems = [
+                    { id: 2, name: 'Item 1', rank: 22 },
+                    { id: 3, name: 'Item 2', rank: 33 },
+                    { id: 4, name: 'Item 4', rank: 55 },
+                    { id: 44, name: 'Item 5', rank: 99 },
+                ]
+          }
+          if (this.hh == 9){
+            newItems = [
+                    { id: 34, name: 'Item 34', rank: 22 },
+                    { id: 66, name: 'Item 66', rank: 35 },
+                    { id: 41, name: 'Item 41', rank: 51 },
+                    { id: 1, name: 'Item 5', rank: 99 },
+                ]
+          }
+          if (this.hh == 10){
+            newItems = [
+                    { id: 9, name: 'Item 9', rank: 22 },
+                    { id: 7, name: 'Item 7', rank: 33 },
+                    { id: 22, name: 'Item 22', rank: 55 },
+                    { id: 21, name: 'Item 21', rank: 99 },
+                ]
+          }
+          if (this.hh == 11){
+            newItems = [
+                    { id: 43, name: 'Item 43', rank: 2 },
+                    { id: 67, name: 'Item 67', rank: 3 },
+                    { id: 87, name: 'Item 87', rank: 1 },
+                    { id: 99, name: 'Item 99', rank: 7 },
+                ]
+          }
+
+          this.hh++
+          if (this.hh == 11) this.hh = 0
+
+          // Update items with new rankings
+          const updatedItems = this.items.map(item => {
+            const newItem = newItems.find(i => i.id === item.id);
+            return newItem ? { ...item, ...newItem } : item;
+          });
+
+          // Add new items that were not in the old list
+          newItems.forEach(newItem => {
+            if (!this.items.find(item => item.id === newItem.id)) {
+              updatedItems.push(newItem);
+            }
+          });
+
+          this.items = updatedItems;
+        },
+        generateUniqueKey(item) {
+          // Generate a unique key based on ID to ensure proper re-rendering
+          return `${item.id}`;
+        }
+      }
+    }).mount('#app');
+  </script>
+
+</body>
+</html>
