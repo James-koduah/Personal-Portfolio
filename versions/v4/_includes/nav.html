@@ -1,0 +1,9 @@
+<nav id="main_nav">
+    <ul id="main_nav_links">
+        {% for item in site.data.nav %}
+        {% if page.url != item.link %}
+        <li><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

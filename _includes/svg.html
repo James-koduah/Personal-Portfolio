@@ -1,0 +1,4 @@
+{% assign svg_data = site.data.svgs | where: "name", include.id %}
+{% for svg in svg_data %}
+  {{ svg.data | safe }}
+{% endfor %}

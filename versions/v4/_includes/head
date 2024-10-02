@@ -2,13 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{page.title}}</title>
 <link rel="stylesheet" href="/base/base.css">
-<script src="/base/base.js" defer></script>
+<script src="/base/base.js"></script>
 
 <meta name="theme-color" content="#8402af">
-<meta property="og:title" content="James Koduah | I build Software">
+<meta property="og:title" content="James Koduah | Full Stack Developer Portfolio">
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://personal.jaskintech.com/images/profile_pic.jpg">
-<meta property="og:description" content="">
+<meta property="og:description" content="James Koduah's portfolio showcasing innovative web applications and backend systems, blending functionality with creativity. Explore digital excellence today!">
 <meta property="og:site_name" content="James Koduah Personal Portfolio">
 <meta property="og:url" content="https://personal.jaskintech.com">
 <link rel="icon" href="/images/profile_pic_icon.jpg" type="image/x-icon">

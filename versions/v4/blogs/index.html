@@ -1,0 +1,25 @@
+---
+title: Blogs
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head %}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        {% include nav.html %}
+        {% for blog in site.blogs %}
+        <a href="{{blog.url}}" class="blog">
+            <div class="blog_img"><img src="/images/blogs/master_programming.jpg" alt=""></div>
+            <div class="blog_text">
+                <header>{{blog.title}}</header>
+                <p>{{blog.summary}}</p>
+            </div>
+            <p href="{{blog.url}}" class="action_button">Read</p>
+        </a>
+        {% endfor %}
+    </main>    
+</body>
+</html>

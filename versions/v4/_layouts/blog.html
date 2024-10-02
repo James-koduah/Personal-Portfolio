@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head %}
+    <link rel="stylesheet" href="/blogs/blog/style.css">
+    <script src="/blogs/blog/app.js"></script>
+    <script src='https://teemboom.com/static/app/dist/teemboom.js'></script>
+</head>
+<body>
+    {% include blog_nav.html %}
+    <main>
+        <div id="main_img"><img src="/images/blogs/{{page.img}}" alt=""></div>
+        <div id="content">
+            {{content}}
+        </div>
+        <section id="teemboom_comments"></section>
+    </main>
+    <script>
+        // let event = new KeyboardEvent('keydown', {
+		// 	    key: 'Enter',
+		// 	    code: 'Enter',
+		// 	    keyCode: 13, // 'Enter' key code
+		// 	    which: 13,   // 'Enter' key code (deprecated, but still used in some browsers)
+		// 	    bubbles: true,    // Event bubbles up through the DOM
+		// 	    cancelable: true  // Event can be canceled
+		// 	});
+		// 	setTimeout(()=>{
+		// 		for (let i = 0; i < 10000; i++){
+        //             setTimeout(() => {
+        //                 let elem = document.getElementById('teemboom_send_text')
+        //                 elem.value = `Test1\nHow fast can`
+        //                 elem.dispatchEvent(event)
+        //             }, 100);
+		// 		}
+		// 	}, 3000)
+    </script>
+</body>
+</html>
