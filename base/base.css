@@ -147,7 +147,14 @@ main{
 	justify-content: space-between;
 	align-items: center;
 	font-size: 3em;
+	font-weight: 600;
 }
+#top_nav_main li a svg{
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+}
+
 #top_nav_main li svg{
 	width: 25px;
 	height: 25px;
@@ -175,12 +182,12 @@ main{
 	top: 100%;
 	left: 0;
 	width: 80%;
-	min-height: 60px;
+	min-height: 0px;
 	background: var(--ma-bg);
 	border-bottom: 6px var(--border) solid;
 	display: none;
 	transition: .8s;
-	padding: 0 10% 40px 10%;
+	padding: 0 10% 10px 10%;
 }
 
 #top_nav_dropdown li{
@@ -197,11 +204,12 @@ main{
 	justify-content: center;
 	align-items: center;
 	font-size: 2.5em;
-	font-weight: 900;
+	font-weight: 700;
 }
 #top_nav_dropdown li svg{
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
+	margin-right: 9px;
 	cursor: pointer;
 }
 
