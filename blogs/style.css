@@ -1,19 +1,72 @@
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding: 20px 3vw 100px;
+#hero{
+    width: 90%;
+    padding: 70px 5% 100px 5%;
+    max-width: 600px;
     margin: 0 auto;
 }
+#hero h1{
+    font-size: 12em;
+    margin-bottom: 10px;
+    color: var(--at-bg);
+    display: flex;
+    align-items: center;
+}
+#hero h1 img{
+    width: 35px;
+    height: 35px;
+    margin-left: 7px;
+}
+#hero h2{
+    font-size: 6em;
+    margin-bottom: 10px;
+}
+#hero h3{
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+#hero h4{
+    font-size: 2.5em;
+}
+#hero p{
+    width: 80%;
+    font-size: 3.5em;
+    line-height: 160%;
+    font-family: var(--sans);
+    margin-bottom: 30px;
+}
+#hero .actionButton{
+    font-size: 2.7em;
+}
+@media (max-width: 600px) {
+    #hero{
+        padding-top: 100px;
+    }
 
-#main_nav{
-    width: 100%;
-    padding: 5px 0;
-    margin: 0;
 }
 
+#bh{
+    font-size: 4em;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+#bh span{
+    font-size: 150%;
+}
+#bh i{
+    font-weight: 900;
+}
+
+
+#blogs{
+    width: 80%;
+    padding: 0px 10% 100px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
 .blog{
     width: 30%;
     height: fit-content;
@@ -21,23 +74,23 @@ main{
 }
 .blog_img{
     width: 100%;
+    aspect-ratio: 16/9;
     border-radius: 10px;
-    overflow: hidden;
-}
-.blog_img img{
     border: 1px var(--at-bg) solid;
+    overflow: hidden;
 }
 .blog_text{
     width: 100%;
     padding: 10px 0;
 }
 .blog_text header{
-    font-size: 3.4em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .blog_text p{
-    font-size: 3em;
+    font-size: 2.4em;
     margin-bottom: 10px;
 }
 

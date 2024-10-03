@@ -7,14 +7,15 @@
     <script src='https://teemboom.com/static/app/dist/teemboom.js'></script>
 </head>
 <body>
-    {% include blog_nav.html %}
+    {% include nav.html %}
     <main>
         <div id="main_img"><img src="/images/blogs/{{page.img}}" alt=""></div>
         <div id="content">
             {{content}}
+            <section id="teemboom_comments"></section>
         </div>
-        <section id="teemboom_comments"></section>
     </main>
+    {% include footer.html %}
     <script>
         // let event = new KeyboardEvent('keydown', {
 		// 	    key: 'Enter',

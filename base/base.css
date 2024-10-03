@@ -8,7 +8,7 @@
 :root{
     --ma-bg: #fff;
     --at-bg: #870bb1;
-    --border: #eee;
+    --border: #ccc;
     --soft-bg: #8402af22;
     --text-color: #333;
     --sans: "Cabin", Oscine, sans-serif;
@@ -57,7 +57,7 @@ img{
 
 .actionButton{
     position: relative;
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 2.3em;
     border-radius: 5px;
     font-weight: 600;
@@ -69,6 +69,8 @@ img{
     transform: rotate(-8deg);
     padding-left: 5px;
     padding-right: 35px;
+	padding-top: 10px;
+	padding-bottom: 6px;
 }
 
 
@@ -139,6 +141,9 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+#top_nav_main li:hover{
+	border-bottom: 2px var(--border) solid;
 }
 #top_nav_main li a{
 	height: 100%;
@@ -234,3 +239,33 @@ main{
 		display: block !important;
 	}
 }
+
+
+
+footer{
+    width: 90vw;
+    padding: 100px 5%;
+    background-color: rgb(19, 16, 19);
+    color: #eee;
+}
+footer header{
+    font-size: 9em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer header span{
+    color: var(--at-bg);
+}
+
+footer p{
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+footer i{
+    display: block;
+    font-size: 3em;
+    text-align: center;
+}
+

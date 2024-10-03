@@ -10,16 +10,27 @@ title: Blogs
 <body>
     <main>
         {% include nav.html %}
-        {% for blog in site.blogs %}
-        <a href="{{blog.url}}" class="blog">
-            <div class="blog_img"><img src="/images/blogs/master_programming.jpg" alt=""></div>
-            <div class="blog_text">
-                <header>{{blog.title}}</header>
-                <p>{{blog.summary}}</p>
-            </div>
-            <p href="{{blog.url}}" class="action_button">Read</p>
-        </a>
-        {% endfor %}
+        <section id="hero">
+            
+            <h1>Psst!...<img src="/images/sound.png" alt=""></h1>
+            <h2>Hey, you! Yeah, you!</h2>
+            <h3>Come Closer</h3>
+            <h4>Let me tell you something...</h4>
+        </section>
+        <header id="bh"><span>E</span>NJOY <span>M</span>Y THOUGHTS<i>.</i></header>
+        <section id="blogs">   
+            {% for blog in site.blogs %}
+            <a href="{{blog.url}}" class="blog">
+                <div class="blog_img"><img src="/images/blogs/master_programming.jpg" alt=""></div>
+                <div class="blog_text">
+                    <header>{{blog.title}}</header>
+                    <p>{{blog.summary}}</p>
+                </div>
+                <button class="actionButton">Read</button>
+            </a>
+            {% endfor %}
+        </section>
     </main>    
+    {% include footer.html %}
 </body>
 </html>
