@@ -32,7 +32,7 @@
 #skills{
     width: 90%;
     padding: 50px 5% 0px 5%;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -98,9 +98,9 @@
 
 .project{
     width: 26%;
-    min-height: 350px;
+    min-height: 230px;
     padding: 20px 2%;
-    box-shadow: 0px 0px 13px 3px #ddd;
+    box-shadow: 0px 0px 13px 3px var(--border);
     border-radius: 8px;
     margin-bottom: 40px;
     display: flex;
@@ -126,6 +126,7 @@
     font-size: 2.5em;
     line-height: 160%;
     text-align: center;
+    display: none;
 }
 .project .skillsG{
     margin-top: auto;
@@ -138,6 +139,7 @@
 .project .skill p{
     margin: 0;
     font-size: 2em;
+    display: block;
 }
 
 /* 
@@ -185,4 +187,31 @@
     font-weight: 600;
     margin-top: 15px;
     text-align: center;
+}
+
+#corner{
+    position: absolute;
+    top: 10vh; right: 0;
+    height: 150px;
+    padding-right: calc(5px + 1.2%);
+}
+
+#corner .item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+#corner .item p{
+    font-size: 1.5em;
+    font-weight: 700;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+    text-align: center;
+}
+#corner .item svg{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
 }

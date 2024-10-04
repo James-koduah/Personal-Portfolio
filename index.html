@@ -51,8 +51,8 @@ title: James Koduah
                 
                 <div class="skillsG skillsG2">
                     <div class="skill">
-                        {% include svg.html id="nginx" %}
-                        <p>Nginx</p>
+                        {% include svg.html id="c" %}
+                         <p>C</p>
                     </div>
                     <div class="skill">
                         {% include svg.html id="javascript" %}
@@ -73,6 +73,10 @@ title: James Koduah
                     <div class="skill">
                         {% include svg.html id="filestorage" %}
                         <p>File Storage</p>
+                    </div>
+                    <div class="skill">
+                        {% include svg.html id="nginx" %}
+                        <p>Nginx</p>
                     </div>
                 </div>
             </div>
@@ -241,7 +245,7 @@ title: James Koduah
                     <div class="skillsG">
                         <div class="skill">
                             {% include svg.html id="javascript" %}
-                            <p>Vanilla JavaScript</p>
+                            <p>Vanilla JS</p>
                         </div>
                     </div>
                 </a>
@@ -256,7 +260,7 @@ title: James Koduah
                     <div class="skillsG">
                         <div class="skill">
                             {% include svg.html id="javascript" %}
-                            <p>Vanilla JavaScript</p>
+                            <p>Vanilla JS</p>
                         </div>
                     </div>
                 </a>
@@ -271,18 +275,25 @@ title: James Koduah
                     <div class="skillsG">
                         <div class="skill">
                             {% include svg.html id="javascript" %}
-                            <p>Vanilla JavaScript</p>
+                            <p>Vanilla JS</p>
                         </div>
                     </div>
                 </a>
                 <div class="project">
                     <div class="img"><img src="./images/shyrobot.png" alt=""></div>
-                    <header>I have more projects to share, but these are from way back.</header>
+                    <header>I have more projects to share, but these are a bit raw.</header>
                     <p>
                         Not everything in this group is polished, but each piece tells a story of progress. 
                         If these were a painting, they’d be the kind you squint at and say, 
                         ‘Is that supposed to be a dog or a cloud?’ 😂
                     </p>
+                    
+                    <div class="skillsG">
+                        <div class="skill">
+                            {% include svg.html id="code" %}
+                            <p>Full range of programming languages</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -290,6 +301,24 @@ title: James Koduah
             <header id="tch">Teemboom Comments In Action</header>
             <div id="teemboom_comments"></div>
         </section>
+        <div id="corner">
+            <div class="item">
+                <p>GHANA</p>
+                {% include svg.html id="ghana" %}
+            </div>
+            <div class="item" onclick="lightDark()">
+                <p>Dark Mode</p>
+                {% include svg.html id="daynight" %}
+            </div>
+            <a class="item" target="_blank" href="https://www.linkedin.com/in/james-koduah/">
+                <p>LinkedIn</p>
+                {% include svg.html id="linkedin" %}
+            </a>
+            <a class="item" target="_blank" href="https://github.com/James-koduah">
+                <p>GitHub</p>
+                {% include svg.html id="github" %}
+            </a>
+        </div>
     </main>
     {% include footer.html %}
 </body>

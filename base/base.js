@@ -9,6 +9,33 @@ function mobileNavDropdown(button){
     }
 }
 
+function lightDark(check=false){
+    let current = localStorage.getItem('lightDark')
+    if (check){
+        if (current === 'dark'){
+            console.log('check')
+            current = 'light'
+        }else{
+            return
+        }
+    }
+    if (current === 'light'){
+        document.documentElement.style.setProperty('--ma-bg', '#131013')
+        document.documentElement.style.setProperty('--ma-opp', '#1e181e')
+        document.documentElement.style.setProperty('--border', '#444')
+        document.documentElement.style.setProperty('--text-color', '#eee')
+        current = 'dark'        
+    }else{
+        document.documentElement.style.setProperty('--ma-bg', '#fff')
+        document.documentElement.style.setProperty('--ma-opp', '#131013')
+        document.documentElement.style.setProperty('--border', '#ddd')
+        document.documentElement.style.setProperty('--text-color', '#333')
+        current = 'light'
+    }
+
+    localStorage.setItem('lightDark', current)
+}
+lightDark(true)
 const technologiesWorkedWith = [
     // Programming Languages
     "Python",

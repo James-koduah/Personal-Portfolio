@@ -26,6 +26,11 @@
 }
 #hero h4{
     font-size: 2.5em;
+    margin-bottom: 10px;
+}
+#hero h5{
+    font-size: 2em;
+    /* color: #555; */
 }
 #hero p{
     width: 80%;

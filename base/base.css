@@ -7,10 +7,12 @@
 
 :root{
     --ma-bg: #fff;
+	--ma-opp: #131013;
     --at-bg: #870bb1;
     --border: #ccc;
-    --soft-bg: #8402af22;
+    --shadow: #8402af22;
     --text-color: #333;
+	--text-color-opp: #eee;
     --sans: "Cabin", Oscine, sans-serif;
     --cabin-ver: "Cabin", Verdana, Geneva, Tahoma, sans-serif;
     --cabin-sans: "Cabin", Oscine, sans-serif;
@@ -165,7 +167,10 @@ main{
 	height: 25px;
 	cursor: pointer;
 }
-
+#navMobileBtn svg path{
+	fill: var(--text-color);
+	stroke: var(--text-color);
+}
 
 .top_nav_main_button{
 	height: 100%;
@@ -245,8 +250,8 @@ main{
 footer{
     width: 90vw;
     padding: 100px 5%;
-    background-color: rgb(19, 16, 19);
-    color: #eee;
+    background-color: var(--ma-opp);
+    color: var(--text-color-opp)
 }
 footer header{
     font-size: 9em;
@@ -268,3 +273,4 @@ footer i{
     font-size: 3em;
     text-align: center;
 }
+

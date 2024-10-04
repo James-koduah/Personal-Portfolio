@@ -4,12 +4,18 @@
         <p>James <span>Koduah</span></p>
     </a>
 	<ul id='top_nav_main'>
-		<li class='mobileNeg'><a href="/blogs/">{% include svg.html id="pen" %} My_Blog</a></li>
-		<li class='mobileNeg'><a href='/docs/'>{% include svg.html id="magnifyinglass" %} Docs</a></li>
-		<li class="mobile" onclick="mobileNavDropdown(this)"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></li>
+        {% for item in site.data.nav %}
+        {% if page.url != item.link %}
+		<li class='mobileNeg'><a href="{{item.link}}">{% include svg.html id=item.svg %} {{item.name}}</a></li>
+		{% endif %}
+		{% endfor %}
+		<li class="mobile" id="navMobileBtn" onclick="mobileNavDropdown(this)"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></li>
 	</ul>
 	<ul id="top_nav_dropdown">
-		<li><a href="/blogs/">{% include svg.html id="pen" %} My_Blog</a></li>
-		<li><a href='/docs/'>{% include svg.html id="magnifyinglass" %} Docs</a></li>
+        {% for item in site.data.nav %}
+        {% if page.url != item.link %}
+		<li><a href="{{item.link}}">{% include svg.html id=item.svg %} {{item.name}}</a></li>
+		{% endif %}
+		{% endfor %}
 	</ul>
 </nav>
