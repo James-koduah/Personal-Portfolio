@@ -1,0 +1,93 @@
+.floater{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    transition: 1s cubic-bezier(0, 0, 0.4, 1);
+    z-index: 1;
+    display: block !important;
+    pointer-events: none;
+    /* animation: bob 1s ease-out infinite; */
+}
+/* @keyframes bob {
+    0%{padding-top: 0px;}
+    30%{padding-top: 7px;}
+    50%{padding-top: 10px;}
+    70%{padding-top: 5px;}
+    100%{padding-top: 0px;}
+} */
+.floater img{
+    object-fit: contain;
+    transition: 1s;
+}
+
+.floaterConvo{
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    width: 200px;
+    height: 80px;
+    padding: 10px 15px;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ma-bg);
+    box-shadow: 0px 0px 3px 3px var(--border);
+    word-break: break-all;
+}
+.floaterConvo svg{
+    width: 50px;
+    height: 50px;
+}
+.floaterConvo p{
+    font-size: 2.7em;
+    text-align: center;
+}
+.floaterConvo header{
+    font-size: 2.8em;
+    font-weight: 600;
+    text-align: center;
+}
+.floaterConvo h5{
+    font-size: 3.5em;
+    font-weight: 600;
+    text-align: center;
+}
+.floatToRight{
+    transform: translateX(60px);
+}
+.floatToLeft{
+    transform: translateX(-100%);
+}
+.floatAtBottom{
+    bottom: -100px;
+}
+.floatAtTop{
+    bottom: 100%;
+}
+.empty{
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+.flare{
+    animation: flare 0.3s ease forwards 5;
+}
+@keyframes flare {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    25% {
+        transform: scale(1.5, 1.5); /* Stretch and scale up */
+    }
+    50% {
+        transform: scale(1); /* Return to normal size */
+    }
+    75% {
+        transform: scale(1.3, 1.3); /* Stretch and scale up */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
+}

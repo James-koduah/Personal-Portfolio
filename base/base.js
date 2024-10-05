@@ -13,7 +13,6 @@ function lightDark(check=false){
     let current = localStorage.getItem('lightDark')
     if (check){
         if (current === 'dark'){
-            console.log('check')
             current = 'light'
         }else{
             return

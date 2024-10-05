@@ -6,8 +6,10 @@ title: James Koduah
 <head>
     {% include head %}
     <link rel="stylesheet" href="/home/home.css">
-    <script defer src="/home/home.js"></script>
     <script src="https://scripts.teemboom.com/teemboom_comments.js"></script>
+    <script src="/base/floater.js" defer></script>
+    <script defer src="/home/home.js"></script>
+    <link rel="stylesheet" href="/base/floater.css">
 </head>
 <body>
     {% include nav.html %}
@@ -15,7 +17,7 @@ title: James Koduah
         <section id="hero">
             <h1>I'm A FullStack <span>Developer</span></h1>
             <p>I Enjoy other technologies but I do Web Development Professionally.</p>
-            <button class="actionButton">Spice Up The Page</button>
+            <button class="actionButton" onclick="spiceUpPage(this)">Spice Up The Page</button>
         </section>
         <section id="skills">
             <h2>Database > Application Logic > API > Front End</h2>
@@ -320,6 +322,13 @@ title: James Koduah
             </a>
         </div>
     </main>
+    <div id="astronaut">
+        <img src="/images/astronaut.png" alt="">
+    </div>
+    <div id="pirate">
+        <img src="/images/pirate.png" alt="">
+    </div>
     {% include footer.html %}
+    
 </body>
 </html>

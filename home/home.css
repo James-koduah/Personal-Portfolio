@@ -26,6 +26,9 @@
     #hero{
         padding-top: 100px;
     }
+    #hero h1{
+        width: 80%;
+    }
 
 }
 
@@ -214,4 +217,11 @@
     width: 25px;
     height: 25px;
     margin-bottom: 10px;
+}
+
+
+#astronaut, #pirate{
+    display: none;
+    top: 90%;
+    left: 0;
 }
