@@ -13,24 +13,44 @@ function spiceUpPage(e){
             'Wha...                What!',
         ],
         [
-            { elemType: 'h5', timeout: 800},
-            'What is happening!',
-        ],
-        [
-            { elemType: 'h5', timeout: 800},
-            'What is happening!',
+            { elemType: 'h5', timeout: 800, dontClean: true},
+            ' What is happening!',
         ],
         [
             { elemType: 'h5', timeout: 800},
             'Wha...      WHERE AM I!',
         ],
         [
-            { elemType: 'h5', timeout: 2000},
+            { elemType: 'h4', timeout: 1500},
             'HELP ME!                           ]AHHHHHHHHHHHHHHHHHHHHHHHHH'
         ],
         [
-            { elemType: 'h5', timeout: 3000},
-            "HAHA!                                        I'm Joking                                        😂]                                                  Were you scared?"
+            { elemType: 'h5', timeout: 1000},
+            "HAHA!                                        I'm Joking     😂]"
+        ],
+        [
+            { elemType: 'h5', timeout: 2000, dontClean: true},
+            "Were you scared?              LOL"
+        ],
+        [
+            { elemType: 'h5', timeout: 1500},
+            "I'm just here for Space inspection      ]Standard procedure"
+        ],
+        [
+            { elemType: 'header', timeout: 1200, typeSpeed: 45},
+            "But...    wait...     uh, where is this?]         Is this Earth?     Mars?     Pluto?"
+        ],
+        [
+            { elemType: 'header', timeout: 3200,},
+            "Man, space really messes with your GPS  .           .           . ] Aha! It's working now."
+        ],
+        [
+            { elemType: 'header', timeout: 1200},
+            "Hmmmmm       ]It seems I'm on a webpage?"
+        ],
+        [
+            { elemType: 'header', timeout: 1400},
+            "Well,                 I’m ready for an adventure.                   Let's go Friend.                Lead the way!"
         ]
     ]
     let astronautEventName = 'astronautEvent'

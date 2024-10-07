@@ -6,14 +6,14 @@
     z-index: 1;
     display: block !important;
     pointer-events: none;
-    /* animation: bob 1s ease-out infinite; */
+    /* animation: bob 1.5s ease-in infinite; */
 }
 /* @keyframes bob {
-    0%{padding-top: 0px;}
-    30%{padding-top: 7px;}
-    50%{padding-top: 10px;}
+    0%{padding-top: 0%;}
+    30%{padding-top: 1%;}
+    50%{padding-top: 0.5%;}
     70%{padding-top: 5px;}
-    100%{padding-top: 0px;}
+    100%{padding-top: 0%;}
 } */
 .floater img{
     object-fit: contain;
@@ -34,20 +34,26 @@
     align-items: center;
     background-color: var(--ma-bg);
     box-shadow: 0px 0px 3px 3px var(--border);
-    word-break: break-all;
 }
 .floaterConvo svg{
     width: 50px;
     height: 50px;
 }
 .floaterConvo p{
-    font-size: 2.7em;
+    font-size: 2.9em;
     text-align: center;
 }
 .floaterConvo header{
     font-size: 2.8em;
     font-weight: 600;
     text-align: center;
+}
+
+.floaterConvo h4{
+    font-size: 3.5em;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-all;
 }
 .floaterConvo h5{
     font-size: 3.5em;

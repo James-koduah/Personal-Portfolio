@@ -49,6 +49,8 @@ class Floater{
     dialougeBoxPositionY = 0;
     currentConvo = 0
 
+
+    temp = ''
     listenEvent(eventName){
         $emitter.on(eventName, (data)=>{
             if (data.detail.event === 'start'){
@@ -111,20 +113,26 @@ class Floater{
             }
         }
     }
-    async runDialouge(){
-        this.dialougeBox.innerHTML = ''
+    async runDialouge(){ 
+        this.temp += '|' + this.dialougeBox.innerText + '|'
         let [settings, text] = this.convo[this.currentConvo]
+        let typeSpeed = settings.typeSpeed || 30
+        if (!settings.dontClean) this.dialougeBox.innerHTML = ''
         if (settings.elemType === false){
             this.dialougeBox.innerHTML = text
         }else{
             let elem = document.createElement(settings.elemType)
             this.dialougeBox.appendChild(elem)
-            await this.autoType(text, elem, 30)
+            await this.autoType(text, elem, typeSpeed)
         }
         this.currentConvo++
-        setTimeout(() => {
-            $emitter.emit(this.eventName, {'event': 'ranD'})
-        }, settings.timeout);
+        if (this.currentConvo >= this.convo.length){
+            console.log(this.temp)
+        }else{
+            setTimeout(() => {
+                $emitter.emit(this.eventName, {'event': 'ranD'})
+            }, settings.timeout);
+        }
     }
     autoType(text, element, speed) {
         return new Promise((resolve) => {
