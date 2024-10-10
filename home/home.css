@@ -109,6 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 .project .img{
     width: 200px;
@@ -145,12 +146,103 @@
     display: block;
 }
 
+
 /* 
 #projectsG .project:nth-child(even){
     background-color: #181717;
     color: #fff;
     box-shadow: 0px 0px 13px 3px #555;
 } */
+
+.project_popup{
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+    max-height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 2;
+    background-color: var(--ma-bg);
+    box-shadow: 0px 0px 10px 10px var(--border);
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+.ppImg{
+    width: 250px;
+    padding: 0 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.ppImg img{
+    object-fit: contain;
+}
+.ppCon{
+    width: 80%;
+    padding: 3% 10%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ppCon header{
+    margin-bottom: 20px;
+    font-size: 4em;
+    font-weight: 600;
+}
+.ppCon p{
+    font-size: 3em;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+    .project_popup{
+        flex-wrap: wrap;
+        height: fit-content;
+        padding: 30px 0;
+    }
+    .ppImg{
+        width: 80%;
+        height: fit-content;
+        min-height: 30%;
+        padding: 10px 10%;
+    }
+    .ppImg img{
+        width: 150px;
+        aspect-ratio: 16/9;
+    }
+    .ppCon{
+        height: fit-content;
+    }
+}
+@media (max-width: 650px) {
+    .ppCon{
+        align-items: center;
+    }
+    .ppCon header{
+        font-size: 3.4em;
+        margin: 30px 0 20px 0;
+    }
+    .ppCon p{
+        font-size: 2.8em;
+    }
+}
+
+.project_popup_close{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--border);
+    opacity: 0.3;
+    z-index: 1;
+}
 
 @media (max-width: 1050px) {
     #projects{

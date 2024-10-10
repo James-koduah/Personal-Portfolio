@@ -75,6 +75,21 @@ img{
 	padding-bottom: 6px;
 }
 
+.action_button{
+	width: fit-content;
+    padding: 8px 20px;
+    font-size: 2.3em;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .1s;
+	background: var(--at-bg);
+    color: #fff;
+    border: 1px var(--at-bg) solid;
+	transition: .4s;
+}
+.action_button:hover{
+	background-color: #000;
+}
 
 main{
     width: 100vw;
