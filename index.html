@@ -321,9 +321,17 @@ title: James Koduah
             <header class="onscroll_d">Who's the real me?</header>
             <header class="onscroll_d">Choose wisely!</header>
             <div class="onscroll_d" id="meImg">
-                <img src="images/me1s.png" alt="">
-                <img src="images/meais1s.png" alt="">
+                <div onclick="picSelection(1, this)" class="img">
+                    <img src="images/me1s.png" alt="">
+                    <span class="pichoose">{% include svg.html id="circle" %}</span>
+                    
+                </div>
+                <div onclick="picSelection(2, this)" class="img">
+                    <img src="images/meai.png" alt="">
+                    <span class="pichoose">{% include svg.html id="circle" %}</span>
+                </div>
             </div>
+            <button id="fks" onclick="picSelectionConfirm()" class="action_button">Confirm Your Selection</button>
         </section>
 
 
