@@ -281,9 +281,23 @@ title: James Koduah
                         </div>
                     </div>
                 </div>
+                <div class="project" onclick="projectPopup('glorymetal')">
+                    <div class="img"><img src="/images/glory_metal_works.jpg" alt=""></div>
+                    <header>Glory Metal Works</header>
+                    <div class="skillsG">
+                        <div class="skill">
+                            {% include svg.html id="javascript" %}
+                            <p>Vanilla JS</p>
+                        </div>
+                        <div class="skill">
+                            {% include svg.html id="jekyll" %}
+                            <p>Jekyll</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="project" onclick="projectPopup('more')">
-                    <div class="img"><img src="./images/shyrobot.png" alt=""></div>
-                    <header>I have more projects to share, but these are a bit raw.</header>
+                    <div class="img"><img src="./images/machine.png" alt=""></div>
+                    <header>See What Else I've Got</header>
                     <p>
                         Not everything in this group is polished, but each piece tells a story of progress. 
                         If these were a painting, they’d be the kind you squint at and say, 
@@ -299,8 +313,22 @@ title: James Koduah
                 </div>
             </div>
         </section>
+
+        <section id="me">
+            <header class="onscroll_d">Wait!</header>
+            <header class="onscroll_d">Proceed Carefully...</header>
+            <header class="onscroll_d">The fate of the world hangs in the balance...</header>
+            <header class="onscroll_d">Who's the real me?</header>
+            <header class="onscroll_d">Choose wisely!</header>
+            <div class="onscroll_d" id="meImg">
+                <img src="images/me1s.png" alt="">
+                <img src="images/meais1s.png" alt="">
+            </div>
+        </section>
+
+
         <section id="teemboomComments">
-            <header id="tch">Teemboom Comments In Action</header>
+            <header id="tch">Test Teemboom Comments In Action</header>
             <div id="teemboom_comments"></div>
         </section>
         <div id="corner">
@@ -330,5 +358,6 @@ title: James Koduah
     </div>
     {% include footer.html %}
     
+    <script src="https://james-koduah.github.io/scroll_slide/app.js"></script>
 </body>
 </html>

@@ -170,13 +170,22 @@ let project_info = {
         link_text: 'Play this Game'
     },
     'virtualkeyboard': {
-        image: 'images/keyboard.jpg',
+        image: 'images/keyboard.JPG',
         header: 'Virtual Keyboard',
         body: ` This project was a fun journey. It is a cool glowing keyboard that
                 was mainly built for to excersise my skills in CSS Grid and Javascript. 
                 This projects holds a spot as one of my first Github repositories.`,
         link: 'https://james-koduah.github.io/Virtual-keyboard/',
         link_text: 'Visit Live Site'
+    },
+    'glorymetal': {
+        image: 'images/glory_metal_works.jpg',
+        header: 'Glory Metal Works Website',
+        body: `Find reliable metal works services for various home-building projects, 
+                with custom quality metal works. 
+                Get metal a service that meets design and structural requirements`,
+        link: 'https://glorymetal.jaskintech.com/',
+        link_text: 'Visit Glory Metal'
     },
     'more': {
         image: 'images/shyrobot.png',
