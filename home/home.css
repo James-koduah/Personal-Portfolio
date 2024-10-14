@@ -359,7 +359,7 @@
 .utext header{
     font-size: 6em;
     font-weight: 100;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 }
 .utext p{
     font-size: 3.5em;
@@ -378,6 +378,13 @@
     .utext{
         width: 90%;
         padding: 50px 5%;
+    }
+    .utext header{
+        font-size: 4.3em;
+        font-weight: 400;
+    }
+    .utext p{
+        font-size: 3em;
     }
 }
 
