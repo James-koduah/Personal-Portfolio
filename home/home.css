@@ -257,20 +257,16 @@
 
 @media (max-width: 700px) {
     #projects{
-        width: 96%;
-        padding: 100px 2%;
+        width: 90%;
+        padding: 100px 5%;
     }
     .project{
+        width: 80%;
+        padding: 40px 10%;
         min-height: fit-content;
     }
     .project .skillsG{
         margin-top: 25px;
-    }
-    .project .img{
-        width: 80%;
-    }
-    .project header{
-        font-size: 2.6em;
     }
 }
 
