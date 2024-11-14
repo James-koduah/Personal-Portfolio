@@ -19,7 +19,7 @@ title: Blogs
             <h5>The Sun is White</h5>
         </section>
         <header id="bh"><span>E</span>NJOY <span>M</span>Y THOUGHTS<i>.</i></header>
-        <section id="blogs">   
+        <!-- <section id="blogs">   
             {% for blog in site.blogs %}
             <a href="{{blog.url}}" class="blog">
                 <div class="blog_img"><img src="/images/blogs/master_programming.jpg" alt=""></div>
@@ -30,7 +30,45 @@ title: Blogs
                 <button class="actionButton">Read</button>
             </a>
             {% endfor %}
-        </section>
+        </section> -->
+        <div class="cont">
+            <div class="blogGroup">
+                <header class="blogGroup_header">Project Insights</header>
+                <div class="groupSlide">
+                    {% assign tag_to_filter = "project_insights" %}
+                    {% for blog in site.blogs %}
+                    {% if blog.tags contains tag_to_filter %}
+                    <a href="{{blog.url}}" class="blog">
+                        <div class="blog_img"><img src="/images/blogs/{{blog.img}}" alt=""></div>
+                        <div class="blog_text">
+                            <header>{{blog.title}}</header>
+                            <p>{{blog.summary}}</p>
+                        </div>
+                        <button class="actionButton">Read</button>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="blogGroup">
+                <header class="blogGroup_header">Career Questions</header>
+                <div class="groupSlide">
+                    {% assign tag_to_filter = "career_questions" %}
+                    {% for blog in site.blogs %}
+                    {% if blog.tags contains tag_to_filter %}
+                    <a href="{{blog.url}}" class="blog">
+                        <div class="blog_img"><img src="/images/blogs/{{blog.img}}" alt=""></div>
+                        <div class="blog_text">
+                            <header>{{blog.title}}</header>
+                            <p>{{blog.summary}}</p>
+                        </div>
+                        <button class="actionButton">Read</button>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </main>    
     {% include footer.html %}
 </body>

@@ -3,6 +3,7 @@ layout: blog
 title: What makes you an expert in a programming language
 summary: Ever wonder when your skills in a particular language are enough to quell that imposter syndrome, read on.
 img: master_programming.webp
+tags: ["career_questions"]
 ---
 
 # What makes you an expert in a programming language
