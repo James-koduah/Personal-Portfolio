@@ -240,6 +240,31 @@ main{
 }
 
 
+.navSettings{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 30px;
+}
+.navSettingsItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.navSettingsItem p{
+    font-size: 1.5em;
+    font-weight: 700;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+    text-align: center;
+}
+.navSettingsItem svg{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
 
 
 

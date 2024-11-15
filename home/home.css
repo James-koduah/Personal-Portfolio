@@ -335,9 +335,11 @@
 
 #upto{
     width: 90%;
-    padding: 0px 5% 150px 5%;
+    padding: 70px 5% 70px 5%;
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
+    background: rgb(238, 252, 252);
 }
 .uImg{
     width: 45%;
