@@ -96,6 +96,14 @@ let project_info = {
         link: 'https://teemboom.com',
         link_text: 'Visit Teemboom'
     },
+    'pointOfSale': {
+        image: '/images/pointOfSale.jpg',
+        header: 'POINT OF SALE APPLICATION',
+        body: `MVP Stage. This application has Inventory Management, Receipt Printing,
+                Intergration with payment systems, transaction records, etc. It has 2 versions, a Desktop App and a Web App`,
+        link: false,
+        link_text: 'Contact Me'
+    },
     'dns_lookup': {
         image: '/images/dnslookup.jpg',
         header: 'DNS LOOKUP TOOL',
