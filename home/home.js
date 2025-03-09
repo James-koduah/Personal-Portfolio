@@ -159,14 +159,14 @@ let project_info = {
         link: 'https://www.youtube.com/watch?v=PSoybo7TTrE&t=8s',
         link_text: 'Watch a Video Demo'
     },
-    'jgworks': {
-        image: 'images/jgmedia.jpg',
-        header: 'JG Media Works',
-        body: `I developed an informational website for a client,
-                transforming their design into a fully 
-                functional site by implementing all interactive features.`,
-        link: 'http://jgmediaworks.net/',
-        link_text: 'Visit JG Media Works'
+    'imageMetadataEditor': {
+        image: 'images/imagemetadataeditor.png',
+        header: 'Image Metadata Editor',
+        body: `This application was commissioned by a client to edit and add metadata to images,
+        specifically HDR Bracketed Frames. It is a native app packaged with PyInstaller for 
+        both Windows, Mac and Linux Systems`,
+        link: '/projects/ime',
+        link_text: 'Visit Application Landing page'
     },
     'ballpaddle': {
         image: 'images/ballandpaddle.jpg',

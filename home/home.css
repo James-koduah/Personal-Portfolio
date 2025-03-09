@@ -21,6 +21,12 @@
 }
 #hero .actionButton{
     font-size: 2.7em;
+    font-weight: 400;
+    background-color: var(--at-bg);
+    color: var(--ma-bg);
+    padding: 11px 20px;
+    border-radius: 2px;
+    border: 1px #444 solid;
 }
 @media (max-width: 600px) {
     #hero{
