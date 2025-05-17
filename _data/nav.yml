@@ -2,9 +2,9 @@
   link: /
   svg: home
 
-- name: My_Blog
-  link: /blogs/
-  svg: pen
+# - name: My_Blog
+#   link: /blogs/
+#   svg: pen
 
 - name: Docs
   link: /docs/

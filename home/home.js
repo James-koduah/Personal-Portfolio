@@ -2,73 +2,73 @@ let floaters = []
 var $emitter = new MyEmitter()
 let spiceLevel = 0
 
-function spiceUpPage(e){
+function spiceUpPage(e) {
     let astronautDialouge = [
         [
-            {elemType: false, timeout: 1500},
+            { elemType: false, timeout: 1500 },
             '<svg class="flare" viewBox="-11 0 34 34" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#ae2025" transform="matrix(.413892 .0862234 -.0862234 .413892 -1135.3273 -1495.8263)"> <path d="m3377.19 2978.61 11.48-3.06 3.92 10.44-10.15 4.85z"></path> <path d="m3372.83 2968.55 11.64-4.6-16.08-51.62-17.48 5.55z"></path> </g> </g></svg>'
         ],
         [
-            { elemType: 'h5', timeout: 800},
+            { elemType: 'h5', timeout: 800 },
             'Wha...                What!',
         ],
         [
-            { elemType: 'h5', timeout: 800, dontClean: true},
+            { elemType: 'h5', timeout: 800, dontClean: true },
             ' What is happening!',
         ],
         [
-            { elemType: 'h5', timeout: 800},
+            { elemType: 'h5', timeout: 800 },
             'Wha...      WHERE AM I!',
         ],
         [
-            { elemType: 'h4', timeout: 800},
+            { elemType: 'h4', timeout: 800 },
             'HELP ME!'
         ],
         [
-            { elemType: 'h4', timeout: 800, dontClean: true, typeSpeed: 80},
+            { elemType: 'h4', timeout: 800, dontClean: true, typeSpeed: 80 },
             'AHHHHHHHHHHHHHHHHHHHHHHHHH'
         ],
         [
-            { elemType: 'h5', timeout: 1000},
+            { elemType: 'h5', timeout: 1000 },
             "HAHA!                                        I'm Joking     😂]"
         ],
         [
-            { elemType: 'h5', timeout: 2000, dontClean: true},
+            { elemType: 'h5', timeout: 2000, dontClean: true },
             "Were you scared?              LOL"
         ],
         [
-            { elemType: 'h5', timeout: 1500},
+            { elemType: 'h5', timeout: 1500 },
             "I'm here for the Space Inspection.      ]Standard procedure"
         ],
         [
-            { elemType: 'header', timeout: 1200, typeSpeed: 45},
+            { elemType: 'header', timeout: 1200, typeSpeed: 45 },
             "But...    wait...     uh, where is this?]         Is this Earth?     Mars?     Pluto?"
         ],
         [
-            { elemType: 'header', timeout: 3200,},
+            { elemType: 'header', timeout: 3200, },
             "Man, space really messes with your GPS  .           .           . ] Aha! It's working now."
         ],
         [
-            { elemType: 'header', timeout: 1200},
+            { elemType: 'header', timeout: 1200 },
             "Hmmmmm       ]It seems I'm on a webpage?"
         ],
         [
-            { elemType: 'header', timeout: 1400},
+            { elemType: 'header', timeout: 1400 },
             "Well,                 I’m ready for an adventure.                   Let's go Friend.                Lead the way!"
         ]
     ]
     let astronautEventName = 'astronautEvent'
 
-    if (spiceLevel === 0){
-        let astronaut = new Floater('astronaut', astronautEventName, astronautDialouge, floaters) 
+    if (spiceLevel === 0) {
+        let astronaut = new Floater('astronaut', astronautEventName, astronautDialouge, floaters)
         floaters.push(astronaut)
         const rect = e.getBoundingClientRect();
         const x = rect.left + window.scrollX;
         const y = rect.top + window.scrollY;
-        $emitter.emit(astronautEventName, {'event': 'start', 'x': x, 'y': y })
-        $emitter.on(astronautEventName, (data)=>{
-            if (data.detail.event === 'ranD'){
-                $emitter.emit(astronautEventName, {'event': 'runD', 'index': false})
+        $emitter.emit(astronautEventName, { 'event': 'start', 'x': x, 'y': y })
+        $emitter.on(astronautEventName, (data) => {
+            if (data.detail.event === 'ranD') {
+                $emitter.emit(astronautEventName, { 'event': 'runD', 'index': false })
             }
         })
         spiceLevel++
@@ -95,6 +95,16 @@ let project_info = {
                 Need to have a chat feature for your Web App? Use Teemboom Comments.`,
         link: 'https://teemboom.com',
         link_text: 'Visit Teemboom'
+    },
+    'sten360': {
+        image: '/images/sten360home.png',
+        header: 'Sten360 Business Management System',
+        body: `Sten360 is an all-in-one business management tool designed to help service-based
+                organizations stay organized and efficient. It allows businesses to easily manage their
+                workers, clients, orders, sales, and finances, while also giving them control over who
+                can access what, across multiple branches.`,
+        link: 'https://sten360.teemboom.com',
+        link_text: 'Visit Sten360'
     },
     'pointOfSale': {
         image: '/images/pointOfSale.jpg',
@@ -214,7 +224,7 @@ let project_info = {
 
 }
 
-function projectPopup(project){
+function projectPopup(project) {
     let data = project_info[project]
     let popupClose = document.createElement('div')
     popupClose.className = 'project_popup_close'
@@ -244,25 +254,25 @@ function projectPopup(project){
     ppCon.appendChild(ppP)
     let link = document.createElement('a')
     link.innerHTML = data.link_text
-    if (data.link){
+    if (data.link) {
         link.href = data.link
         link.target = '_blank'
     }
     link.className = 'action_button'
     ppCon.appendChild(link)
 }
-function closeProjectPopup(){
-    for (item of document.getElementsByClassName('project_popup')){
+function closeProjectPopup() {
+    for (item of document.getElementsByClassName('project_popup')) {
         item.remove()
         popup_active = false
     }
-    for (item of document.getElementsByClassName('project_popup_close')){
+    for (item of document.getElementsByClassName('project_popup_close')) {
         item.remove()
     }
 }
 
-window.addEventListener("popstate", function(event) {
-    if (popup_active){
+window.addEventListener("popstate", function (event) {
+    if (popup_active) {
         history.pushState(null, document.title, location.href);
         closeProjectPopup()
     }
@@ -271,8 +281,8 @@ window.addEventListener("popstate", function(event) {
 
 
 let choosen_pic = false
-function picSelection(arg, e){
-    for (item of document.getElementsByClassName('pichoose')){
+function picSelection(arg, e) {
+    for (item of document.getElementsByClassName('pichoose')) {
         item.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#870bb1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>'
     }
     choosen_pic = arg
@@ -280,14 +290,14 @@ function picSelection(arg, e){
     svg.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#870bb1"></path> </g></svg>'
 }
 
-function picSelectionConfirm(){
-    if (choosen_pic === false){
+function picSelectionConfirm() {
+    if (choosen_pic === false) {
         console.log('No Picture has been selected')
     }
-    if (choosen_pic === 1){
+    if (choosen_pic === 1) {
         console.log('Real Life Pic Selected')
     }
-    if (choosen_pic === 2){
+    if (choosen_pic === 2) {
         console.log('AI picture selected')
     }
     projectPopup('update')
