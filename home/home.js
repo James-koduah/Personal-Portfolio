@@ -147,7 +147,7 @@ let project_info = {
         header: 'Jaskin Tech',
         body: `An Informational Website I built for my agency to show our services.
                It has a clean look, detailed descriptions, and a blog.`,
-        link: 'https://jaskintech.com',
+        link: 'https://jaskintech.jameskoduah.com',
         link_text: 'Visit Jaskin Tech'
     },
     'rockpapersisscors': {
