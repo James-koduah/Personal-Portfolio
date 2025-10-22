@@ -98,13 +98,13 @@ let project_info = {
     },
     'sten360': {
         image: '/images/sten360home.png',
-        header: 'Sten360 Business Management System',
-        body: `Sten360 is an all-in-one business management tool designed to help service-based
+        header: 'Bindu Business Management System',
+        body: `Bindu is an all-in-one business management tool designed to help service-based
                 organizations stay organized and efficient. It allows businesses to easily manage their
                 workers, clients, orders, sales, and finances, while also giving them control over who
                 can access what, across multiple branches.`,
-        link: 'https://sten360.teemboom.com',
-        link_text: 'Visit Sten360'
+        link: 'https://mybindu.app',
+        link_text: 'Visit Bindu'
     },
     'pointOfSale': {
         image: '/images/pointOfSale.jpg',
@@ -147,7 +147,7 @@ let project_info = {
         header: 'Jaskin Tech',
         body: `An Informational Website I built for my agency to show our services.
                It has a clean look, detailed descriptions, and a blog.`,
-        link: 'https://jaskintech.jameskoduah.com',
+        link: 'https://jaskin-tech.com',
         link_text: 'Visit Jaskin Tech'
     },
     'rockpapersisscors': {
@@ -202,7 +202,7 @@ let project_info = {
         body: `Find reliable metal works services for various home-building projects, 
                 with custom quality metal works. 
                 Get metal a service that meets design and structural requirements`,
-        link: 'https://glorymetal.jaskintech.com/',
+        link: 'https://glorymetal.jaskin-tech.com/',
         link_text: 'Visit Glory Metal'
     },
     'more': {
