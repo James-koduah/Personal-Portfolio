@@ -202,7 +202,7 @@ let project_info = {
         body: `Find reliable metal works services for various home-building projects, 
                 with custom quality metal works. 
                 Get metal a service that meets design and structural requirements`,
-        link: 'https://glorymetal.jaskin-tech.com/',
+        link: 'https://glorymetal.jameskoduah.com/',
         link_text: 'Visit Glory Metal'
     },
     'more': {
