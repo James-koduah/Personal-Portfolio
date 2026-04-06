@@ -154,7 +154,7 @@ let project_info = {
         image: '/images/rockpapersisscors.jpg',
         header: 'Rock Paper Scissiors Game',
         body: `A JavaScript game of chance for when you're bored and want 
-                to press some buttons, and win some points, and feel some joy.
+                to press some buttons, win some points and feel some joy.
                 Presents cool animations and smooth gameplay`,
         link: 'https://james-koduah.github.io/Rock-Paper-Scissors/',
         link_text: 'Play this Game'

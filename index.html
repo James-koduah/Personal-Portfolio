@@ -16,11 +16,11 @@ title: James Koduah
     <main>
         <section id="hero">
             <h1>I'm A FullStack <span>Developer</span></h1>
-            <p>I Enjoy other technologies but I do Web Development Professionally.</p>
+            <p>I enjoy other technologies but I do Web Development professionally.</p>
             <button class="actionButton" onclick="spiceUpPage(this)">Space Inspector</button>
         </section>
         <section id="skills">
-            <h2>Database > Application Logic > API > Front End</h2>
+            <h2>DevOps > Database > Application Logic > API > Front End</h2>
             <div class="skillsG">
                 <div class="skill">
                     {% include svg.html id="sql" %}
@@ -46,6 +46,10 @@ title: James Koduah
                     {% include svg.html id="jekyll" %}
                     <p>Jekyll</p>
                 </div>
+                <div class="skill">
+                    {% include svg.html id="AI" %}
+                    <p>AI Code Assistants</p>
+                </div>
                 
                 <div class="skillsG skillsG2">
                     <div class="skill">
@@ -65,14 +69,6 @@ title: James Koduah
                         <p>Django</p>
                     </div>
                     <div class="skill">
-                        {% include svg.html id="netlify" %}
-                        <p>Netlify</p>
-                    </div>
-                    <div class="skill">
-                        {% include svg.html id="filestorage" %}
-                        <p>File Storage</p>
-                    </div>
-                    <div class="skill">
                         {% include svg.html id="nginx" %}
                         <p>Nginx</p>
                     </div>
@@ -80,7 +76,7 @@ title: James Koduah
             </div>
         </section>
         <section id="projects">
-            <header id="ph">My Recent Web Development Work</header>
+            <header id="ph">My Personal/Freelance Web Development Work</header>
             <div id="projectsG">
                 <div class="project" onclick="projectPopup('teemboom_comments')"  data-astronaut="">
                     <div class="img"><img src="/images/teemboomlogo.png" alt=""></div>
@@ -94,10 +90,18 @@ title: James Koduah
                             {% include svg.html id="python" %}
                             <p>Python</p>
                         </div>
-                        <!-- <div class="skill">
+                        <div class="skill">
                             {% include svg.html id="vuejs" %}
                             <p>Vue JS</p>
-                        </div> -->
+                        </div>
+                        <div class="skill">
+                            {% include svg.html id="reactjs" %}
+                            <p>React JS</p>
+                        </div>
+                        <div class="skill">
+                            {% include svg.html id="go" %}
+                            <p>Go</p>
+                        </div>
                     </div>
                 </div>
                 <div class="project" onclick="projectPopup('sten360')"  data-astronaut="">
@@ -293,27 +297,59 @@ title: James Koduah
             </div>
         </section>
 
-        <!-- <section id="me">
-            <header class="onscroll_d">Slow Down!</header>
-            <header class="onscroll_d">Proceed Carefully...</header>
-            <header class="onscroll_d">The fate of the world hangs in the balance...</header>
-            <header class="onscroll_d">Who's the real me?</header>
-            <header class="onscroll_d">Choose wisely!</header>
-            <div class="onscroll_d" id="meImg">
-                <div onclick="picSelection(1, this)" class="img">
-                    <img src="images/me1s.png" alt="">
-                    <span class="pichoose">{% include svg.html id="circle" %}</span>
-                    
-                </div>
-                <div onclick="picSelection(2, this)" class="img">
-                    <img src="images/meai.png" alt="">
-                    <span class="pichoose">{% include svg.html id="circle" %}</span>
-                </div>
-            </div>
-            <button id="fks" onclick="picSelectionConfirm()" class="action_button">Confirm Your Selection</button>
-        </section> -->
+        <section id="workExperience">
+            <header id="weh">Work Experience</header>
+            <p class="weSub">From freelance delivery to startup execution to full-time product ownership.</p>
+            <div class="weTimeline">
+                <article class="experienceCard">
+                    <div class="experienceTop">
+                        <div>
+                            <h3>Full Stack Web Developer</h3>
+                            <p class="company">Entrelacs AI • <a href="https://entrelacs.ai" target="_blank" rel="noopener noreferrer">entrelacs.ai</a></p>
+                        </div>
+                        <div class="duration">1 Year</div>
+                    </div>
+                    <ul class="experienceHighlights">
+                        <li>Owned end-to-end delivery — DB design, APIs, and polished frontend interfaces.</li>
+                        <li>Improved reliability through debugging, refactoring, and cleaner deployment practices.</li>
+                        <li>Built internal tools that reduced repetitive manual tasks for the team.</li>
+                    </ul>
+                </article>
 
-        <section id="upto">
+                <article class="experienceCard">
+                    <div class="experienceTop">
+                        <div>
+                            <h3>Software Developer</h3>
+                            <p class="company">MyBindu Startup • <a href="https://mybindu.app" target="_blank" rel="noopener noreferrer">mybindu.app</a></p>
+                        </div>
+                        <div class="duration">4 Months</div>
+                    </div>
+                    <ul class="experienceHighlights">
+                        <li>Shipped MVP features rapidly in a fast-moving startup environment.</li>
+                        <li>Collaborated closely with the product team to iterate quickly on user-facing work.</li>
+                        <li>Kept the product stable by resolving bugs across both frontend and backend.</li>
+                    </ul>
+                </article>
+
+                <article class="experienceCard">
+                    <div class="experienceTop">
+                        <div>
+                            <h3>Freelance Web Developer</h3>
+                            <p class="company">Upwork + Local Clients in Ghana</p>
+                        </div>
+                        <div class="duration">5+ Projects</div>
+                    </div>
+                    <ul class="experienceHighlights">
+                        <li>Independently delivered 5+ projects from requirements to deployment on Upwork and locally.</li>
+                        <li>Managed client communication, architecture decisions, and post-launch support solo.</li>
+                        <li>Balanced technical quality with client goals, timelines, and budget constraints.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- <section id="upto">
             <div class="utext">
                 <header>What Project Am I Currently Working On?</header>
                 <p>
@@ -338,25 +374,8 @@ title: James Koduah
         <section id="teemboomComments">
             <header id="tch">Test My SaaS <br> Teemboom Comments In Action</header>
             <div id="teemboom_comments"></div>
-        </section>
-        <div id="corner">
-            <div class="item">
-                <p>GHANA</p>
-                {% include svg.html id="ghana" %}
-            </div>
-            <div class="item" onclick="lightDark()">
-                <p>Dark Mode</p>
-                {% include svg.html id="daynight" %}
-            </div>
-            <a class="item" target="_blank" href="https://www.linkedin.com/in/james-koduah/">
-                <p>LinkedIn</p>
-                {% include svg.html id="linkedin" %}
-            </a>
-            <a class="item" target="_blank" href="https://github.com/James-koduah">
-                <p>GitHub</p>
-                {% include svg.html id="github" %}
-            </a>
-        </div>
+        </section> -->
+        {% include top_right_items.html %}
     </main>
     <div id="astronaut">
         <img src="/images/astronaut.png" alt="">

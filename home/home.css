@@ -41,7 +41,7 @@
 #skills{
     width: 90%;
     padding: 50px 5% 0px 5%;
-    max-width: 650px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -276,6 +276,154 @@
     }
 }
 
+#workExperience{
+    width: 90%;
+    max-width: 1100px;
+    padding: 20px 5% 110px 5%;
+    margin: 0 auto;
+}
+
+#weh{
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+#workExperience .weSub{
+    max-width: 760px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+    font-size: 2.7em;
+    line-height: 165%;
+    opacity: 0.85;
+}
+
+.weTimeline{
+    position: relative;
+    padding-left: 60px;
+}
+
+.weTimeline::before{
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 8px;
+    width: 2px;
+    height: calc(100% - 16px);
+    background: linear-gradient(var(--at-bg), transparent);
+}
+
+.experienceCard{
+    position: relative;
+    background-color: var(--ma-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0px 0px 13px 3px var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+}
+
+.experienceCard + .experienceCard{
+    margin-top: 18px;
+}
+
+.experienceCard::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--at-bg);
+    left: -49px;
+    top: 42px;
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--at-bg), transparent 70%);
+}
+
+.experienceTop{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.experienceTop h3{
+    font-size: 3.8em;
+    line-height: 120%;
+    margin-bottom: 6px;
+}
+
+.experienceTop .company{
+    font-size: 2.4em;
+    opacity: 0.8;
+}
+
+.duration{
+    font-size: 2.2em;
+    font-weight: 600;
+    border: 1px solid var(--at-bg);
+    color: var(--at-bg);
+    border-radius: 100px;
+    padding: 8px 15px;
+    white-space: nowrap;
+}
+
+
+
+.experienceHighlights{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experienceHighlights li{
+    position: relative;
+    padding-left: 20px;
+    font-size: 2.4em;
+    line-height: 165%;
+    margin-bottom: 4px;
+}
+
+.experienceHighlights li::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--at-bg);
+    position: absolute;
+    left: 0;
+    top: 0.9em;
+    transform: translateY(-50%);
+}
+
+
+
+@media (max-width: 700px) {
+    #workExperience{
+        width: 90%;
+        padding: 20px 5% 90px 5%;
+    }
+
+    .weTimeline{
+        padding-left: 28px;
+    }
+
+    .weTimeline::before{
+        left: 9px;
+    }
+
+    .experienceCard{
+        padding: 30px 20px;
+    }
+
+    .experienceCard::before{
+        left: -25px;
+    }
+
+    .experienceTop{
+        flex-wrap: wrap;
+    }
+}
+
 
 #me{
     width: 90vw;
@@ -420,33 +568,6 @@
     font-weight: 400;
     margin-top: 15px;
     text-align: center;
-}
-
-#corner{
-    position: absolute;
-    top: 10vh; right: 0;
-    height: 150px;
-    padding-right: calc(5px + 1.2%);
-}
-
-#corner .item{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-#corner .item p{
-    font-size: 1.5em;
-    font-weight: 700;
-    /* writing-mode: vertical-rl;
-    text-orientation: upright; */
-    text-align: center;
-}
-#corner .item svg{
-    width: 25px;
-    height: 25px;
-    margin-bottom: 10px;
 }
 
 
