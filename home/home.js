@@ -205,6 +205,65 @@ let project_info = {
         link: 'https://glorymetal.jameskoduah.com/',
         link_text: 'Visit Glory Metal'
     },
+    'animation_football': {
+        image: '/images/animations/football.mp4',
+        mediaType: 'video',
+        header: 'Football Animation',
+        body: `Animation showcase rendered from the football clip in the animations collection.`,
+        link: '/images/animations/football.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_landscape': {
+        image: '/images/animations/landscape.mp4',
+        mediaType: 'video',
+        header: 'Landscape Animation',
+        body: `Animation showcase rendered from the landscape clip in the animations collection.`,
+        link: '/images/animations/landscape.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_rain2': {
+        image: '/images/animations/rain2.mp4',
+        mediaType: 'video',
+        header: 'Rain Animation',
+        body: `Animation showcase rendered from the rain clip in the animations collection.`,
+        link: '/images/animations/rain2.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_tire': {
+        image: '/images/animations/tire.gif',
+        header: 'Tire Animation',
+        body: `Animation showcase rendered from the tire GIF in the animations collection.`,
+        link: '/images/animations/tire.gif',
+        link_text: 'Open Animation'
+    },
+    'animation_walking_kicking': {
+        image: '/images/animations/walking_kicking.mp4',
+        mediaType: 'video',
+        header: 'Walking & Kicking Animation',
+        body: `Animation showcase rendered from the walking and kicking clip in the animations collection.`,
+        link: '/images/animations/walking_kicking.mp4',
+        link_text: 'Open Animation'
+    },
+    'print_hanger_body': {
+        image: '/images/3d_printing/hanger-Body.gltf',
+        mediaType: 'model',
+        header: 'Hanger Body',
+        body: `Interactive 3D model preview. You can drag to rotate the object and inspect the design from different angles.`,
+        link: '/images/3d_printing/hanger-Body.gltf',
+        link_text: 'Open GLTF',
+        download: '/images/3d_printing/hanger-Body.stl',
+        download_text: 'Download STL'
+    },
+    'print_wifi_sim_tray_body': {
+        image: '/images/3d_printing/wifi_sim_tray-Body.gltf',
+        mediaType: 'model',
+        header: 'WiFi SIM Tray Body',
+        body: `Interactive 3D model preview. You can drag to rotate the object and inspect the design from different angles.`,
+        link: '/images/3d_printing/wifi_sim_tray-Body.gltf',
+        link_text: 'Open GLTF',
+        download: '/images/3d_printing/wifi_sim_tray-Body.stl',
+        download_text: 'Download STL'
+    },
     'more': {
         image: 'images/shyrobot.png',
         header: 'More Projects',
@@ -224,6 +283,39 @@ let project_info = {
 
 }
 
+// Project Filtering Functionality
+function initializeProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filterBtn');
+    const projects = document.querySelectorAll('.project');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter projects
+            projects.forEach(project => {
+                if (filter === 'all') {
+                    project.classList.remove('hidden');
+                } else {
+                    const projectCategory = project.getAttribute('data-category');
+                    if (projectCategory === filter) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    });
+}
+
+// Initialize filters when page loads
+document.addEventListener('DOMContentLoaded', initializeProjectFilters);
+
 function projectPopup(project) {
     let data = project_info[project]
     let popupClose = document.createElement('div')
@@ -232,6 +324,9 @@ function projectPopup(project) {
     popupClose.addEventListener('click', closeProjectPopup)
     let popup = document.createElement('div')
     popup.className = 'project_popup'
+    if (project.startsWith('animation_') || project.startsWith('print_')) {
+        popup.classList.add('project_popup_media')
+    }
     document.body.appendChild(popup)
     popup_active = true
 
@@ -239,9 +334,29 @@ function projectPopup(project) {
     let ppImg = document.createElement('div')
     ppImg.className = 'ppImg'
     popup.appendChild(ppImg)
-    let pp_img = document.createElement('img')
-    pp_img.src = data.image
-    ppImg.appendChild(pp_img)
+    if (data.mediaType === 'video') {
+        let pp_video = document.createElement('video')
+        pp_video.src = data.image
+        pp_video.autoplay = true
+        pp_video.muted = true
+        pp_video.loop = true
+        pp_video.controls = true
+        pp_video.playsInline = true
+        ppImg.appendChild(pp_video)
+    } else if (data.mediaType === 'model') {
+        let pp_model = document.createElement('model-viewer')
+        pp_model.setAttribute('src', data.image)
+        pp_model.setAttribute('camera-controls', '')
+        pp_model.setAttribute('auto-rotate', '')
+        pp_model.setAttribute('interaction-prompt', 'none')
+        pp_model.setAttribute('ar', '')
+        pp_model.setAttribute('shadow-intensity', '1')
+        ppImg.appendChild(pp_model)
+    } else {
+        let pp_img = document.createElement('img')
+        pp_img.src = data.image
+        ppImg.appendChild(pp_img)
+    }
 
     let ppCon = document.createElement('div')
     ppCon.className = 'ppCon'
@@ -252,14 +367,33 @@ function projectPopup(project) {
     let ppP = document.createElement('p')
     ppP.innerHTML = data.body
     ppCon.appendChild(ppP)
-    let link = document.createElement('a')
-    link.innerHTML = data.link_text
-    if (data.link) {
-        link.href = data.link
-        link.target = '_blank'
+    if (data.link_text) {
+        let link = document.createElement('a')
+        link.innerHTML = data.link_text
+        if (data.link) {
+            link.href = data.link
+            link.target = '_blank'
+        }
+        link.className = 'action_button'
+        ppCon.appendChild(link)
     }
-    link.className = 'action_button'
-    ppCon.appendChild(link)
+
+    if (data.download) {
+        
+
+        let downloadLink = document.createElement('a')
+        downloadLink.innerHTML = data.download_text || 'Download File'
+        downloadLink.href = data.download
+        downloadLink.download = ''
+        downloadLink.className = 'action_button secondary_button'
+        ppCon.appendChild(downloadLink)
+        if (data.mediaType === 'model') {
+            let interactionHint = document.createElement('p')
+            interactionHint.className = 'interaction_hint'
+            interactionHint.innerHTML = 'Tip: Drag to rotate the 3D model. Use touch or mouse to interact.'
+            ppCon.appendChild(interactionHint)
+        }
+    }
 }
 function closeProjectPopup() {
     for (item of document.getElementsByClassName('project_popup')) {

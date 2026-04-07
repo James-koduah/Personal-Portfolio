@@ -1,0 +1,263 @@
+- popup_id: teemboom_comments
+  category: web-apps
+  badge: Web App
+  title: Teemboom Comments
+  description: SaaS platform for adding comments to any website
+  astronaut: true
+  media:
+    type: image
+    src: /images/teemboomlogo.png
+    alt: ""
+  skills:
+    - icon: nosql
+      name: MongoDB
+    - icon: python
+      name: Python
+    - icon: vuejs
+      name: Vue JS
+    - icon: reactjs
+      name: React JS
+    - icon: go
+      name: Go
+
+- popup_id: sten360
+  category: web-apps
+  badge: Web App
+  title: Bindu Business Management
+  description: All-in-one system for service-based businesses
+  astronaut: true
+  media:
+    type: image
+    src: /images/sten360home.png
+    alt: ""
+  skills:
+    - icon: postgresql
+      name: PostgreSQL
+    - icon: reactjs
+      name: React JS
+    - icon: python
+      name: Python
+
+- popup_id: pointOfSale
+  category: web-apps
+  badge: Web App
+  title: Point Of Sale App
+  description: Complete inventory & payment system
+  media:
+    type: image
+    src: /images/pointOfSale.jpg
+    alt: ""
+  skills:
+    - icon: python
+      name: Python
+    - icon: flask
+      name: Flask
+    - icon: vuejs
+      name: Vue JS
+
+- popup_id: streamsfire
+  category: web-apps
+  badge: Web App
+  title: Streams On Fire
+  description: Live Twitch stream discovery platform
+  media:
+    type: image
+    src: /images/flame.png
+    alt: ""
+  skills:
+    - icon: sql
+      name: SQL
+    - icon: python
+      name: Python
+    - icon: flask
+      name: Flask
+    - icon: vuejs
+      name: Vue JS
+
+- popup_id: imageMetadataEditor
+  category: tools
+  badge: Tool
+  title: Image Metadata Editor
+  description: Edit HDR image metadata easily
+  media:
+    type: image
+    src: /images/imagemetadataeditor.png
+    alt: ""
+  skills:
+    - icon: python
+      name: Python
+    - icon: reactjs
+      name: React JS
+
+- popup_id: dns_lookup
+  category: tools
+  badge: Tool
+  title: DNS Lookup Tool
+  description: Check DNS records for any domain
+  media:
+    type: image
+    src: /images/dnslookup.jpg
+    alt: ""
+  skills:
+    - icon: python
+      name: Python
+    - icon: django
+      name: Django
+
+- popup_id: animation_walking_kicking
+  category: animations
+  badge: Animation
+  title: Walking & Kicking Animation
+  description: Character walk and kick animation loop
+  media:
+    type: video
+    src: /images/animations/walking_kicking.mp4
+
+- popup_id: animation_football
+  category: animations
+  badge: Animation
+  title: Football Animation
+  description: Looping football motion animation
+  media:
+    type: video
+    src: /images/animations/football.mp4
+
+- popup_id: animation_landscape
+  category: animations
+  badge: Animation
+  title: Landscape Animation
+  description: Animated scenic landscape sequence
+  media:
+    type: video
+    src: /images/animations/landscape.mp4
+
+- popup_id: animation_tire
+  category: animations
+  badge: Animation
+  title: Tire Animation
+  description: Animated tire movement
+  media:
+    type: image
+    src: /images/animations/tire.gif
+    alt: Tire animation
+
+- popup_id: print_hanger_body
+  category: 3d-printing
+  badge: 3D Printing
+  title: Hanger Body
+  description: Interactive 3D preview — drag to rotate the model
+  media:
+    type: model
+    src: /images/3d_printing/hanger-Body.gltf
+
+- popup_id: print_wifi_sim_tray_body
+  category: 3d-printing
+  badge: 3D Printing
+  title: WiFi SIM Tray Body
+  description: Interactive 3D preview — drag to rotate the model
+  media:
+    type: model
+    src: /images/3d_printing/wifi_sim_tray-Body.gltf
+
+- popup_id: rockpapersisscors
+  category: games
+  badge: Game
+  title: Rock Paper Scissors
+  description: Interactive game with smooth animations
+  media:
+    type: image
+    src: /images/rockpapersisscors.jpg
+    alt: ""
+  skills:
+    - icon: javascript
+      name: Vanilla JS
+
+- popup_id: ballpaddle
+  category: games
+  badge: Game
+  title: Ball and Paddle Game
+  description: Fun arcade-style game experience
+  media:
+    type: image
+    src: /images/ballandpaddle.jpg
+    alt: ""
+  skills:
+    - icon: javascript
+      name: Vanilla JS
+
+- popup_id: virtualkeyboard
+  category: tools
+  badge: Tool
+  title: Virtual Keyboard
+  description: Glowing keyboard with CSS Grid animations
+  media:
+    type: image
+    src: /images/keyboard.JPG
+    alt: ""
+  skills:
+    - icon: javascript
+      name: Vanilla JS
+
+- popup_id: jaskintech
+  category: websites
+  badge: Website
+  title: Jaskin Tech Website
+  description: Agency landing page with blog
+  media:
+    type: image
+    src: /images/jaskin_tech.jpg
+    alt: ""
+  skills:
+    - icon: jekyll
+      name: Jekyll
+    - icon: netlify
+      name: Netlify
+    - icon: javascript
+      name: Vanilla JS
+
+- popup_id: parma
+  category: web-apps
+  badge: Web App
+  title: Parma Hospital Management
+  description: Healthcare system for patient records
+  media:
+    type: image
+    src: /images/parma.jpg
+    alt: ""
+  skills:
+    - icon: sql
+      name: SQL
+    - icon: python
+      name: Python
+    - icon: flask
+      name: Flask
+
+- popup_id: glorymetal
+  category: websites
+  badge: Website
+  title: Glory Metal Works
+  description: Service business landing page
+  media:
+    type: image
+    src: /images/glory_metal_works.jpg
+    alt: ""
+  skills:
+    - icon: javascript
+      name: Vanilla JS
+    - icon: jekyll
+      name: Jekyll
+
+- popup_id: cmdhospital
+  category: tools
+  badge: CLI App
+  title: Command Line Hospital
+  description: Python CLI with file-based storage
+  media:
+    type: image
+    src: /images/cmd_hospital.jpg
+    alt: ""
+  skills:
+    - icon: filestorage
+      name: File Storage
+    - icon: python
+      name: Python

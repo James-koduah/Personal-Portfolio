@@ -6,6 +6,7 @@ title: James Koduah
 <head>
     {% include head %}
     <link rel="stylesheet" href="/home/home.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://scripts.teemboom.com/teemboom_comments.js"></script>
     <script src="/base/floater.js" defer></script>
     <script defer src="/home/home.js"></script>
@@ -19,7 +20,7 @@ title: James Koduah
             <p>I enjoy other technologies but I do Web Development professionally.</p>
             <button class="actionButton" onclick="spiceUpPage(this)">Space Inspector</button>
         </section>
-        <section id="skills">
+        <section id="skills" class="sectionPadding">
             <h2>DevOps > Database > Application Logic > API > Front End</h2>
             <div class="skillsG">
                 <div class="skill">
@@ -75,306 +76,77 @@ title: James Koduah
                 </div>
             </div>
         </section>
-        <section id="projects">
-            <header id="ph">My Personal/Freelance Web Development Work</header>
-            <div id="projectsG">
-                <div class="project" onclick="projectPopup('teemboom_comments')"  data-astronaut="">
-                    <div class="img"><img src="/images/teemboomlogo.png" alt=""></div>
-                    <header>Teemboom Comments</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="nosql" %}
-                            <p>MongoDB</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="vuejs" %}
-                            <p>Vue JS</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="reactjs" %}
-                            <p>React JS</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="go" %}
-                            <p>Go</p>
-                        </div>
+        <section id="projects" class="sectionPadding">
+            <header id="ph">My Portfolio</header>
+            <div id="projectFilters" class="projectFilters">
+                <button class="filterBtn active" data-filter="all">All Projects</button>
+                <button class="filterBtn" data-filter="web-apps">Web Apps</button>
+                <button class="filterBtn" data-filter="websites">Websites</button>
+                <button class="filterBtn" data-filter="animations">Animations</button>
+                <button class="filterBtn" data-filter="games">Games</button>
+                <button class="filterBtn" data-filter="tools">Tools & utilities</button>
+                <button class="filterBtn" data-filter="3d-printing">3d Printing</button>
+            </div>
+            <div id="projectsG" class="projectsContainer">
+                {% for project in site.data.projects %}
+                <div class="project" onclick="projectPopup('{{ project.popup_id }}')" data-category="{{ project.category }}"{% if project.astronaut %} data-astronaut=""{% endif %}>
+                    <div class="categoryBadge">{{ project.badge }}</div>
+                    <div class="img">
+                        {% if project.media.type == 'video' %}
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="{{ project.media.src }}" type="video/mp4">
+                        </video>
+                        {% elsif project.media.type == 'model' %}
+                        <model-viewer src="{{ project.media.src }}" camera-controls auto-rotate interaction-prompt="none" disable-zoom></model-viewer>
+                        {% else %}
+                        <img src="{{ project.media.src }}" alt="{{ project.media.alt }}">
+                        {% endif %}
                     </div>
-                </div>
-                <div class="project" onclick="projectPopup('sten360')"  data-astronaut="">
-                    <div class="img"><img src="/images/sten360home.png" alt=""></div>
-                    <header>Sten360 Business Management System</header>
+                    <header>{{ project.title }}</header>
+                    <p class="projectDesc">{{ project.description }}</p>
+                    {% if project.skills %}
                     <div class="skillsG">
+                        {% for skill in project.skills %}
                         <div class="skill">
-                            {% include svg.html id="postgresql" %}
-                            <p>PostgreSQL</p>
+                            {% include svg.html id=skill.icon %}
+                            <p>{{ skill.name }}</p>
                         </div>
-                        <div class="skill">
-                            {% include svg.html id="reactjs" %}
-                            <p>React JS</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
+                        {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
-                <div class="project" onclick="projectPopup('pointOfSale')">
-                    <div class="img"><img src="/images/pointOfSale.jpg" alt=""></div>
-                    <header>Point Of Sale Application</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="flask" %}
-                            <p>Flask</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="vuejs" %}
-                            <p>Vue JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('imageMetadataEditor')">
-                    <div class="img"><img src="/images/imagemetadataeditor.png" alt=""></div>
-                    <header>Image Metadata Editor</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="reactjs" %}
-                            <p>React JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('dns_lookup')">
-                    <div class="img"><img src="/images/dnslookup.jpg" alt=""></div>
-                    <header>DNS Lookup Tool</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="django" %}
-                            <p>Django</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('streamsfire')">
-                    <div class="img"><img src="/images/flame.png" alt=""></div>
-                    <header>Streams On Fire</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="sql" %}
-                            <p>Sql</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="flask" %}
-                            <p>Flask</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="vuejs" %}
-                            <p>Vue JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('parma')">
-                    <div class="img"><img src="/images/parma.jpg" alt=""></div>
-                    <header>Parma Hospital Management System</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="sql" %}
-                            <p>Sql</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="flask" %}
-                            <p>Flask</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('jaskintech')">
-                    <div class="img"><img src="/images/jaskin_tech.jpg" alt=""></div>
-                    <header>Jaskin Tech</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="jekyll" %}
-                            <p>Jekyll</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="netlify" %}
-                            <p>Netlify</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="javascript" %}
-                            <p>Vanilla JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('rockpapersisscors')">
-                    <div class="img"><img src="/images/rockpapersisscors.jpg" alt=""></div>
-                    <header>Rock Paper Scissiors Game</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="javascript" %}
-                            <p>Vanilla JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('cmdhospital')">
-                    <div class="img"><img src="/images/cmd_hospital.jpg" alt=""></div>
-                    <header>Command Line Hospital</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="filestorage" %}
-                            <p>File Storage</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="python" %}
-                            <p>Python</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('ballpaddle')">
-                    <div class="img"><img src="/images/ballandpaddle.jpg" alt=""></div>
-                    <header>Ball and Paddle Game</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="javascript" %}
-                            <p>Vanilla JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('virtualkeyboard')">
-                    <div class="img"><img src="/images/keyboard.JPG" alt=""></div>
-                    <header>Virtual Keyboard</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="javascript" %}
-                            <p>Vanilla JS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('glorymetal')">
-                    <div class="img"><img src="/images/glory_metal_works.jpg" alt=""></div>
-                    <header>Glory Metal Works</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="javascript" %}
-                            <p>Vanilla JS</p>
-                        </div>
-                        <div class="skill">
-                            {% include svg.html id="jekyll" %}
-                            <p>Jekyll</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project" onclick="projectPopup('more')">
-                    <div class="img"><img src="./images/machine.png" alt=""></div>
-                    <header>See What Else I've Got</header>
-                    <div class="skillsG">
-                        <div class="skill">
-                            {% include svg.html id="code" %}
-                            <p>Full range of programming languages</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
 
-        <section id="workExperience">
-            <header id="weh">Work Experience</header>
-            <p class="weSub">From freelance delivery to startup execution to full-time product ownership.</p>
+        <section id="workExperience" class="sectionPadding">
+            <header id="weh">{{ site.data.work_experience.section_title }}</header>
+            <p class="weSub">{{ site.data.work_experience.section_subtitle }}</p>
             <div class="weTimeline">
+                {% for experience in site.data.work_experience.entries %}
                 <article class="experienceCard">
                     <div class="experienceTop">
                         <div>
-                            <h3>Full Stack Web Developer</h3>
-                            <p class="company">Entrelacs AI • <a href="https://entrelacs.ai" target="_blank" rel="noopener noreferrer">entrelacs.ai</a></p>
+                            <h3>{{ experience.role }}</h3>
+                            <p class="company">
+                                {{ experience.company_name }}
+                                {% if experience.company_url and experience.company_display %}
+                                • <a style="color: var(--at-bg);" href="{{ experience.company_url }}" target="_blank" rel="noopener noreferrer">{{ experience.company_display }}</a>
+                                {% endif %}
+                            </p>
                         </div>
-                        <div class="duration">1 Year</div>
+                        <div class="duration">{{ experience.duration }}</div>
                     </div>
                     <ul class="experienceHighlights">
-                        <li>Owned end-to-end delivery — DB design, APIs, and polished frontend interfaces.</li>
-                        <li>Improved reliability through debugging, refactoring, and cleaner deployment practices.</li>
-                        <li>Built internal tools that reduced repetitive manual tasks for the team.</li>
+                        {% for highlight in experience.highlights %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
                     </ul>
                 </article>
-
-                <article class="experienceCard">
-                    <div class="experienceTop">
-                        <div>
-                            <h3>Software Developer</h3>
-                            <p class="company">MyBindu Startup • <a href="https://mybindu.app" target="_blank" rel="noopener noreferrer">mybindu.app</a></p>
-                        </div>
-                        <div class="duration">4 Months</div>
-                    </div>
-                    <ul class="experienceHighlights">
-                        <li>Shipped MVP features rapidly in a fast-moving startup environment.</li>
-                        <li>Collaborated closely with the product team to iterate quickly on user-facing work.</li>
-                        <li>Kept the product stable by resolving bugs across both frontend and backend.</li>
-                    </ul>
-                </article>
-
-                <article class="experienceCard">
-                    <div class="experienceTop">
-                        <div>
-                            <h3>Freelance Web Developer</h3>
-                            <p class="company">Upwork + Local Clients in Ghana</p>
-                        </div>
-                        <div class="duration">5+ Projects</div>
-                    </div>
-                    <ul class="experienceHighlights">
-                        <li>Independently delivered 5+ projects from requirements to deployment on Upwork and locally.</li>
-                        <li>Managed client communication, architecture decisions, and post-launch support solo.</li>
-                        <li>Balanced technical quality with client goals, timelines, and budget constraints.</li>
-                    </ul>
-                </article>
+                {% endfor %}
             </div>
         </section>
 
-
-        <!-- <section id="upto">
-            <div class="utext">
-                <header>What Project Am I Currently Working On?</header>
-                <p>
-                    Outside of my main work, I'm taking on a project of building a Point of Sale (POS) app 
-                    that's targeted at local Ghanaian businesses. The main goal is to make cashless payment easier, 
-                    tapping into the power of Mobile Money—a payment method that's taken off here.
-                </p>
-                <p>
-                    But here's where I add some spice: Image detection and AI voice assistant at the storefront. 
-                    Here's my draft — Every few seconds (To save processing power), capture and process image/video frames,  
-                    use people and face detection, and then interact with customers.
-                </p>
-                <p>
-                    The app will have to adapt to different situations as they happen. It's all about bringing some futuristic 
-                    tech into the everyday flow of business and creating practical but cool experiences.
-                    I'm a bit worried about privacy and data protection but hey! It's AI Magic.
-                </p>
-            </div>
-            <div class="uImg"><img src="images/me1s.png" alt=""></div>
-        </section>
-
-        <section id="teemboomComments">
-            <header id="tch">Test My SaaS <br> Teemboom Comments In Action</header>
-            <div id="teemboom_comments"></div>
-        </section> -->
         {% include top_right_items.html %}
     </main>
     <div id="astronaut">
