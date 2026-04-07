@@ -1,9 +1,9 @@
 let floaters = []
-var $emitter = new MyEmitter()
-let spiceLevel = 0
+var $emitter = new MyEmitter() // Class can be found in base/floater.js
+let conversationLevel = 0
 
-function spiceUpPage(e) {
-    let astronautDialouge = [
+function astronautDialouge(e) {
+    let Dialouge = [
         [
             { elemType: false, timeout: 1500 },
             '<svg class="flare" viewBox="-11 0 34 34" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#ae2025" transform="matrix(.413892 .0862234 -.0862234 .413892 -1135.3273 -1495.8263)"> <path d="m3377.19 2978.61 11.48-3.06 3.92 10.44-10.15 4.85z"></path> <path d="m3372.83 2968.55 11.64-4.6-16.08-51.62-17.48 5.55z"></path> </g> </g></svg>'
@@ -59,8 +59,8 @@ function spiceUpPage(e) {
     ]
     let astronautEventName = 'astronautEvent'
 
-    if (spiceLevel === 0) {
-        let astronaut = new Floater('astronaut', astronautEventName, astronautDialouge, floaters)
+    if (conversationLevel === 0) {
+        let astronaut = new Floater('astronaut', astronautEventName, Dialouge, floaters) // Class can be found in base/floater.js
         floaters.push(astronaut)
         const rect = e.getBoundingClientRect();
         const x = rect.left + window.scrollX;
@@ -71,7 +71,7 @@ function spiceUpPage(e) {
                 $emitter.emit(astronautEventName, { 'event': 'runD', 'index': false })
             }
         })
-        spiceLevel++
+        conversationLevel++
     }
 }
 
@@ -88,7 +88,7 @@ let project_info = {
     'teemboom_comments': {
         image: '/images/teemboomlogo.png',
         header: 'Teemboom Comments',
-        body: `My Saas Application. Teemboom comments is a service
+        body: `My Saas Application. Teemboom is a service
                 for adding a comments section or chat to any website or app.
                 Do you have a Blog? Use Teemboom Comments.
                 Just built your first website? Use Teemboom Comments.
@@ -314,7 +314,41 @@ function initializeProjectFilters() {
 }
 
 // Initialize filters when page loads
-document.addEventListener('DOMContentLoaded', initializeProjectFilters);
+function initializeWorkExperienceToggles() {
+    const experienceCards = document.querySelectorAll('.experienceCard');
+
+    experienceCards.forEach(card => {
+        const highlights = card.querySelector('.experienceHighlights');
+
+        const toggleCard = () => {
+            const isExpanded = card.classList.toggle('expanded');
+            card.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+            if (highlights) {
+                highlights.hidden = !isExpanded;
+            }
+        };
+
+        card.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+                return;
+            }
+            toggleCard();
+        });
+
+        card.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') {
+                return;
+            }
+            event.preventDefault();
+            toggleCard();
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeProjectFilters();
+    initializeWorkExperienceToggles();
+});
 
 function projectPopup(project) {
     let data = project_info[project]

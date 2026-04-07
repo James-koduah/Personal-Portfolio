@@ -1,5 +1,5 @@
 section_title: Work Experience
-section_subtitle: From freelance delivery to startup execution to full-time product ownership.
+section_subtitle: Freelance. Startup Execution. Full-time Employment.
 entries:
   - role: Full Stack Web Developer
     company_name: Entrelacs AI
@@ -8,7 +8,7 @@ entries:
     duration: 1 Year
     highlights:
       - Owned end-to-end delivery — DB design, APIs, and polished frontend interfaces.
-      - Improved reliability through debugging, refactoring, and cleaner deployment practices.
+      - Acted as a go-to IT support resource, resolving technical issues, assisting teams, and contributing to overall system efficiency.
       - Built internal tools that reduced repetitive manual tasks for the team.
 
   - role: Software Developer

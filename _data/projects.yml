@@ -38,23 +38,6 @@
     - icon: python
       name: Python
 
-- popup_id: pointOfSale
-  category: web-apps
-  badge: Web App
-  title: Point Of Sale App
-  description: Complete inventory & payment system
-  media:
-    type: image
-    src: /images/pointOfSale.jpg
-    alt: ""
-  skills:
-    - icon: python
-      name: Python
-    - icon: flask
-      name: Flask
-    - icon: vuejs
-      name: Vue JS
-
 - popup_id: streamsfire
   category: web-apps
   badge: Web App
@@ -88,6 +71,23 @@
       name: Python
     - icon: reactjs
       name: React JS
+
+- popup_id: pointOfSale
+  category: web-apps
+  badge: Web App
+  title: Point Of Sale App
+  description: Complete inventory & payment system
+  media:
+    type: image
+    src: /images/pointOfSale.jpg
+    alt: ""
+  skills:
+    - icon: python
+      name: Python
+    - icon: flask
+      name: Flask
+    - icon: vuejs
+      name: Vue JS
 
 - popup_id: dns_lookup
   category: tools
