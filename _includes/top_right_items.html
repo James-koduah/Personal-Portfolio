@@ -1,0 +1,50 @@
+<style>
+    #corner {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        height: 150px;
+        padding-right: calc(5px + 1.2%);
+    }
+
+    #corner .item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #corner .item p {
+        font-size: 1.5em;
+        font-weight: 700;
+        /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+        text-align: center;
+    }
+
+    #corner .item svg {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div id="corner">
+    <div class="item">
+        <p>GHANA</p>
+        {% include svg.html id="ghana" %}
+    </div>
+    <div class="item" onclick="lightDark()">
+        <p>Dark Mode</p>
+        {% include svg.html id="daynight" %}
+    </div>
+    <a class="item" target="_blank" href="https://www.linkedin.com/in/james-koduah/">
+        <p>LinkedIn</p>
+        {% include svg.html id="linkedin" %}
+    </a>
+    <a class="item" target="_blank" href="https://github.com/James-koduah">
+        <p>GitHub</p>
+        {% include svg.html id="github" %}
+    </a>
+</div>

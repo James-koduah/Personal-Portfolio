@@ -1,9 +1,9 @@
 let floaters = []
-var $emitter = new MyEmitter()
-let spiceLevel = 0
+var $emitter = new MyEmitter() // Class can be found in base/floater.js
+let conversationLevel = 0
 
-function spiceUpPage(e) {
-    let astronautDialouge = [
+function astronautDialouge(e) {
+    let Dialouge = [
         [
             { elemType: false, timeout: 1500 },
             '<svg class="flare" viewBox="-11 0 34 34" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#ae2025" transform="matrix(.413892 .0862234 -.0862234 .413892 -1135.3273 -1495.8263)"> <path d="m3377.19 2978.61 11.48-3.06 3.92 10.44-10.15 4.85z"></path> <path d="m3372.83 2968.55 11.64-4.6-16.08-51.62-17.48 5.55z"></path> </g> </g></svg>'
@@ -59,8 +59,8 @@ function spiceUpPage(e) {
     ]
     let astronautEventName = 'astronautEvent'
 
-    if (spiceLevel === 0) {
-        let astronaut = new Floater('astronaut', astronautEventName, astronautDialouge, floaters)
+    if (conversationLevel === 0) {
+        let astronaut = new Floater('astronaut', astronautEventName, Dialouge, floaters) // Class can be found in base/floater.js
         floaters.push(astronaut)
         const rect = e.getBoundingClientRect();
         const x = rect.left + window.scrollX;
@@ -71,7 +71,7 @@ function spiceUpPage(e) {
                 $emitter.emit(astronautEventName, { 'event': 'runD', 'index': false })
             }
         })
-        spiceLevel++
+        conversationLevel++
     }
 }
 
@@ -88,7 +88,7 @@ let project_info = {
     'teemboom_comments': {
         image: '/images/teemboomlogo.png',
         header: 'Teemboom Comments',
-        body: `My Saas Application. Teemboom comments is a service
+        body: `My Saas Application. Teemboom is a service
                 for adding a comments section or chat to any website or app.
                 Do you have a Blog? Use Teemboom Comments.
                 Just built your first website? Use Teemboom Comments.
@@ -154,7 +154,7 @@ let project_info = {
         image: '/images/rockpapersisscors.jpg',
         header: 'Rock Paper Scissiors Game',
         body: `A JavaScript game of chance for when you're bored and want 
-                to press some buttons, and win some points, and feel some joy.
+                to press some buttons, win some points and feel some joy.
                 Presents cool animations and smooth gameplay`,
         link: 'https://james-koduah.github.io/Rock-Paper-Scissors/',
         link_text: 'Play this Game'
@@ -205,6 +205,65 @@ let project_info = {
         link: 'https://glorymetal.jameskoduah.com/',
         link_text: 'Visit Glory Metal'
     },
+    'animation_football': {
+        image: '/images/animations/football.mp4',
+        mediaType: 'video',
+        header: 'Football Animation',
+        body: `Animation showcase rendered from the football clip in the animations collection.`,
+        link: '/images/animations/football.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_landscape': {
+        image: '/images/animations/landscape.mp4',
+        mediaType: 'video',
+        header: 'Landscape Animation',
+        body: `Animation showcase rendered from the landscape clip in the animations collection.`,
+        link: '/images/animations/landscape.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_rain2': {
+        image: '/images/animations/rain2.mp4',
+        mediaType: 'video',
+        header: 'Rain Animation',
+        body: `Animation showcase rendered from the rain clip in the animations collection.`,
+        link: '/images/animations/rain2.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_tire': {
+        image: '/images/animations/tire.gif',
+        header: 'Tire Animation',
+        body: `Animation showcase rendered from the tire GIF in the animations collection.`,
+        link: '/images/animations/tire.gif',
+        link_text: 'Open Animation'
+    },
+    'animation_walking_kicking': {
+        image: '/images/animations/walking_kicking.mp4',
+        mediaType: 'video',
+        header: 'Walking & Kicking Animation',
+        body: `Animation showcase rendered from the walking and kicking clip in the animations collection.`,
+        link: '/images/animations/walking_kicking.mp4',
+        link_text: 'Open Animation'
+    },
+    'print_hanger_body': {
+        image: '/images/3d_printing/hanger-Body.gltf',
+        mediaType: 'model',
+        header: 'Hanger Body',
+        body: `Interactive 3D model preview. You can drag to rotate the object and inspect the design from different angles.`,
+        link: '/images/3d_printing/hanger-Body.gltf',
+        link_text: 'Open GLTF',
+        download: '/images/3d_printing/hanger-Body.stl',
+        download_text: 'Download STL'
+    },
+    'print_wifi_sim_tray_body': {
+        image: '/images/3d_printing/wifi_sim_tray-Body.gltf',
+        mediaType: 'model',
+        header: 'WiFi SIM Tray Body',
+        body: `Interactive 3D model preview. You can drag to rotate the object and inspect the design from different angles.`,
+        link: '/images/3d_printing/wifi_sim_tray-Body.gltf',
+        link_text: 'Open GLTF',
+        download: '/images/3d_printing/wifi_sim_tray-Body.stl',
+        download_text: 'Download STL'
+    },
     'more': {
         image: 'images/shyrobot.png',
         header: 'More Projects',
@@ -224,6 +283,73 @@ let project_info = {
 
 }
 
+// Project Filtering Functionality
+function initializeProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filterBtn');
+    const projects = document.querySelectorAll('.project');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter projects
+            projects.forEach(project => {
+                if (filter === 'all') {
+                    project.classList.remove('hidden');
+                } else {
+                    const projectCategory = project.getAttribute('data-category');
+                    if (projectCategory === filter) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    });
+}
+
+// Initialize filters when page loads
+function initializeWorkExperienceToggles() {
+    const experienceCards = document.querySelectorAll('.experienceCard');
+
+    experienceCards.forEach(card => {
+        const highlights = card.querySelector('.experienceHighlights');
+
+        const toggleCard = () => {
+            const isExpanded = card.classList.toggle('expanded');
+            card.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+            if (highlights) {
+                highlights.hidden = !isExpanded;
+            }
+        };
+
+        card.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+                return;
+            }
+            toggleCard();
+        });
+
+        card.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') {
+                return;
+            }
+            event.preventDefault();
+            toggleCard();
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeProjectFilters();
+    initializeWorkExperienceToggles();
+});
+
 function projectPopup(project) {
     let data = project_info[project]
     let popupClose = document.createElement('div')
@@ -232,6 +358,9 @@ function projectPopup(project) {
     popupClose.addEventListener('click', closeProjectPopup)
     let popup = document.createElement('div')
     popup.className = 'project_popup'
+    if (project.startsWith('animation_') || project.startsWith('print_')) {
+        popup.classList.add('project_popup_media')
+    }
     document.body.appendChild(popup)
     popup_active = true
 
@@ -239,9 +368,29 @@ function projectPopup(project) {
     let ppImg = document.createElement('div')
     ppImg.className = 'ppImg'
     popup.appendChild(ppImg)
-    let pp_img = document.createElement('img')
-    pp_img.src = data.image
-    ppImg.appendChild(pp_img)
+    if (data.mediaType === 'video') {
+        let pp_video = document.createElement('video')
+        pp_video.src = data.image
+        pp_video.autoplay = true
+        pp_video.muted = true
+        pp_video.loop = true
+        pp_video.controls = true
+        pp_video.playsInline = true
+        ppImg.appendChild(pp_video)
+    } else if (data.mediaType === 'model') {
+        let pp_model = document.createElement('model-viewer')
+        pp_model.setAttribute('src', data.image)
+        pp_model.setAttribute('camera-controls', '')
+        pp_model.setAttribute('auto-rotate', '')
+        pp_model.setAttribute('interaction-prompt', 'none')
+        pp_model.setAttribute('ar', '')
+        pp_model.setAttribute('shadow-intensity', '1')
+        ppImg.appendChild(pp_model)
+    } else {
+        let pp_img = document.createElement('img')
+        pp_img.src = data.image
+        ppImg.appendChild(pp_img)
+    }
 
     let ppCon = document.createElement('div')
     ppCon.className = 'ppCon'
@@ -252,14 +401,33 @@ function projectPopup(project) {
     let ppP = document.createElement('p')
     ppP.innerHTML = data.body
     ppCon.appendChild(ppP)
-    let link = document.createElement('a')
-    link.innerHTML = data.link_text
-    if (data.link) {
-        link.href = data.link
-        link.target = '_blank'
+    if (data.link_text) {
+        let link = document.createElement('a')
+        link.innerHTML = data.link_text
+        if (data.link) {
+            link.href = data.link
+            link.target = '_blank'
+        }
+        link.className = 'action_button'
+        ppCon.appendChild(link)
     }
-    link.className = 'action_button'
-    ppCon.appendChild(link)
+
+    if (data.download) {
+        
+
+        let downloadLink = document.createElement('a')
+        downloadLink.innerHTML = data.download_text || 'Download File'
+        downloadLink.href = data.download
+        downloadLink.download = ''
+        downloadLink.className = 'action_button secondary_button'
+        ppCon.appendChild(downloadLink)
+        if (data.mediaType === 'model') {
+            let interactionHint = document.createElement('p')
+            interactionHint.className = 'interaction_hint'
+            interactionHint.innerHTML = 'Tip: Drag to rotate the 3D model. Use touch or mouse to interact.'
+            ppCon.appendChild(interactionHint)
+        }
+    }
 }
 function closeProjectPopup() {
     for (item of document.getElementsByClassName('project_popup')) {

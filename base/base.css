@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+	box-sizing: border-box;
 }
 
 :root{
@@ -22,6 +23,8 @@
 
 body{
     width: 100vw;
+	max-width: 1500px;
+	margin: 0 auto;
     background-color: var(--ma-bg);
     color: var(--text-color);
     font-family: var(---sefif);
@@ -93,7 +96,7 @@ img{
 }
 
 main{
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     padding-top: 40px;
 }
@@ -110,7 +113,7 @@ main{
 	width: calc(100vw - 10px);
 	padding: 5px;
 	/* border-bottom: 1px var(--border) solid; */
-	height: 40px;
+	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -274,7 +277,17 @@ main{
 	display: none !important;
 }
 
-@media (max-width: 600px) {
+.sectionPadding{
+	padding-left: 160px !important;
+	padding-right: 160px !important;
+}
+@media (max-width: 900px) {
+	.sectionPadding{
+		padding-left: 80px !important;
+		padding-right: 80px !important;
+	}
+}
+@media (max-width: 650px) {
 	.mobileNeg{
 		display: none !important;
 	}
@@ -284,12 +297,16 @@ main{
 	.dropActive{
 		display: block !important;
 	}
+	.sectionPadding{
+		padding-left: 24px !important;
+		padding-right: 24px !important;
+	}
 }
 
 
 
 footer{
-    width: 90vw;
+    width: 100vw;
     padding: 100px 5%;
     background-color: var(--ma-opp);
     color: var(--text-color-opp)
@@ -314,4 +331,5 @@ footer i{
     font-size: 3em;
     text-align: center;
 }
+
 
