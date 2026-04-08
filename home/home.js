@@ -209,7 +209,7 @@ let project_info = {
         image: '/images/animations/football.mp4',
         mediaType: 'video',
         header: 'Football Animation',
-        body: `Animation showcase rendered from the football clip in the animations collection.`,
+        body: `Animation showcase rendered from my the animations collection.`,
         link: '/images/animations/football.mp4',
         link_text: 'Open Animation'
     },
@@ -217,22 +217,14 @@ let project_info = {
         image: '/images/animations/landscape.mp4',
         mediaType: 'video',
         header: 'Landscape Animation',
-        body: `Animation showcase rendered from the landscape clip in the animations collection.`,
+        body: `Animation showcase rendered of a landscape from my animations collection.`,
         link: '/images/animations/landscape.mp4',
-        link_text: 'Open Animation'
-    },
-    'animation_rain2': {
-        image: '/images/animations/rain2.mp4',
-        mediaType: 'video',
-        header: 'Rain Animation',
-        body: `Animation showcase rendered from the rain clip in the animations collection.`,
-        link: '/images/animations/rain2.mp4',
         link_text: 'Open Animation'
     },
     'animation_tire': {
         image: '/images/animations/tire.gif',
         header: 'Tire Animation',
-        body: `Animation showcase rendered from the tire GIF in the animations collection.`,
+        body: `Animation showcase rendered of a tire GIF from my animations collection.`,
         link: '/images/animations/tire.gif',
         link_text: 'Open Animation'
     },
@@ -240,7 +232,7 @@ let project_info = {
         image: '/images/animations/walking_kicking.mp4',
         mediaType: 'video',
         header: 'Walking & Kicking Animation',
-        body: `Animation showcase rendered from the walking and kicking clip in the animations collection.`,
+        body: `Animation made with OpenToonz of walking and kicking a ball.`,
         link: '/images/animations/walking_kicking.mp4',
         link_text: 'Open Animation'
     },
@@ -363,6 +355,14 @@ function projectPopup(project) {
     }
     document.body.appendChild(popup)
     popup_active = true
+
+    let popupButtonClose = document.createElement('button')
+    popupButtonClose.className = 'project_popup_button_close'
+    popupButtonClose.type = 'button'
+    popupButtonClose.setAttribute('aria-label', 'Close project popup')
+    popupButtonClose.innerHTML = '<strong>X</strong>'
+    popupButtonClose.addEventListener('click', closeProjectPopup)
+    popup.appendChild(popupButtonClose)
 
 
     let ppImg = document.createElement('div')
