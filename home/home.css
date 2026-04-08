@@ -341,6 +341,32 @@
     display: flex;
     overflow: hidden;
 }
+
+.project_popup_button_close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 999px;
+    color: var(--text-color);
+    font-size: 3em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.project_popup_button_close:hover,
+.project_popup_button_close:focus-visible{
+    transform: scale(1.05);
+    outline: none;
+}
+
 .ppImg{
     width: 250px;
     padding: 0 25px;
@@ -429,6 +455,10 @@
         padding: 30px 0;
         flex-direction: column;
     }
+    .project_popup_button_close{
+        top: 5px;
+        right: 0px;
+    }
     .ppImg{
         width: 100%;
         height: fit-content;
@@ -463,11 +493,11 @@
         align-items: center;
     }
     .ppCon header{
-        font-size: 3.4em;
+        /* font-size: 3.4em; */
         margin: 30px 0 20px 0;
     }
     .ppCon p{
-        font-size: 2.8em;
+        /* font-size: 2.8em; */
     }
 }
 
@@ -490,9 +520,6 @@
     #projectsG, .projectsContainer {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
-    .project {
-        min-height: 360px;
-    }
 }
 
 @media (max-width: 700px) {
@@ -510,20 +537,11 @@
     }
     .filterBtn {
         padding: 10px 18px;
-        font-size: 1.8em;
     }
     .project {
-        min-height: 340px;
         padding: 25px 20px 20px 20px;
     }
-    .project header {
-        font-size: 2.4em;
-        margin: 6px 0 8px 0;
-    }
-    .projectDesc {
-        font-size: 1.6em;
-        margin: 6px 0 15px 0;
-    }
+    
     .project .img {
         width: 160px;
         margin-bottom: 12px;
@@ -534,13 +552,6 @@
     }
     .project .skill {
         padding: 6px 10px;
-    }
-    .project .skill p {
-        font-size: 1.4em;
-    }
-    .categoryBadge {
-        font-size: 1.3em;
-        padding: 6px 12px;
     }
 }
 
