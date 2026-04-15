@@ -126,9 +126,9 @@ let project_info = {
     'streamsfire': {
         image: '/images/flame.png',
         header: 'Streams On Fire',
-        body: ` A web app that presents live channel and stream data from Twitch,
+        body: ` A web app commisioned by a client that presents live channel and stream data from Twitch,
                 ranking them using an algorithm to highlight top-performing streams. 
-                It offers various filtering options to help users discover streams across different categories.`,
+                It offers various filtering options to help users discover small but fast growing streams across different categories.`,
         link: 'https://streamsonfire.com',
         link_text: 'Visit Streams On Fire'
     },
@@ -217,8 +217,17 @@ let project_info = {
         image: '/images/animations/landscape.mp4',
         mediaType: 'video',
         header: 'Landscape Animation',
-        body: `Animation showcase rendered of a landscape from my animations collection.`,
+        body: `Animation of a landscape from my animations collection.`,
         link: '/images/animations/landscape.mp4',
+        link_text: 'Open Animation'
+    },
+    'animation_hello_project': {
+        image: '/images/animations/hello_project.mp4',
+        mediaType: 'video',
+        header: 'Hello in a Window Animation',
+        body: `This started as a simple doodle that kept growing, and growing, and growing… like a snowball rolling down a hill, I just kept adding more, and more, and more
+                <br><br>307 frames at 12 frames per second. OpenToonz.`,
+        link: '/images/animations/hello_project.mp4',
         link_text: 'Open Animation'
     },
     'animation_tire': {

@@ -131,6 +131,15 @@
     type: video
     src: /images/animations/landscape.mp4
 
+- popup_id: animation_hello_project
+  category: animations
+  badge: Animation
+  title: Hello in a window
+  description: Is that a HELLO way over there?
+  media:
+    type: video
+    src: /images/animations/hello_project.mp4
+
 - popup_id: animation_tire
   category: animations
   badge: Animation
