@@ -7,7 +7,6 @@ title: James Koduah
     {% include head %}
     <link rel="stylesheet" href="/home/home.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="https://scripts.teemboom.com/teemboom_comments.js"></script>
     <script src="/base/floater.js" defer></script>
     <script defer src="/home/home.js"></script>
     <link rel="stylesheet" href="/base/floater.css">
@@ -160,6 +159,10 @@ title: James Koduah
         </section>
 
         {% include top_right_items.html %}
+        <section class="sectionPadding" style="padding-bottom: 80px;">
+            <header id="weh">Teemboom Comments Demo</header>
+            <div id="teemboom_comment"></div>
+        </section>
     </main>
     <div id="astronaut">
         <img src="/images/astronaut.png" alt="">
@@ -168,7 +171,15 @@ title: James Koduah
         <img src="/images/pirate.png" alt="">
     </div>
     {% include footer.html %}
+
     
     <script src="https://james-koduah.github.io/scroll_slide/app.js"></script>
+    <script src="https://scripts.teemboom.com/teemboom-comment.js"></script>
+    <script>
+    // Initialize TeemBoom Comments
+    TeemboomComments.init({
+        selector: '#teemboom_comment', // The ID of the container where comments will be rendered
+    });
+    </script>
 </body>
 </html>
