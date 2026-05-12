@@ -3,6 +3,7 @@ title: James Koduah
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% include head %}
     <link rel="stylesheet" href="/home/home.css">
@@ -11,6 +12,7 @@ title: James Koduah
     <script defer src="/home/home.js"></script>
     <link rel="stylesheet" href="/base/floater.css">
 </head>
+
 <body>
     {% include nav.html %}
     <main>
@@ -32,7 +34,7 @@ title: James Koduah
                 </div>
                 <div class="skill">
                     {% include svg.html id="python" %}
-                     <p>Python</p>
+                    <p>Python</p>
                 </div>
                 <div class="skill">
                     {% include svg.html id="vuejs" %}
@@ -50,11 +52,11 @@ title: James Koduah
                     {% include svg.html id="AI" %}
                     <p>AI Code Assistants</p>
                 </div>
-                
+
                 <div class="skillsG skillsG2">
                     <div class="skill">
                         {% include svg.html id="c" %}
-                         <p>C</p>
+                        <p>C</p>
                     </div>
                     <div class="skill">
                         {% include svg.html id="javascript" %}
@@ -100,7 +102,8 @@ title: James Koduah
             </div>
             <div id="projectsG" class="projectsContainer">
                 {% for project in site.data.projects %}
-                <div class="project" onclick="projectPopup('{{ project.popup_id }}')" data-category="{{ project.category }}"{% if project.astronaut %} data-astronaut=""{% endif %}>
+                <div class="project" onclick="projectPopup('{{ project.popup_id }}')"
+                    data-category="{{ project.category }}" {% if project.astronaut %} data-astronaut="" {% endif %}>
                     <div class="categoryBadge">{{ project.badge }}</div>
                     <div class="img">
                         {% if project.media.type == 'video' %}
@@ -108,7 +111,8 @@ title: James Koduah
                             <source src="{{ project.media.src }}" type="video/mp4">
                         </video>
                         {% elsif project.media.type == 'model' %}
-                        <model-viewer src="{{ project.media.src }}" camera-controls auto-rotate interaction-prompt="none" disable-zoom></model-viewer>
+                        <model-viewer src="{{ project.media.src }}" camera-controls auto-rotate
+                            interaction-prompt="none" disable-zoom></model-viewer>
                         {% else %}
                         <img src="{{ project.media.src }}" alt="{{ project.media.alt }}">
                         {% endif %}
@@ -142,7 +146,8 @@ title: James Koduah
                             <p class="company">
                                 {{ experience.company_name }}
                                 {% if experience.company_url and experience.company_display %}
-                                • <a style="color: var(--at-bg);" href="{{ experience.company_url }}" target="_blank" rel="noopener noreferrer">{{ experience.company_display }}</a>
+                                • <a style="color: var(--at-bg);" href="{{ experience.company_url }}" target="_blank"
+                                    rel="noopener noreferrer">{{ experience.company_display }}</a>
                                 {% endif %}
                             </p>
                         </div>
@@ -172,14 +177,24 @@ title: James Koduah
     </div>
     {% include footer.html %}
 
-    
+
     <script src="https://james-koduah.github.io/scroll_slide/app.js"></script>
     <script src="https://scripts.teemboom.com/teemboom-comment.js"></script>
     <script>
-    // Initialize TeemBoom Comments
-    TeemboomComments.init({
-        selector: '#teemboom_comment', // The ID of the container where comments will be rendered
-    });
+        function getLightDark() {
+            let current = localStorage.getItem('lightDark')
+            if (current === 'light') {
+                return 'light'
+            } else {
+                return 'dark'
+            }
+        }
+        // Initialize TeemBoom Comments
+        TeemboomComments.init({
+            containerID: 'teemboom_comment', // The ID of the container where comments will be rendered
+            color_mode: getLightDark(), // 'light' or 'dark' - you can toggle this based on your site's theme
+        });
     </script>
 </body>
+
 </html>

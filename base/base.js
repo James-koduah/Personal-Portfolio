@@ -33,8 +33,10 @@ function lightDark(check=false){
     }
 
     localStorage.setItem('lightDark', current)
+    TeemboomComments.setColorMode(current)
 }
 lightDark(true)
+
 const technologiesWorkedWith = [
     // Programming Languages
     "Python",
