@@ -185,8 +185,12 @@ title: James Koduah
             let current = localStorage.getItem('lightDark')
             if (current === 'light') {
                 return 'light'
-            } else {
+            } else if (current === 'dark') {
                 return 'dark'
+            } else {
+                // Default to light mode if not set
+                localStorage.setItem('lightDark', 'light')
+                return 'light'
             }
         }
         // Initialize TeemBoom Comments
